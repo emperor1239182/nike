@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components{
+  .arrivals{
+    @apply flex flex-wrap gap-3 mt-3
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+ @layer base{
+   .menu{
+     @apply
+      p-3
+      sm:p-4
+      rounded-4xl
+      sm:rounded-none
+      fixed 
+      bottom-3 
+      sm:left-0 
+      w-full 
+      sm:w-auto 
+      sm:h-[100vh] 
+      mt-10 
+      bg-white/15 backdrop-blur-lg backdrop-saturate-[180%]
+       border-white/20 shadow-lg shadow-black/15 ring-inset ring-4 ring-white/30
+    } 
+    .navListContainer{
+       @apply 
+       flex 
+       justify-around 
+       sm:flex-col 
+       sm:justify-between 
+       sm:gap-5 
+  
+      } 
+      .navList{ 
+        @apply 
+        flex 
+        flex-col 
+        sm:flex-row 
+        items-center 
+        justify-center 
+        sm:justify-normal 
+        sm:gap-3 
+        text-[10px] 
+        sm:text-xl 
+       text-gray-500
+        font-bold 
+      } 
+      .listText{
+         @apply 
+         sm:hidden
+         lg:block
+        } 
+      }

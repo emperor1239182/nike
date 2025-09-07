@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import { FiHeart, FiHome, FiUser, FiSearch, FiShoppingBag } from "react-icons/fi";
+import { NavBar } from "@/components/nav";
+import { GetProducts } from "@/utils/productFetching";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,12 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Link href={"/"}>Home <FiHome/> </Link>
-        <Link href={"/shop"}> Shop <FiSearch/> </Link>
-        <Link href={"/favourites"}>Favourite <FiHeart/></Link>
-        <Link href={"/bag"}>Bag <FiShoppingBag/></Link>
-        <Link href={"/profile"}>Login <FiUser/></Link>
-        {children}
+        <GetProducts>
+        <NavBar/>
+       <div className="w-full sm:max-w-xl lg:max-w-2xl mx-auto"> {children} </div>
+       </GetProducts>
       </body>
     </html>
   );
