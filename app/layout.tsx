@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <GetProducts>
         <NavBar/>
-       <div className="w-full sm:max-w-xl lg:max-w-2xl mx-auto"> {children} </div>
+       <div className="w-full sm:max-w-xl lg:max-w-2xl mx-auto p-2"> {children} </div>
        </GetProducts>
       </body>
     </html>

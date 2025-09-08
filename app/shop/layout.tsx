@@ -4,8 +4,10 @@ export default function ShopLayout ({children}: Readonly<{
 }>) {
     return (
         <>
+        
         <ShopNav/>
         {children}
+      
         </>
     )
 }

@@ -13,20 +13,21 @@ export const NewArrivals = () => {
         }
         {newProducts.length > 0? 
         (
-          <ul className="arrivals">
-            {newProducts.slice(1, 9).map((products) => (
-              <li key={products.id}>
-                  <img
-                  src={products.image}
-                  alt="img"
-                  className="w-40 h-40"
-                  />
+        <ul className="arrivals hide-scrollbar">
+          {newProducts.slice(1, 9).map((product) => (
+            <li
+              key={product.id}
+              className="flex-shrink-0 w-[80%] md:w-[60%] lg:w-[40%] snap-center transition-all duration-500 ease-in-out transform hover:scale-[1.02]"
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-64 object-cover rounded-2xl shadow-xl transition-all duration-500 ease-in-out"
+              />
+            </li>
+          ))}
+        </ul>
 
-               <p className="text-[12px]">{products.name}</p>
-              </li>
-            ))
-          }
-          </ul>
         ) : `${errorMessage}`
       }
         </div>

@@ -9,7 +9,8 @@ export const GetProducts = ({children} : ProviderProps) => {
     const [errorMessage, setErrorMessage] = useState('');
     const [loading, setLoading] = useState(false);
     const [newProducts, setNewProducts] = useState([]);
-    const [slides, setSlides] = useState([])
+    const [slides, setSlides] = useState([]);
+    const [sportWears, setSportWears] = useState([]);
     
 
     const fetchNew = async () => {
@@ -36,6 +37,7 @@ export const GetProducts = ({children} : ProviderProps) => {
         }
     }
 
+    {/* fetch slide products */}
     const fetchSlides = async () => {
         setLoading(true);
         
@@ -60,10 +62,44 @@ export const GetProducts = ({children} : ProviderProps) => {
         }
     }
 
+    {/* fetch sportwears products */}
+    const fetchSportWears = async () => {
+        setLoading(true);
+        
+        try {
+            const response = await fetch ('/Sportwears.json');
+
+            if(!response.ok){
+                throw new Error('Failed to fetch products');
+            }
+            const data = await response.json();
+
+            if(data.Sportwears){
+                setSportWears(data.Sportwears);
+                console.log('Products fetched successfully');
+                setLoading(false);
+            }
+        } catch (error) {
+            console.log(error);
+            setErrorMessage('Unable to fetch products');
+        } finally{
+            setLoading(false);
+        }
+    }
+
+    {/* call the fetch sportwears function */}
+    const handleFetchSportwears = () => {
+        fetchSportWears();
+    }
+
+    {/* call the fetch slides function */}
+     const handleFetchSlides = () => {
+        fetchSlides();
+    }
+
    
 
     useEffect(()=>{
-        fetchSlides();
         fetchNew();
         
     }, []);
@@ -71,7 +107,7 @@ export const GetProducts = ({children} : ProviderProps) => {
 
 
     return (
-        <productsContext.Provider value={{errorMessage, loading, newProducts, slides}}>
+        <productsContext.Provider value={{errorMessage, loading, newProducts, slides, sportWears, handleFetchSportwears, handleFetchSlides}}>
             {children}
         </productsContext.Provider>
     )

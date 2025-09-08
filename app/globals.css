@@ -12,7 +12,7 @@
 
 @layer components{
   .arrivals{
-    @apply flex flex-wrap gap-3 mt-3 overflow-auto w-auto items-center
+    @apply flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full px-4 gap-4
   }
   .signUp{
     @apply fixed bg-[url('/signUpImage.png')] bg-cover bg-center bg-no-repeat h-[100%] max-w-xl w-full px-4
@@ -71,5 +71,11 @@
         }
         .penTool{
           @apply sticky bottom-30 rounded-4xl bg-black text-white w-10 h-10 flex justify-center items-center 
+        }
+        .categories{
+          @apply flex justify-around text-gray-600 text-[15px] mt-5
+        }
+        .productsDisplay{
+          @apply grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3
         }
       }
