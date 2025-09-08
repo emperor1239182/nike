@@ -9,13 +9,13 @@ export default function Shirts() {
             {shirts.length > 0? (
                 <ul className="productsDisplay">
                     {shirts.map((shirt)=>(
-                        <li key={shirt.id}>
-                            <div className="w-40 h-40 relative">
+                        <li key={shirt.id} className="w-full">
+                            <div className="imageContainer">
                             <img src={shirt.image}
                             alt="Tops and shirt"
-                            className="w-40 h-40 object-cover"
+                            className="productImage"
                             />
-                            <div className="absolute top-3 right-3 bg-white rounded-full p-1 shadow-md">
+                            <div className="favorite">
                                 <FiHeart className="text-gray-600 w-3 h-3" />
                             </div>
                             </div>

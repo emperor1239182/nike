@@ -75,10 +75,23 @@
         .categories{
           @apply flex justify-around text-gray-600 text-[15px] mt-5
         }
-        .productsDisplay{
-          @apply grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3
+        
+        .productsDisplay {
+          @apply grid grid-cols-2 sm:[grid-template-columns:repeat(auto-fit,minmax(150px,1fr))] gap-3 place-items-center;
         }
+
         .productName{
           @apply text-[12px]
         }
+
+        .productImage{
+          @apply w-full h-full object-cover rounded-lg
+        }
+        .imageContainer{
+          @apply relative aspect-square w-full
+        }
+        .favorite{
+          @apply absolute top-3 right-3 bg-white rounded-full p-1 shadow-md
+        }
       }
+

@@ -9,13 +9,13 @@ export default function Shoes() {
             {slides.length > 0? (
                 <ul className="productsDisplay">
                     {slides.map((shoe)=>(
-                        <li key={shoe.id}>
-                            <div className="w-40 h-40 relative">
+                        <li key={shoe.id} className="w-full">
+                            <div className="imageContainer">
                             <img src={shoe.image}
                             alt="Shoes"
-                            className="w-40 h-40 object-cover"
+                            className="productImage"
                             />
-                            <div className="absolute top-3 right-3 bg-white rounded-full p-1 shadow-md">
+                            <div className="favorite">
                                 <FiHeart className="text-gray-600 w-3 h-3" />
                             </div>
                             </div>
