@@ -18,11 +18,13 @@ export const NavBar = () => {
                   <p className="listText">Home</p>
                 </li>
               </Link>
-    
+
+              <Link href={"/shop"}>
               <li className="navList">
                 <FiSearch size={18} />
                 <p className="listText">Shop</p>
               </li>
+              </Link>
     
               <Link href={"/favourites"}>
                 <li className="navList">

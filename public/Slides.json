@@ -1,0 +1,55 @@
+{
+    "Slides" : [
+        {
+        "id" : 1,
+        "image" : "/NikeN7.png",
+        "name" : "NikeN7",
+        "price" : "$125",
+        "description": "Basketball Shoes "
+        },
+        {
+        "id" : 2,
+        "image" : "/NikePalm.png",
+        "name" : "Nike Benassi N7",
+        "price" : "$35",
+        "description": "Slides"
+        },
+        {
+        "id" : 3,
+        "image" : "/BrownNike.png",
+        "name" : "Brown Nike Jordan",
+        "price" : "$72",
+        "description": "Air Jordan"
+        },
+        {
+        "id" : 4,
+        "image" : "/Black&WhiteShoe.png",
+        "name" : "Nike",
+        "price" : "$79",
+        "description": "Nike shoe"
+        },
+        {
+        "id" : 5,
+        "image" : "/WhiteNikeJordan.png",
+        "name" : "Jordan",
+        "price" : "$49",
+        "description": "Basketball Black Wear"
+        },
+        {
+        "id" : 6,
+        "image" : "/WhiteNike.png",
+        "name" : "Sneaker",
+        "price" : "$49",
+        "description": "Basketball Black Wear"
+        },
+        {
+        "id" : 7,
+        "image" : "/FootballPlay.png",
+        "name" : "Nike Soccer",
+        "price" : "$203",
+        "description": "Go Soccer Pro"
+        }
+
+
+    ]
+}

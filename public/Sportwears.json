@@ -1,0 +1,82 @@
+{
+    "Sportwears" : [
+        {
+        "id" : 1,
+        "image" : "/Dunk.png",
+        "name" : "Sport Basketball",
+        "price" : "$782",
+        "description": "Basketball Black Wear"
+        },
+        {
+        "id" : 2,
+        "image" : "/FootballPlay.png",
+        "name" : "Nike Soccer",
+        "price" : "$203",
+        "description": "Go Soccer Pro"
+        },
+        {
+        "id" : 3,
+        "image" : "/GirlExercise.png",
+        "name" : "Nike Workout",
+        "price" : "$340",
+        "description": "Workout With Ease"
+        },
+        {
+        "id" : 4,
+        "image" : "/GirlRuning.png",
+        "name" : "Nike Track Star",
+        "price" : "$65",
+        "description": "Go Atlethe"
+        },
+        {
+        "id" : 5,
+        "image" : "/HoldingBall.png",
+        "name" : "Nike Skills",
+        "price" : "$600",
+        "description": "Go Skillful"
+        },
+        {
+        "id" : 6,
+        "image" : "/HolidayGirls.png",
+        "name" : "Nike Holidays",
+        "price" : "$1000",
+        "description": "Holiday Just Got Better"
+        },
+        {
+        "id" : 7,
+        "image" : "/SportTime.png",
+        "name" : "Nike All Sport",
+        "price" : "$49",
+        "description": "Basketball Black Wear"
+        },
+        {
+        "id" : 8,
+        "image" : "/Tennis.png",
+        "name" : "Sport Basketball",
+        "price" : "$49",
+        "description": "Basketball Black Wear"
+        },
+        {
+        "id" : 9,
+        "image" : "/YoungBasketballer.png",
+        "name" : "Sport Basketball",
+        "price" : "$49",
+        "description": "Basketball Black Wear"
+        },
+         {
+        "id" : 10,
+        "image" : "/Backshot.png",
+        "name" : "Sport Basketball",
+        "price" : "$49",
+        "description": "Basketball Black Wear"
+        },
+        {
+        "id" : 11,
+        "image" : "/BallSpinning.png",
+        "name" : "Basketball",
+        "price" : "$173",
+        "description": "Basketball Wear"
+        },
+
+    ]
+}

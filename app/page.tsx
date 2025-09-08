@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { NewArrivals } from "@/components/newArrivals";
+import { FiMessageCircle, FiShare, FiPenTool } from "react-icons/fi";
+import Link from "next/link";
 export default function Home() {
 
   const days : string[] = [
@@ -39,18 +41,56 @@ export default function Home() {
         <main  className="flex-1 max-w-2xl w-full p-3 justify-center ">
 
         <h1 className="font-bold text-[20px] ">Discover</h1>
-        <div className="text-[10px] text-gray-500 font-bold"> {day}, {dateNum} {month}</div>
+        <div className="text-[10px] text-gray-500 font-bold mb-4"> {day}, {dateNum} {month}</div>
         <Image
         src="/BasketballTeam.png"
         alt="Basketball Team"
-        width={100}
-        height={100}
+        width={80}
+        height={80}
         layout="responsive"
         objectFit="contain"
         />
 
         <NewArrivals/>
+
+        {/* Review posts */}
+
+        <section className="postsInteraction mt-10">
+
+        <h1 className="font-bold text-2xl">Reviews</h1>
+        <p className="text-[14px] text-gray-400">View reviews, interact and share your thoughts...</p>
+        <div className="post mt-1 flex flex-col gap-4">
+        <Image 
+        src="/GirlsDancing.png"
+        alt="girs dancing post"
+        width={50}
+        height={50}
+        layout="responsive"
+        objectFit="contain"
+        />
+        <h1 className="font-bold">Soyeon Dance Challenge</h1>
+        <p>Hip hop dancer Soyeon shows us an epic dance challenge in the latest playlist episode</p>
+        <div className="flex gap-5">
+          <FiShare/>
+          <FiMessageCircle/>
+        </div>
+        </div>
+
+        </section>
+
+        <Link href="/shop">
+        <div className="flex justify-center mt-5">
+        <button 
+        type="button"
+        className="bg-black text-white rounded-4xl px-15 py-2 text-center ml-[25%] mr-[25%] ">
+          Explore
+        </button>
+        </div>
+        </Link>
         
+        <div className="penTool">
+          <FiPenTool size={20}/>
+        </div>
 
 
         </main>

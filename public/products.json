@@ -195,7 +195,7 @@
         {
         "id" : 30,
         "image" : "/Tennis.png",
-        "name" : "Sport Basketball",
+        "name" : "Sport Tennis",
         "price" : "$49",
         "description": "Basketball Black Wear"
         },
@@ -203,7 +203,7 @@
         {
         "id" : 31,
         "image" : "/TwoboysPanties.png",
-        "name" : "Sport Basketball",
+        "name" : "Luxury",
         "price" : "$49",
         "description": "Basketball Black Wear"
         },
@@ -211,7 +211,7 @@
         {
         "id" : 32,
         "image" : "/TwogirlsJumping.png",
-        "name" : "Sport Basketball",
+        "name" : "Athlete",
         "price" : "$49",
         "description": "Basketball Black Wear"
         },
@@ -219,7 +219,7 @@
         {
         "id" : 33,
         "image" : "/WhiteNike.png",
-        "name" : "Sport Basketball",
+        "name" : "Sneaker",
         "price" : "$49",
         "description": "Basketball Black Wear"
         },
@@ -227,7 +227,7 @@
         {
         "id" : 34,
         "image" : "/WhiteNikeJordan.png",
-        "name" : "Sport Basketball",
+        "name" : "Jordan",
         "price" : "$49",
         "description": "Basketball Black Wear"
         },

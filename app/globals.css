@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  } 
+}
+
 @layer components{
   .arrivals{
-    @apply flex flex-wrap gap-3 mt-3
+    @apply flex flex-wrap gap-3 mt-3 overflow-auto w-auto items-center
+  }
+  .signUp{
+    @apply fixed bg-[url('/signUpImage.png')] bg-cover bg-center bg-no-repeat h-[100%] max-w-xl w-full px-4
   }
 }
  @layer base{
@@ -50,4 +63,13 @@
          sm:hidden
          lg:block
         } 
+        .signUp-buton{
+          @apply rounded-4xl text-center text-black bg-white text-[13px] font-bold border-1 px-10 py-2 cursor-pointer
+        }
+        .signUp-buton:hover{
+          @apply bg-black text-white
+        }
+        .penTool{
+          @apply sticky bottom-30 rounded-4xl bg-black text-white w-10 h-10 flex justify-center items-center 
+        }
       }
