@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 
 export const ShopNav = () => {
      const router = useRouter();
-    const {handleFetchSportwears, handleFetchSlides} = NewFetched();
+    const {handleFetchSportwears, handleFetchSlides, handleFetchShirts} = NewFetched();
     return (
         <>
         <nav>
@@ -28,7 +28,10 @@ export const ShopNav = () => {
             <p>All</p> 
             </Link>
 
-            <Link href="/tops">
+            <Link href="/shop/tops" onClick={() => {
+            console.log('Fetched shirts');
+            handleFetchShirts();
+            }}>
             <p>Tops & T-Shirts</p> 
             </Link>
 
@@ -39,7 +42,10 @@ export const ShopNav = () => {
             <p className="cursor-pointer">Sport Wears</p>
             </Link>
 
-            <Link href="/shoes">
+            <Link href="/shop/shoes" onClick={() => {
+            console.log('Fetched sports');
+            handleFetchSlides();
+            }}>
             <p>Shoes</p> 
             </Link>
             

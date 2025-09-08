@@ -11,6 +11,7 @@ export const GetProducts = ({children} : ProviderProps) => {
     const [newProducts, setNewProducts] = useState([]);
     const [slides, setSlides] = useState([]);
     const [sportWears, setSportWears] = useState([]);
+    const [shirts, setShirt] = useState([]);
     
 
     const fetchNew = async () => {
@@ -87,6 +88,30 @@ export const GetProducts = ({children} : ProviderProps) => {
         }
     }
 
+    const fetchShirt = async () => {
+        setLoading(true);
+        
+        try {
+            const response = await fetch ('/Shirt.json');
+
+            if(!response.ok){
+                throw new Error('Failed to fetch products');
+            }
+            const data = await response.json();
+
+            if(data.Shirt){
+                setShirt(data.Shirt);
+                console.log('Products fetched successfully');
+                setLoading(false);
+            }
+        } catch (error) {
+            console.log(error);
+            setErrorMessage('Unable to fetch products');
+        } finally{
+            setLoading(false);
+        }
+    }
+
     {/* call the fetch sportwears function */}
     const handleFetchSportwears = () => {
         fetchSportWears();
@@ -95,6 +120,11 @@ export const GetProducts = ({children} : ProviderProps) => {
     {/* call the fetch slides function */}
      const handleFetchSlides = () => {
         fetchSlides();
+    }
+
+    {/* call the fetch shirts function */}
+    const handleFetchShirts = () => {
+        fetchShirt();
     }
 
    
@@ -107,7 +137,7 @@ export const GetProducts = ({children} : ProviderProps) => {
 
 
     return (
-        <productsContext.Provider value={{errorMessage, loading, newProducts, slides, sportWears, handleFetchSportwears, handleFetchSlides}}>
+        <productsContext.Provider value={{errorMessage, loading, newProducts, slides, sportWears, shirts, handleFetchSportwears, handleFetchSlides, handleFetchShirts}}>
             {children}
         </productsContext.Provider>
     )
