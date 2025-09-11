@@ -1,33 +1,44 @@
-"use client"
-import { NewFetched } from "@/utils/Contexts"
-import { FiHeart } from "react-icons/fi";
-export default function Shoes() {
-     const {slides, errorMessage} = NewFetched();
-    return (
-        <>
-        <section className="mt-5"> 
-            {slides.length > 0? (
-                <ul className="productsDisplay">
-                    {slides.map((shoe)=>(
-                        <li key={shoe.id} className="w-full">
-                            <div className="imageContainer">
-                            <img src={shoe.image}
-                            alt="Shoes"
-                            className="productImage"
-                            />
-                            <div className="favorite">
-                                <FiHeart className="text-gray-600 w-3 h-3" />
-                            </div>
-                            </div>
-                            <p className="productName font-bold">{shoe.name}</p>
-                            <p className="productName text-gray-600">{shoe.description}</p>
-                            <p className="productName font-bold">{shoe.price}</p>
-                        </li>
-                    ))}
-                </ul>
-            ): `${errorMessage}`}
+import { FiHeart } from "react-icons/fi"
+export default async function NikeShoes () {
+    const request = await fetch("http://localhost:3000/Slides.json", {
+        cache : "no-cache"
+    });
 
-        </section>
-        </>
+    if(!request){
+        throw new Error("Unable to fetch products");
+    }
+
+    const response = await request.json();
+    const data = response.Slides
+
+    return (
+       <section className="mt-5">
+    
+        {data.length > 0? 
+        (
+          <ul className="productsDisplay">
+            {data.map((product) => (
+              <li key={product.id} className="w-full">
+                <div className="imageContainer">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="productImage"
+                  />
+                  <div className="favorite">
+                    <FiHeart className="text-gray-600 w-3 h-3" />
+                  </div>
+                </div>
+
+                <p className="productName font-bold mt-2">{product.name}</p>
+                <p className="productName text-gray-600">{product.description}</p>
+                <p className="productName font-semibold">{product.price}</p>
+              </li>
+            ))}
+          </ul>
+
+        ) : (<p>No product found</p>)
+      }
+      </section>
     )
 }

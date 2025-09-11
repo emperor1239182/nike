@@ -1,14 +1,12 @@
 "use client" 
 import { FiArrowLeft, FiFilter, FiSearch } from "react-icons/fi"
 import Link from "next/link"
-import { NewFetched } from "@/utils/Contexts"
 import { useRouter } from "next/navigation";
 
 
 
 export const ShopNav = () => {
      const router = useRouter();
-    const {handleFetchSportwears, handleFetchSlides, handleFetchShirts} = NewFetched();
     return (
         <>
         <nav>
@@ -28,24 +26,15 @@ export const ShopNav = () => {
             <p>All</p> 
             </Link>
 
-            <Link href="/shop/tops" onClick={() => {
-            console.log('Fetched shirts');
-            handleFetchShirts();
-            }}>
+            <Link href="/shop/tops" >
             <p>Tops & T-Shirts</p> 
             </Link>
 
-            <Link href="/shop/sportWears" onClick={() => {
-            console.log('Fetched sports');
-            handleFetchSportwears();
-            }}>
+            <Link href="/shop/sportWears">
             <p className="cursor-pointer">Sport Wears</p>
             </Link>
 
-            <Link href="/shop/shoes" onClick={() => {
-            console.log('Fetched sports');
-            handleFetchSlides();
-            }}>
+            <Link href="/shop/shoes" >
             <p>Shoes</p> 
             </Link>
             

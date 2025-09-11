@@ -19,7 +19,7 @@ export const NavBar = () => {
                 </li>
               </Link>
 
-              <Link href={"/shop"}>
+              <Link href={"/collections"}>
               <li className="navList">
                 <FiSearch size={18} />
                 <p className="listText">Collections</p>

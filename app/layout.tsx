@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/nav";
-import { GetProducts } from "@/utils/Contexts";
+import { Suspense } from "react";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +30,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GetProducts>
         <NavBar/>
+        <Suspense fallback={<GlobalLoading />}>
        <div className="w-full sm:max-w-xl lg:max-w-2xl mx-auto p-2"> {children} </div>
-       </GetProducts>
+       </Suspense>
       </body>
     </html>
+  );
+}
+
+
+
+function GlobalLoading() {
+  return (
+    <div className="flex items-center justify-center h-screen">
+      <p className="text-gray-500 animate-pulse text-lg">Loading page...</p>
+    </div>
   );
 }

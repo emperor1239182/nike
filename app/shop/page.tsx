@@ -1,15 +1,22 @@
-"use client"
-import { NewFetched } from "@/utils/Contexts"
 import { FiHeart } from "react-icons/fi";
-export default function Shop () {
-    const {newProducts, errorMessage} = NewFetched();
-    return (
-        <>
-        <section className="mt-5">
-        {newProducts.length > 0? 
+export default async function Shop () {
+  const response = await fetch("http://localhost:3000/Products.json", {
+    cache : "no-cache"
+  })
+
+  if(!response.ok){
+    throw new Error("Failed to fetch all products");
+  }
+
+  const data = await response.json()
+  const shopProducts = data.Products;
+  return (
+    <section className="mt-5">
+    
+        {shopProducts.length > 0? 
         (
           <ul className="productsDisplay">
-            {newProducts.map((product) => (
+            {shopProducts.map((product) => (
               <li key={product.id} className="w-full">
                 <div className="imageContainer">
                   <img
@@ -24,14 +31,13 @@ export default function Shop () {
 
                 <p className="productName font-bold mt-2">{product.name}</p>
                 <p className="productName text-gray-600">{product.description}</p>
-                <p className="productName font-bold">{product.price}</p>
+                <p className="productName font-semibold">{product.price}</p>
               </li>
             ))}
           </ul>
 
-        ) : `${errorMessage}`
+        ) : (<p>No product found</p>)
       }
       </section>
-        </>
-    )
+  )
 }
