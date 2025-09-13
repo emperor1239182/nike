@@ -1,4 +1,5 @@
 import { FiHeart } from "react-icons/fi"
+import Image from "next/image";
 export default async function NikeShoes () {
     const request = await fetch("http://localhost:3000/Slides.json", {
         cache : "no-cache"
@@ -9,6 +10,7 @@ export default async function NikeShoes () {
     }
 
     const response = await request.json();
+    console.log("fetched successfully");
     const data = response.Slides
 
     return (
@@ -20,11 +22,13 @@ export default async function NikeShoes () {
             {data.map((product) => (
               <li key={product.id} className="w-full">
                 <div className="imageContainer">
-                  <img
+                 <Image
                     src={product.image}
                     alt={product.name}
+                    width={100}
+                    height={100}
                     className="productImage"
-                  />
+                />
                   <div className="favorite">
                     <FiHeart className="text-gray-600 w-3 h-3" />
                   </div>

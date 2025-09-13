@@ -10,9 +10,9 @@ export const ShopNav = () => {
     return (
         <>
         <nav>
-            <ul className="flex justify-between items-center">
+            <ul className="flex justify-between items-center ">
                 <FiArrowLeft onClick={() => router.back()}/>
-                <h1 className="font-bold text-2xl text-center">Shop</h1>
+                <h1 className="font-bold text-xl text-center">Shop</h1>
                 <div className="flex gap-2">
                     <FiFilter/>
                     <FiSearch/>

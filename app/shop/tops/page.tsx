@@ -1,4 +1,5 @@
 import { FiHeart } from "react-icons/fi";
+import Image from "next/image";
 export default async function Shirts() {
    
     const request = await fetch("http://localhost:3000/Shirt.json", {
@@ -22,11 +23,13 @@ export default async function Shirts() {
             {data.map((product) => (
               <li key={product.id} className="w-full">
                 <div className="imageContainer">
-                  <img
+                 <Image
                     src={product.image}
                     alt={product.name}
+                    width={100}
+                    height={100}
                     className="productImage"
-                  />
+                />
                   <div className="favorite">
                     <FiHeart className="text-gray-600 w-3 h-3" />
                   </div>

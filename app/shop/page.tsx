@@ -1,4 +1,5 @@
 import { FiHeart } from "react-icons/fi";
+import Image from "next/image";
 export default async function Shop () {
   const response = await fetch("http://localhost:3000/Products.json", {
     cache : "no-cache"
@@ -19,9 +20,11 @@ export default async function Shop () {
             {shopProducts.map((product) => (
               <li key={product.id} className="w-full">
                 <div className="imageContainer">
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
+                    width={100}
+                    height={100}
                     className="productImage"
                   />
                   <div className="favorite">
