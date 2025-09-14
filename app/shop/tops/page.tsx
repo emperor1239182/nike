@@ -37,7 +37,7 @@ export default async function Shirts() {
 
                 <p className="productName font-bold mt-2">{product.name}</p>
                 <p className="productName text-gray-600">{product.description}</p>
-                <p className="productName font-semibold">{product.price}</p>
+                <p className="productsPrice">{product.price}</p>
               </li>
             ))}
           </ul>
