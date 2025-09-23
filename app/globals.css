@@ -17,6 +17,7 @@
   .signUp{
     @apply fixed bg-[url('/signUpImage.png')] bg-cover bg-center bg-no-repeat h-[100%] max-w-xl w-full px-4
   }
+  
 }
  @layer base{
    .menu{
@@ -106,7 +107,25 @@
           @apply flex-shrink-0 w-[80%] md:w-[60%] lg:w-[40%] snap-center transition-all duration-500 ease-in-out transform hover:scale-[1.02]
         }
         .productsPrice{
-          @apply font-semibold productName
+          @apply font-semibold 
+        }
+        .activeLinks{
+          @apply border-b-2 border-gray-400
+        }
+        .filterText{
+          @apply flex gap-4 text-[13px] font-semibold
+        }
+        .sort{
+          @apply mt-5 border-b-1 border-gray-500 p-3
+        }
+        .signInInputs{
+          @apply p-3 border-2 border-gray-500 rounded-lg
+        }
+        .passCheck{
+          @apply text-[12px] text-gray-500 ml-4
+        }
+        .fields{
+          @apply flex justify-between flex-wrap mt-5 mb-5 w-full
         }
       }
 

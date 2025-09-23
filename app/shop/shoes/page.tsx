@@ -1,5 +1,8 @@
-import { FiHeart } from "react-icons/fi"
 import Image from "next/image";
+import { FavoriteButton } from "@/components/favoriteButton";
+import type { Product } from "@/utils/types";
+
+
 export default async function NikeShoes () {
     const request = await fetch("http://localhost:3000/Slides.json", {
         cache : "no-cache"
@@ -19,7 +22,7 @@ export default async function NikeShoes () {
         {data.length > 0? 
         (
           <ul className="productsDisplay">
-            {data.map((product) => (
+            {data.map((product : Product) => (
               <li key={product.id} className="w-full">
                 <div className="imageContainer">
                  <Image
@@ -30,7 +33,7 @@ export default async function NikeShoes () {
                     className="productImage"
                 />
                   <div className="favorite">
-                    <FiHeart className="text-gray-600 w-3 h-3" />
+                    <FavoriteButton product={product}/>
                   </div>
                 </div>
 

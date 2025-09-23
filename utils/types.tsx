@@ -1,0 +1,18 @@
+export interface Product {
+    id : number;
+    name : string;
+    price : number;
+    image : string;
+    description : string
+}
+
+export interface FavoritesContextType {
+    favorites : Product [];
+    addToFavorites : (product : Product) => void;
+    removeFromFavorites : (product : number) => void;
+    isFavorite : (productId : number) => boolean;
+}
+
+export type FavoriteButtonProps = {
+    product : Product
+}

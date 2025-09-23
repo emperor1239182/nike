@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/nav";
 import { Suspense } from "react";
+import { FavoriteProvider } from "@/utils/Contexts";
 
 
 const geistSans = Geist({
@@ -30,10 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <FavoriteProvider>
         <NavBar/>
         <Suspense fallback={<GlobalLoading />}>
        <div className="w-full sm:max-w-xl lg:max-w-2xl mx-auto p-2"> {children} </div>
        </Suspense>
+       </FavoriteProvider>
       </body>
     </html>
   );

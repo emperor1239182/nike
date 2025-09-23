@@ -1,5 +1,7 @@
-import { FiHeart } from "react-icons/fi";
 import Image from "next/image";
+import { FavoriteButton } from "@/components/favoriteButton";
+import type { Product } from "@/utils/types";
+
 export default async function Shop () {
   const response = await fetch("http://localhost:3000/Products.json", {
     cache : "no-cache"
@@ -17,7 +19,7 @@ export default async function Shop () {
         {shopProducts.length > 0? 
         (
           <ul className="productsDisplay">
-            {shopProducts.map((product) => (
+            {shopProducts.map((product : Product) => (
               <li key={product.id} className="w-full">
                 <div className="imageContainer">
                   <Image
@@ -28,7 +30,7 @@ export default async function Shop () {
                     className="productImage"
                   />
                   <div className="favorite">
-                    <FiHeart className="text-gray-600 w-3 h-3" />
+                    <FavoriteButton product={product}/>
                   </div>
                 </div>
 
