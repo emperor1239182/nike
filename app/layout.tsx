@@ -5,7 +5,6 @@ import { NavBar } from "@/components/nav";
 import { Suspense } from "react";
 import { FavoriteProvider } from "@/utils/Contexts";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

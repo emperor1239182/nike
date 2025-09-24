@@ -1,9 +1,9 @@
-import { SearchFilter } from "@/components/filter"
+
+import { FavoritesPage } from "./favorites"
 export default function Favourite () {
     return (
         <>
-        <h1>Favourite</h1>
-        <SearchFilter/>
+        <FavoritesPage/>
         </>
     )
 }

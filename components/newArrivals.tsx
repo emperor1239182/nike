@@ -1,3 +1,4 @@
+import type { Product } from "@/utils/types";
 export default async function Arrivals () {
   const response = await fetch("http://localhost:3000/Products.json", {
     cache : "no-cache"
@@ -18,7 +19,7 @@ export default async function Arrivals () {
         {products.length > 0? 
         (
         <ul className="arrivals hide-scrollbar">
-          {products.slice(1, 9).map((product) => (
+          {products.slice(1, 9).map((product : Product) => (
             <li
               key={product.id}
               className="flex-shrink-0 w-[80%] md:w-[60%] lg:w-[40%] snap-center transition-all duration-500 ease-in-out transform hover:scale-[1.02]"

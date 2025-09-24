@@ -7,17 +7,18 @@ const FavouriteContext = createContext <FavoritesContextType | undefined > (unde
 
 export const FavoriteProvider : React.FC<{children : React.ReactNode}> = ({children}) => {
     const [favorites, setFavorites] = useState <Product []> (()=>{
-        if (typeof window !== "undefined") {
-    const saved = localStorage.getItem("favorites");
-    return saved ? JSON.parse(saved) : [];
-  }
-  return []; //save to lacal storage
-})
+        if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('favorites');
+      return saved ? JSON.parse(saved) : [];
+    }
+    return [];
+  });
 
-    //save to local storage whenever favorites changes
-    useEffect(()=>{
-        localStorage.setItem('favorites', JSON.stringify(favorites));
-    }, [favorites]);
+    // Save to localStorage whenever favorites change
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
+
 
     const addToFavorites = (product : Product) => {
         setFavorites((prev)=> {
