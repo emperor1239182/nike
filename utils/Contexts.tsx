@@ -14,6 +14,8 @@ export const FavoriteProvider : React.FC<{children : React.ReactNode}> = ({child
     return [];
   });
 
+  const [message, setMessage] = useState("")
+
     // Save to localStorage whenever favorites change
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
@@ -24,28 +26,34 @@ export const FavoriteProvider : React.FC<{children : React.ReactNode}> = ({child
         setFavorites((prev)=> {
 
             //check if product already is a favorite
-
             if(!prev.some((item)=> item.id === product.id)){
                 return [...prev, product];
             }
             return prev;
         })
+        setMessage("Item Added To Favorites");
+        setTimeout(()=> setMessage(""), 2000)
+        
     }
 
     const removeFromFavorites = (productId : number) => {
         setFavorites((prev)=> prev.filter((item)=> item.id !== productId ));
+       setMessage("Item Removed From Favorites")
+       setTimeout(()=> setMessage(""), 2000)
     }
 
     const isFavorite = (productId : number) => {
         return favorites.some((item)=> item.id === productId);
     }
 
+    
     return (
         <FavouriteContext.Provider value={{
             favorites,
             addToFavorites,
             removeFromFavorites,
-            isFavorite
+            isFavorite,
+            message
         }}
         >
             {children}

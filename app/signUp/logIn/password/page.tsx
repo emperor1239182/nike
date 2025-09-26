@@ -1,6 +1,9 @@
+"use client"
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Password () {
+    const route = useRouter()
     return (
         <section>
          <div >
@@ -17,7 +20,7 @@ export default function Password () {
                 <label htmlFor="password">Enter your password</label> 
                     <input type="password" id="password" required className="signInInputs"/>
                 
-                <button type="submit" className="signUp-buton  mt-10">
+                <button type="submit" className="signUp-buton  mt-10" onClick={()=> route.push("/")}>
                         Login
                     </button>
             </form>

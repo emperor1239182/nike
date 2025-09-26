@@ -6,7 +6,7 @@ export default function Login () {
     const route = useRouter();
     return (
         <>
-        <section className="login">
+        <section className="login p-4">
             <div >
             <Image
             src="/NikeLogo.png"

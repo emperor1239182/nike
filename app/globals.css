@@ -82,7 +82,7 @@
         }
 
         .productName{
-          @apply text-[12px]
+          @apply text-[12px] 
         }
 
         .productImage{
@@ -127,5 +127,15 @@
         .fields{
           @apply flex justify-between flex-wrap mt-5 mb-5 w-full
         }
+        .message{
+          @apply fixed top-4 left-1/2 transform -translate-x-1/2 bg-black text-white text-[13px] text-center px-4 py-2 rounded-md shadow-lg
+        }
+
+        .productDetails {
+          @apply flex justify-center flex-col items-center fixed bottom-0 left-1/2 transform -translate-x-1/2 bg-white text-black text-[13px] px-4 py-4 rounded-t-2xl shadow-lg w-[90%] max-w-md transition-transform duration-900 ease-in-out;
+       }
+
+
       }
+
 

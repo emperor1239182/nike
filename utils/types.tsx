@@ -11,6 +11,7 @@ export interface FavoritesContextType {
     addToFavorites : (product : Product) => void;
     removeFromFavorites : (product : number) => void;
     isFavorite : (productId : number) => boolean;
+    message : string;
 }
 
 export type FavoriteButtonProps = {

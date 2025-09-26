@@ -5,7 +5,7 @@ import type { FavoriteButtonProps } from "@/utils/types";
 import { useState, useEffect } from "react";
 
 export const FavoriteButton: React.FC<FavoriteButtonProps> = ({ product }) => {
-  const { addToFavorites, removeFromFavorites, isFavorite } = useFavorite();
+  const { addToFavorites, removeFromFavorites, isFavorite, message} = useFavorite();
   const [isProductFavorite, setIsProductFavorite] = useState(false);
 
   // Update isProductFavorite only on the client after mount
@@ -21,10 +21,20 @@ export const FavoriteButton: React.FC<FavoriteButtonProps> = ({ product }) => {
     }
   };
 
-  return (
+ return (
+  <>
     <FiHeart
       onClick={handleToggleFavorite}
-      className={`${isProductFavorite ? "bg-red-500 text-white" : "bg-gray-200 text-gray-800 w-3 h-3"}`}
+      className={`${
+        isProductFavorite ? "bg-red-500 text-white" : "bg-gray-200 text-gray-800"
+      } w-6 h-6 p-1 rounded-full cursor-pointer`} 
     />
-  );
+    {message && (
+      <div className="message">
+        {message}
+      </div>
+    )}
+  </>
+);
 };
+
