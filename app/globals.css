@@ -143,7 +143,7 @@
         @apply flex flex-col justify-center items-center bg-white
        }
        .options{
-        @apply flex justify-between gap-6
+        @apply flex justify-between gap-6 items-center
        }
        .cards{
         @apply rounded-4xl p-2 text-center border-1 border-gray-200

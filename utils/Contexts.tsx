@@ -71,6 +71,7 @@ export const useFavorite = () => {
     return context;
 }
 
+
 //cart context
 
 const CartContext = createContext<CartContextType | null> (null);
@@ -90,7 +91,7 @@ export const CartProvider : React.FC<{children : React.ReactNode}> = ({children}
   }, [cartItems]);
 
   const addToCart = (productId : Product) => {
-    
+
         setCartItems((prev)=> {
 
             if(!prev.some((item)=> item.id === productId.id)){
@@ -112,6 +113,7 @@ export const CartProvider : React.FC<{children : React.ReactNode}> = ({children}
     const isCart = (productId : number) => {
         return cartItems.some((item)=> item.id === productId);
     }
+
 
     return (
         <CartContext.Provider value={{

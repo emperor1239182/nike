@@ -11,6 +11,13 @@ export const Order = () => {
 
     const {cartItems} = useCart();
     const router = useRouter();
+
+    const total = cartItems.reduce((acc, product) => {
+  const price = parseFloat(String(product.price).replace(/[^0-9.]/g, ""));
+  return acc + (isNaN(price) ? 0 : price);
+}, 0);
+
+
     return (
         <>
         <FiArrowLeft onClick={() => router.back()} className="mt-4"/>
@@ -22,6 +29,7 @@ export const Order = () => {
                 </div>
             ))
             )}
+
 
             <div className="paymentOptions my-4">
                 <div className="options border-t-1 border-gray-400 p-3">
@@ -95,7 +103,7 @@ export const Order = () => {
 
                 <div className="options border-t-1 border-gray-400 p-3">
                     <h3 className="font-bold text-[px]">Purchase Summary</h3>
-                    <p className="text-red-500">Select Delivery +</p>
+                    <h3 className="text-lg font-bold">Total : {total}</h3>
                 </div>
             </div>
             <button type="button" className="signUp-buton">Submit Payment</button>
