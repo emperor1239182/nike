@@ -1,15 +1,16 @@
 "use client";
-import { useFavorite } from "@/utils/Contexts";
+import { useFavorite, useCart } from "@/utils/Contexts";
 import type { Product } from "@/utils/types";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FiHeart } from "react-icons/fi";
+import { FavoriteDetails } from "@/components/favoriteDetails";
 
 export const FavoritesPage = () => {
   const { favorites, removeFromFavorites } = useFavorite();
+  const {message} = useCart();
   const [clientFavorites, setClientFavorites] = useState<Product[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
- 
   // Sync clientFavorites with favorites after mount
   useEffect(() => {
     setClientFavorites(favorites);
@@ -54,34 +55,16 @@ export const FavoritesPage = () => {
               </button>
             </div>
           ))}
+          
+          {message && (
+      <div className="message">
+        {message}
+      </div>
+    )}
         </div>
       )}
     
-      {selectedProduct && (
-        <div className={`productDetails ${
-    selectedProduct ? "translate-y-0" : "translate-y-full"
-  }`}>
-          <h2 className="text-xl font-bold mb-2">Product Details</h2>
-          <button
-        onClick={() => setSelectedProduct(null)}
-        className="absolute top-2 right-4 text-gray-500 text-lg hover:text-black"
-      >
-        ✕
-      </button>
-          <Image
-            src={selectedProduct.image}
-            width={200}
-            height={200}
-            alt={selectedProduct.name}
-          />
-          <p className="mt-2 font-semibold">{selectedProduct.name}</p>
-          <p className="text-gray-600">{selectedProduct.description}</p>
-          <p className="font-bold">{selectedProduct.price}</p>
-          <button type="button" className="signUp-buton m-auto">
-            Add To Bag
-          </button>
-        </div>
-      )}
+      <FavoriteDetails selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
     </div>
   );
 };

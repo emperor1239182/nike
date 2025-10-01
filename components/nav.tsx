@@ -1,8 +1,15 @@
+"use client"
+import { useCart, useFavorite } from "@/utils/Contexts";
 import Link from "next/link";
 import { FiHeart, FiHome, FiUser, FiSearch, FiShoppingBag } from "react-icons/fi";
-
+import {useState, useEffect} from 'react'
 
 export const NavBar = () => {
+  const {cartItems} = useCart();
+
+
+ 
+
     return (
     <>
     <nav className="menu">
@@ -37,8 +44,10 @@ export const NavBar = () => {
                 <li className="navList">
                   <FiShoppingBag size={18} />
                   <p className="listText">Bag</p>
+                  <span className="absolute -top-3 -right-2 sm:-left-2 sm:-right-0 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">{cartItems.length}</span>
                 </li>
               </Link>
+
       
             <Link href={"/profile"}>
                 <li className="navList">

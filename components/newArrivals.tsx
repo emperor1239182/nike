@@ -1,8 +1,7 @@
 import type { Product } from "@/utils/types";
+import Image from "next/image";
 export default async function Arrivals () {
-  const response = await fetch("http://localhost:3000/Products.json", {
-    cache : "no-cache"
-  })
+  const response = await fetch("http://localhost:3000/Products.json")
   
   if(!response.ok){
     throw new Error ("Failed to get new products");
@@ -24,8 +23,10 @@ export default async function Arrivals () {
               key={product.id}
               className="flex-shrink-0 w-[80%] md:w-[60%] lg:w-[40%] snap-center transition-all duration-500 ease-in-out transform hover:scale-[1.02]"
             >
-              <img
+              <Image
                 src={product.image}
+                width={100}
+                height={100}
                 alt={product.name}
                 className="w-full h-64 object-cover rounded-2xl shadow-xl transition-all duration-500 ease-in-out"
               />

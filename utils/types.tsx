@@ -14,6 +14,13 @@ export interface FavoritesContextType {
     message : string;
 }
 
+export interface CartContextType {
+    cartItems : Product [];
+    addToCart : (product : Product) => void;
+    removeFromCart : (product : number) => void;
+    isCart : (productId : number) => boolean;
+    message : string;
+}
 export type FavoriteButtonProps = {
     product : Product
 }
