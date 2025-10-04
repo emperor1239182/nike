@@ -85,6 +85,7 @@ export const CartProvider : React.FC<{children : React.ReactNode}> = ({children}
     return [];
   })
   const [message, setMessage] = useState("")
+  const [purchasedMessage, setPurchasedMessage] = useState("")
 
   useEffect(()=>{
     localStorage.setItem('cart', JSON.stringify(cartItems));
@@ -114,6 +115,12 @@ export const CartProvider : React.FC<{children : React.ReactNode}> = ({children}
         return cartItems.some((item)=> item.id === productId);
     }
 
+    const purchased = () => {
+    setPurchasedMessage("Successfully purchsed all items");
+    setCartItems([]);
+}
+
+
 
     return (
         <CartContext.Provider value={{
@@ -121,7 +128,10 @@ export const CartProvider : React.FC<{children : React.ReactNode}> = ({children}
             message,
             addToCart,
             removeFromCart,
-            isCart
+            isCart,
+            purchased,
+            purchasedMessage,
+            setPurchasedMessage
         }}
         >
         {children}

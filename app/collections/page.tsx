@@ -41,7 +41,7 @@ export default async function Collections () {
             layout="intrinsic"
             style={{ aspectRatio: '1 / 1' }}
         />
-        <p className="cards">Best Sellers</p>
+        <p className="card">Best Sellers</p>
         </div>
 
         <div className="mt-4">
@@ -53,7 +53,7 @@ export default async function Collections () {
         layout="intrinsic"
         style={{ aspectRatio: '1 / 1' }}
         />
-        <p className="cards">Featured in Air Nike</p>
+        <p className="card">Featured in Air Nike</p>
         </div>
         </ul>
 

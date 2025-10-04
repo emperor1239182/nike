@@ -1,5 +1,9 @@
+"use client"
 import Image from "next/image"
+import { useRouter } from "next/navigation";
+
 export default function SignIn () {
+    const router = useRouter();
     return (
         <>
         <section className="signIn">
@@ -53,9 +57,11 @@ export default function SignIn () {
                         <p>I agree to Nikes privacy policy and terms of use</p>
                     </div>
 
-                    <button type="submit" className="signUp-buton w-[300px] m-auto mt-10">
+                    
+                    <button type="submit" className="signUp-buton w-[300px] m-auto mt-10" onClick={()=> router.push("/signUp/logIn")}>
                         Create Account
                     </button>
+                   
             </form>
 
         </section>

@@ -1,4 +1,6 @@
 import Link from "next/link"
+
+import Image from "next/image";
 export default function SignUp ()  {
     return (
         <>
@@ -6,7 +8,13 @@ export default function SignUp ()  {
 
             <div className="intro flex flex-col gap-5 text-white absolute bottom-20">
 
-                <img src="/NikeLogo.png" className="w-20"/>
+                <Image
+                 src="/NikeLogo.png"
+                 className="w-20"
+                 width={20}
+                 height={20}
+                 alt={"logo"}
+                  />
                 
                 <p className="font-semibold text-xl"> Nike App <br/> Bringing Nike members the products, inspiration and stories in sport.</p>
 

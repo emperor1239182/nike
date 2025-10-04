@@ -27,7 +27,7 @@ export const CartItems = () => {
                             src={product.image}
                             width={100}
                             height={100}
-                            className="productImage cursor-pointer"
+                            className="productImage"
                             />
                             <p className="productName font-bold mt-2">{product.name}</p>
                             <p className="productName text-gray-600">{product.description}</p>

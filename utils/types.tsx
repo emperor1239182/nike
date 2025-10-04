@@ -19,7 +19,10 @@ export interface CartContextType {
     addToCart : (product : Product) => void;
     removeFromCart : (product : number) => void;
     isCart : (productId : number) => boolean;
+    purchased : () => void;
     message : string;
+    purchasedMessage : string;
+    setPurchasedMessage : (msg: string) => void;
 }
 export type FavoriteButtonProps = {
     product : Product

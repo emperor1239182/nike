@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavBar } from "@/components/nav";
 import { Suspense } from "react";
 import { FavoriteProvider, CartProvider } from "@/utils/Contexts";
+import { CartItems } from "./bag/cart";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,9 +33,24 @@ export default function RootLayout({
       >
         <CartProvider>
         <FavoriteProvider>
-        <NavBar/>
+          
         <Suspense fallback={<GlobalLoading />}>
-       <div className="w-full sm:max-w-xl lg:max-w-2xl mx-auto p-2"> {children} </div>
+
+        <div className="flex justify-between gap-10">
+
+        <NavBar/>
+
+          <div className="w-full sm:max-w-xl lg:max-w-2xl sm:mx-auto p-2 border-r-1 border-gray-200">
+             {children} 
+             </div>
+
+          <div className="w-full lg:max-w-[350px] xl:max-w-lg hidden lg:block  h-screen overflow-y-auto hide-scrollbar p-4 ">
+            <CartItems/>
+          </div>
+
+          </div>
+
+        
        </Suspense>
        </FavoriteProvider>
        </CartProvider>

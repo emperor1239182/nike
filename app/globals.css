@@ -26,9 +26,9 @@
       fixed 
       z-70
       bottom-3 
-      sm:left-0 
+      lg:relative
       w-full 
-      sm:w-auto 
+      sm:w-auto
       sm:h-[100vh] 
       mt-10 
       bg-white/15 backdrop-blur-lg backdrop-saturate-[180%]
@@ -36,6 +36,8 @@
     } 
   
 }
+
+
  @layer base{
     .navListContainer{
        @apply 
@@ -46,6 +48,7 @@
        sm:gap-5 
   
       } 
+
       .navList{ 
         @apply 
         flex 
@@ -61,10 +64,11 @@
        text-gray-500
         font-bold 
       } 
+
       .listText{
          @apply 
          sm:hidden
-         lg:block
+         xl:block
         } 
         .signUp-buton{
           @apply rounded-4xl text-center text-white bg-black text-[13px] font-bold border-1 px-10 py-2 cursor-pointer
@@ -96,7 +100,7 @@
         .genders{
           @apply flex gap-3 items-center text-[14px] text-gray-600 font-semibold mt-2 border-b-1 border-gray-600
         }
-        .cards{
+        .card{
           @apply font-bold text-[11px]
         }
         .imageCard{
@@ -146,11 +150,18 @@
         @apply flex justify-between gap-6 items-center
        }
        .cards{
-        @apply rounded-4xl p-2 text-center border-1 border-gray-200
+        @apply rounded-4xl p-2 text-center border-1 border-gray-200 
+       }
+       .regularButton{
+        @apply rounded-4xl text-center text-black bg-white text-[13px] font-bold border-1 px-10 py-2 cursor-pointer
+        }
+        .productSelect{
+          @apply flex flex-col justify-center bg-black text-white gap-10 max-w-[400px] p-3 mx-auto 
+        }
+
        }
        
+       
 
-
-      }
 
 

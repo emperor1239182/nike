@@ -7,15 +7,17 @@ import { useRouter } from "next/navigation";
 export const Order = () => {
     const [openSection, setOpenSection] = useState<null | "delivery" | "payment">(null);
     const [selectedDelivery, setSelectedDelivery] = useState("");
-    const[selectedPayment, setSelectedPayment] = useState("");
+    const [selectedPayment, setSelectedPayment] = useState("");
 
-    const {cartItems} = useCart();
+    const {cartItems, purchased, purchasedMessage, setPurchasedMessage} = useCart();
     const router = useRouter();
 
     const total = cartItems.reduce((acc, product) => {
   const price = parseFloat(String(product.price).replace(/[^0-9.]/g, ""));
   return acc + (isNaN(price) ? 0 : price);
 }, 0);
+
+
 
 
     return (
@@ -103,10 +105,31 @@ export const Order = () => {
 
                 <div className="options border-t-1 border-gray-400 p-3">
                     <h3 className="font-bold text-[px]">Purchase Summary</h3>
-                    <h3 className="text-lg font-bold">Total : {total}</h3>
+                    <h3 className="text-lg font-bold">Total : ${total}</h3>
                 </div>
             </div>
-            <button type="button" className="signUp-buton">Submit Payment</button>
+            <button 
+            type="button" 
+            className="signUp-buton"
+            onClick={()=> purchased()}
+            >
+                Submit Payment
+            </button>
+
+                        {purchasedMessage && (
+            <div className="message">
+                {purchasedMessage} <br/> <br/>
+                <p
+                    className="bg-white text-black rounded p-2 text-center"
+                    onClick={() => {
+                        setPurchasedMessage("");
+                        router.push("/");
+                    }}
+                >
+                    Go to home
+                </p>
+            </div>
+        )}
         </section>
         </>
     )

@@ -14,7 +14,7 @@ export default function Login () {
             height={50}
             alt="nikeLogo"
             />
-            <p className="text-2xl font-semibold max-w-2xl">Enter your email to log in</p>
+            <p className="text-2xl font-semibold max-w-2xl">Enter your email to login</p>
             </div>
 
             <form className="w-[500px] max-w-[500px] mt-5 relative flex flex-col gap-2">
