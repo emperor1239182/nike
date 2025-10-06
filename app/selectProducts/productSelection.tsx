@@ -77,7 +77,7 @@ export const ProductSelection = () => {
                 />
             </div>
 
-            <Link href="/" className="regularButton">
+            <Link href="/selectSportBrand" className="regularButton">
             <button type="button">
                 Next
             </button>

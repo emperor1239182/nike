@@ -1,9 +1,12 @@
 "use client"
 import Image from "next/image";
 import { useCart } from "@/utils/Contexts";
+import { useState } from "react";
 
 export const FavoriteDetails = ({ selectedProduct, setSelectedProduct }) => {
     const {addToCart} = useCart();
+    const [selectedSize, setSelectedSize] = useState("");
+
   return (
     <>
       {selectedProduct && (
@@ -45,10 +48,10 @@ export const FavoriteDetails = ({ selectedProduct, setSelectedProduct }) => {
             <div className="mt-3">
               <h4 className="text-lg font-bold mb-2">Size</h4>
               <div className="arrivals px-0 hide-scrollbar gap-2">
-                <p className="size">L (W 10-13/M 8-12)</p>
-                <p className="size">M (W 8-10/M 6-8)</p>
-                <p className="size">S (W 6-8/M 4-6)</p>
-                <p className="size">XL (W 12-14/M 10-12)</p>
+                <p className= {`${selectedSize === "large" ? "bg-black text-white" : ""} size`} onClick={()=> setSelectedSize("large")}>L (W 10-13/M 8-12)</p>
+                <p className= {`${selectedSize === "medium" ? "bg-black text-white" : ""} size`} onClick={()=> setSelectedSize("medium")}>M (W 8-10/M 6-8)</p>
+                <p className= {`${selectedSize === "small" ? "bg-black text-white" : ""} size`} onClick={()=> setSelectedSize("small")}>S (W 6-8/M 4-6)</p>
+                <p className= {`${selectedSize === "extraLarge" ? "bg-black text-white" : ""} size`} onClick={()=> setSelectedSize("extraLarge")}>XL (W 12-14/M 10-12)</p>
               </div>
             </div>
 

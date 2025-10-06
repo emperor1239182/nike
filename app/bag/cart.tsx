@@ -42,7 +42,7 @@ export const CartItems = () => {
                     ))}
 
                     <Link href="/checkout" className="signUp-buton col-span-auto sm:col-span-3 row-span-2">
-                    <button type="button">Proceed to checkout</button>
+                    <button type="button" >Proceed to checkout</button>
                     </Link>
 
                 </div>

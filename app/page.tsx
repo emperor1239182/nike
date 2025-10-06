@@ -59,7 +59,7 @@ export default function Home() {
 
         {/* Review posts */}
 
-        <section className="postsInteraction mt-10">
+        <section className="postsInteraction my-8">
 
         <h1 className="font-bold text-2xl">Reviews</h1>
         <p className="text-[14px] text-gray-400">View reviews, interact and share your thoughts...</p>
@@ -82,15 +82,13 @@ export default function Home() {
 
         </section>
 
-        <Link href="/shop">
-        <div className="flex justify-center mt-5">
-        <button 
-        type="button"
-        className="bg-black text-white rounded-4xl px-15 py-2 text-center ml-[25%] mr-[25%] ">
-          Explore
-        </button>
-        </div>
+        <div className="flex justify-center">
+        <Link href="/shop" className="bg-black text-white rounded-4xl px-15 py-2 text-center ">
+        
+        <button type="button">Explore</button>
+        
         </Link>
+        </div>
         
         <div className="penTool">
           <FiPenTool size={20}/>

@@ -40,11 +40,11 @@ export default function RootLayout({
 
         <NavBar/>
 
-          <div className="w-full sm:max-w-xl lg:max-w-2xl sm:mx-auto p-2 border-r-1 border-gray-200">
+          <div className="w-full sm:max-w-xl lg:max-w-2xl sm:mx-auto p-2 lg:border-r-1 border-gray-200">
              {children} 
              </div>
 
-          <div className="w-full lg:max-w-[350px] xl:max-w-lg hidden lg:block  h-screen overflow-y-auto hide-scrollbar p-4 ">
+          <div className="w-full lg:max-w-[350px] xl:max-w-lg hidden lg:block h-screen overflow-y-auto hide-scrollbar p-4 ">
             <CartItems/>
           </div>
 
