@@ -1,0 +1,46 @@
+{
+    "New" : [
+        
+        {
+        "id" : 39,
+        "image" : "/YoungBasketballer.png",
+        "name" : "Sport Basketball",
+        "price" : "$49",
+        "description": "Basketball Black Wear"
+        },
+
+        {
+        "id" : 7,
+        "image" : "/Black&WhiteShoe.png",
+        "name" : "Nike",
+        "price" : "$79",
+        "description": "Nike shoe"
+        },
+
+        {
+        "id" : 8,
+        "image" : "/Boy&Girlhoddie.png",
+        "name" : "Nike Hoodie",
+        "price" : "$500",
+        "description": "Nike Custom Hoodie"
+        },
+
+        {
+        "id" : 9,
+        "image" : "/BoybasketBall.png",
+        "name" : "Sport Basketball",
+        "price" : "$49",
+        "description": "Basketball Black Wear"
+        },
+
+         {
+        "id" : 6,
+        "image" : "/BallSpinning.png",
+        "name" : "Basketball",
+        "price" : "$173",
+        "description": "Basketball Wear"
+        }
+
+        
+    ]
+}

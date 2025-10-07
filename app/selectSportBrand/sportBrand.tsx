@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { useState } from "react"
 import Link from "next/link"
-export const Brands = () => {40
+export const Brands = () => {
     const [activities, setActivities] = useState("");
 
     const activity = {

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link";
 import { CollectionNav } from "@/components/collectionsNav"
+import type { Product } from "@/utils/types";
 export default async function Collections () {
     const req = await fetch("http://localhost:3000/Products.json", {
         cache : "no-cache"
@@ -32,7 +33,8 @@ export default async function Collections () {
 
         <ul className="flex gap-2">
         <div className="mt-4">
-        
+
+        <Link href="/bestsellers">
         <Image 
             src="/BoyCart.png"
             width={180}
@@ -41,6 +43,7 @@ export default async function Collections () {
             layout="intrinsic"
             style={{ aspectRatio: '1 / 1' }}
         />
+        </Link>
         <p className="card">Best Sellers</p>
         </div>
 
@@ -57,6 +60,7 @@ export default async function Collections () {
         </div>
         </ul>
 
+        <Link href="/new&featured">
         <div className="mt-9 relative">
         <Image 
         src="/AlbinoGirl.png"
@@ -66,7 +70,9 @@ export default async function Collections () {
         />
         <p className="font-semibold absolute left-6 top-[50%] text-white">New & Featured</p>
         </div>
+        </Link>
 
+        <Link href="newInSport">
         <div className="mt-1 relative">
         <Image 
         src="/HolidayGirls.png"
@@ -74,19 +80,22 @@ export default async function Collections () {
         height={50}
         alt="New and featured"
         />
-        <p className="font-semibold absolute left-6 top-[50%] text-white">New & Featured</p>
+        <p className="font-semibold absolute left-6 top-[50%] text-white">New In Sport</p>
         </div>
+        </Link>
 
         <div className="newCollections mt-9">
             <div className="flex justify-between">
                 <h3 className="font-bold">New Arrivals</h3>
+                <Link href="/new&featured">
                 <p className="text-gray text-[13px]">View All</p>
+                </Link>
             </div>
             
         {Data.length > 0? 
         (
         <ul className="arrivals hide-scrollbar mt-6">
-          {Data.slice(1, 9).map((product) => (
+          {Data.slice(1, 9).map((product : Product) => (
             <li
               key={product.id}
               className="imageTransition"
@@ -117,7 +126,7 @@ export default async function Collections () {
         {products.length > 0? 
         (
         <ul className="arrivals hide-scrollbar mt-6">
-          {products.slice(1, 9).map((product) => (
+          {products.slice(1, 9).map((product : Product) => (
             <li
               key={product.id}
               className="imageTransition"
@@ -142,13 +151,15 @@ export default async function Collections () {
       <div className="newCollections mt-9">
             <div className="flex justify-between">
                 <h3 className="font-bold">Recommended for You</h3>
+                <Link href="/recommended">
                 <p className="text-gray text-[13px]">View All</p>
+                </Link>
             </div>
             
         {Data.length > 0? 
         (
         <ul className="arrivals hide-scrollbar mt-6">
-          {Data.slice(13, 20).map((product) => (
+          {Data.slice(13, 20).map((product : Product) => (
             <li
               key={product.id}
               className="imageTransition"

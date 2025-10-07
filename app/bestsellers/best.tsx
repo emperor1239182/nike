@@ -5,15 +5,18 @@ import type { Product } from "@/utils/types"
 import Image from "next/image"
 import { useState } from "react"
 
-export const SportProducts = ({data } : {data : Product[]}) => {
+
+export const BestSales = ({data } : {data : Product[]} ) => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const handleProductDetails = (product: Product) => {
       setSelectedProduct(product); // store the clicked product
     };
+
     return (
         <>
        <section className="mt-5">
+        <h1 className="font-bold text-black text-xl mb-4">Best Sellers</h1>
     
         {data.length > 0? 
         (
@@ -27,7 +30,7 @@ export const SportProducts = ({data } : {data : Product[]}) => {
                     width={100}
                     height={100}
                     className="productImage cursor-pointer"
-                    onClick={() => handleProductDetails(product)} 
+                    onClick={() => handleProductDetails(product)}
                 />
                   <div className="favorite">
                     <FavoriteButton product={product}/>
@@ -43,8 +46,10 @@ export const SportProducts = ({data } : {data : Product[]}) => {
 
         ) : (<p>No product found</p>)
       }
+
       <FavoriteDetails selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
       </section>
         </>
     )
 }
+

@@ -3,7 +3,7 @@ import { TopsProducts } from "./topsProducts";
 export default async function Shirts() {
    
     const request = await fetch("http://localhost:3000/Shirt.json", {
-        cache : "no-cache"
+        cache : "default"
     });
 
 

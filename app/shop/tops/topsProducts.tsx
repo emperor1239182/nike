@@ -1,9 +1,18 @@
-"use cient"
+"use client"
 import { FavoriteButton } from "@/components/favoriteButton"
+import { FavoriteDetails } from "@/components/favoriteDetails"
 import type { Product } from "@/utils/types"
 import Image from "next/image"
+import { useState } from "react"
 
-export const TopsProducts = ({data }) => {
+export const TopsProducts = ({data } : {data : Product[]}) => {
+
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const handleProductDetails = (product: Product) => {
+      setSelectedProduct(product); // store the clicked product
+    };
+
     return (
         <>
        <section className="mt-5">
@@ -19,7 +28,8 @@ export const TopsProducts = ({data }) => {
                     alt={product.name}
                     width={100}
                     height={100}
-                    className="productImage"
+                    className="productImage cursor-pointer"
+                    onClick={() => handleProductDetails(product)}
                 />
                   <div className="favorite">
                     <FavoriteButton product={product}/>
@@ -35,6 +45,7 @@ export const TopsProducts = ({data }) => {
 
         ) : (<p>No product found</p>)
       }
+      <FavoriteDetails selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
       </section>
         </>
     )

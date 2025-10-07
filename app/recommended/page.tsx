@@ -1,8 +1,7 @@
-import { AllProducts } from "./allProducts";
 import type { Product } from "@/utils/types";
-
-export default async function Shop () {
-  const request = await fetch("http://localhost:3000/Products.json", {
+import { Recommend } from "./recommended";
+export default async function Recommended () {
+    const request = await fetch("http://localhost:3000/Products.json", {
     cache : "default"
   })
 
@@ -12,8 +11,9 @@ export default async function Shop () {
 
   const response  = await request.json()
   const data : Product[] = response.Products;
-
-  return (
-    <AllProducts data={data}/>
-  )
+    return (
+        <>
+        <Recommend data={data}/>
+        </>
+    )
 }

@@ -4,7 +4,7 @@ import {ShoeProducts} from "@/app/shop/shoes/products"
 
 export default async function NikeShoes () {
     const request = await fetch("http://localhost:3000/Slides.json", {
-        cache : "no-cache"
+        cache : "default"
     });
 
     if(!request){

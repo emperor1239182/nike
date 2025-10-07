@@ -2,7 +2,6 @@ import Image from "next/image";
 import { FiMessageCircle, FiShare, FiPenTool } from "react-icons/fi";
 import Link from "next/link";
 import Arrivals from "@/components/newArrivals";
-import { Suspense } from "react";
 export default function Home() {
 
   const days : string[] = [
@@ -52,9 +51,8 @@ export default function Home() {
         objectFit="contain"
         />
 
-        <Suspense fallback={<p className="p-4">Loading products...</p>}>
+        
         <Arrivals/>
-        </Suspense>
 
 
         {/* Review posts */}

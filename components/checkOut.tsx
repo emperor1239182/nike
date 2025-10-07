@@ -36,7 +36,7 @@ export const Order = () => {
             <div className="paymentOptions my-4">
                 <div className="options border-t-1 border-gray-400 p-3">
                     <h3 className="font-bold">Delivery</h3>
-                    <p className="text-red-500" onClick={()=> setOpenSection(openSection === "delivery" ? null : "delivery")}>Select Delivery +</p>
+                    <p className={`${selectedDelivery ? "text-black" : "text-red-500"}` } onClick={()=> setOpenSection(openSection === "delivery" ? null : "delivery")}>Select Delivery +</p>
                 </div>
 
                 {openSection === "delivery" && (
@@ -72,7 +72,7 @@ export const Order = () => {
 
                 <div className="options border-t-1 border-gray-400 p-3">
                     <h3 className="font-bold">Payment</h3>
-                    <p className="text-red-500" onClick={()=> setOpenSection(openSection === "payment" ? null : "payment")}>Select Payment +</p>
+                    <p className={`${selectedPayment ? "text-black" : "text-red-500"}` } onClick={()=> setOpenSection(openSection === "payment" ? null : "payment")}>Select Payment +</p>
                 </div>
 
                                 {openSection === "payment" && (
