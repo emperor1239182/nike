@@ -2,8 +2,14 @@
 import Image from "next/image";
 import { useCart } from "@/utils/Contexts";
 import { useState } from "react";
+import { Product } from "@/utils/types";
 
-export const FavoriteDetails = ({ selectedProduct, setSelectedProduct }) => {
+interface FavoriteDetailsProps {
+  selectedProduct: Product | null;
+  setSelectedProduct: (product: Product | null) => void;
+}
+
+export const FavoriteDetails = ({ selectedProduct, setSelectedProduct }: FavoriteDetailsProps) => {
     const {addToCart} = useCart();
     const [selectedSize, setSelectedSize] = useState("");
 

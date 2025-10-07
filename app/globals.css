@@ -162,10 +162,13 @@
         @apply rounded-4xl text-center text-black bg-white text-[13px] font-bold border-1 px-10 py-2 cursor-pointer
         }
         .productSelect{
-          @apply flex flex-col justify-center bg-black text-white gap-10 max-w-[400px] py-3 px-10 mx-auto 
+          @apply flex flex-col justify-center bg-black text-white gap-10 max-w-[400px] py-5 px-10 mx-auto lg:mt-8
         }
         button{
           @apply cursor-pointer
+        }
+        .selectionIntro{
+          @apply w-[100%] font-bold text-white text-lg
         }
 
        }

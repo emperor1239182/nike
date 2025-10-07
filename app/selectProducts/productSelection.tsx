@@ -7,9 +7,9 @@ export const ProductSelection = () => {
     const [kids, setKids] = useState("");
     return (
         <section className="productSelect">
-            <p className="font-bold text-lg">
+            <h1 className="selectionIntro">
                 First up, which product do you use the most?
-            </p>
+            </h1>
 
             <div className="flex justify-between">
 

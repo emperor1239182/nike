@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 
 export const NavBar = () => {
   const {cartItems} = useCart();
+  const {favorites} = useFavorite()
   const router = useRouter();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -45,7 +46,10 @@ export const NavBar = () => {
     
               <Link href={"/favourites"}>
                 <li className="navList">
-                  <FiHeart size={18} />
+                  <div className="relative">
+                    <FiHeart size={18} />
+                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold min-w-[20px] h-[20px] flex items-center justify-center rounded-full">{favorites.length}</span>
+                  </div>
                   <p className="listText">Favourites</p>
                 </li>
               </Link>
@@ -54,9 +58,11 @@ export const NavBar = () => {
                   className="navList lg:cursor-not-allowed lg:pointer-events-none lg:opacity-60"
                   onClick={isSmallScreen ? () => router.push("/bag") : undefined}
                 >
-                  <FiShoppingBag size={18} />
+                  <div className="relative">
+                    <FiShoppingBag size={18} />
+                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold min-w-[20px] h-[20px] flex items-center justify-center rounded-full">{cartItems.length}</span>
+                  </div>
                   <p className="listText">Bag</p>
-                  <span className="absolute -top-3 -right-2 sm:-left-2 sm:-right-0 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">{cartItems.length}</span>
                 </li>
               
 

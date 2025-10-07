@@ -3,7 +3,7 @@ import Link from "next/link"
 export const Start = () => {
     return (
         <section className="personalize">
-            <p className="absolute top-10 w-[80%] sm:w-[40%] text-white font-bold text-xl">
+            <p className="absolute top-10 w-[80%] sm:w-[60%] text-white font-bold text-xl">
                 To personallze your experience and connect you to sport, weve got a few questions for you.
             </p>
 
