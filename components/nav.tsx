@@ -7,15 +7,25 @@ import { useRouter } from "next/navigation";
 
 export const NavBar = () => {
   const {cartItems} = useCart();
-  const {favorites} = useFavorite()
+  const {favorites} = useFavorite();
   const router = useRouter();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
+  // Handle screen size changes
   useEffect(() => {
     const checkScreen = () => setIsSmallScreen(window.innerWidth < 1024);
     checkScreen();
     window.addEventListener('resize', checkScreen);
     return () => window.removeEventListener('resize', checkScreen);
+  }, []);
+
+  // Handle client-side mounting
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setMounted(true);
+    }
+    return () => setMounted(false);
   }, []);
 
 
@@ -48,7 +58,11 @@ export const NavBar = () => {
                 <li className="navList">
                   <div className="relative">
                     <FiHeart size={18} />
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold min-w-[20px] h-[20px] flex items-center justify-center rounded-full">{favorites.length}</span>
+                    {mounted && favorites.length > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold min-w-[20px] h-[20px] flex items-center justify-center rounded-full">
+                        {favorites.length}
+                      </span>
+                    )}
                   </div>
                   <p className="listText">Favourites</p>
                 </li>
@@ -60,7 +74,11 @@ export const NavBar = () => {
                 >
                   <div className="relative">
                     <FiShoppingBag size={18} />
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold min-w-[20px] h-[20px] flex items-center justify-center rounded-full">{cartItems.length}</span>
+                    {mounted && cartItems.length > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold min-w-[20px] h-[20px] flex items-center justify-center rounded-full">
+                        {cartItems.length}
+                      </span>
+                    )}
                   </div>
                   <p className="listText">Bag</p>
                 </li>

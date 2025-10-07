@@ -98,7 +98,9 @@ export const CartProvider : React.FC<{children : React.ReactNode}> = ({children}
             if(!prev.some((item)=> item.id === productId.id)){
                 return [...prev, productId];
             }
+            
             return prev;
+            
         })
         setMessage("Added To Bag");
         setTimeout(()=> setMessage(""), 2000)
@@ -119,6 +121,8 @@ export const CartProvider : React.FC<{children : React.ReactNode}> = ({children}
     setPurchasedMessage("Successfully purchsed all items");
     setCartItems([]);
 }
+
+
 
 
 

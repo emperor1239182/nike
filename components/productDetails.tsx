@@ -1,15 +1,19 @@
 "use client"
 import Image from "next/image";
+import { useCart } from "@/utils/Contexts";
 import { useState } from "react";
 import { Product } from "@/utils/types";
+import { FavoriteButton } from "./favoriteButton";
 import { CartButton } from "./addtocartButton";
+import { Recommend } from "@/app/recommended/recommended";
 
-interface FavoriteDetailsProps {
+interface ProductDetailsProps {
   selectedProduct: Product | null;
   setSelectedProduct: (product: Product | null) => void;
 }
 
-export const FavoriteDetails = ({ selectedProduct, setSelectedProduct }: FavoriteDetailsProps) => {
+export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductDetailsProps) => {
+    const {addToCart} = useCart();
     const [selectedSize, setSelectedSize] = useState("");
 
   return (
@@ -60,7 +64,14 @@ export const FavoriteDetails = ({ selectedProduct, setSelectedProduct }: Favorit
               </div>
             </div>
 
-            <CartButton product={selectedProduct}/>
+            <CartButton product={selectedProduct} />
+
+            <div className="rounded-4xl bg-gray-300 text-center p-2 flex items-center justify-center gap-3 mt-3">
+                <p>Add To Favorites</p>
+            <FavoriteButton product={selectedProduct}/>
+            </div>
+
+            
 
        
           </div>
