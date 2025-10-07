@@ -4,7 +4,7 @@ import { FavoriteDetails } from "@/components/favoriteDetails"
 import type { Product } from "@/utils/types"
 import Image from "next/image"
 import { useState } from "react"
-
+import { Message } from "@/components/message"
 
 export const Recommend = ({ data }: { data: Product[] }) => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -47,6 +47,7 @@ export const Recommend = ({ data }: { data: Product[] }) => {
         ) : (<p>No product found</p>)
       }
 
+      <Message/>
       <FavoriteDetails selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
       </section>
         </>
