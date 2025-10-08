@@ -12,6 +12,7 @@ export interface FavoritesContextType {
     removeFromFavorites : (product : number) => void;
     isFavorite : (productId : number) => boolean;
     message : string;
+    clearAllFavorites : () => void;
 }
 
 export interface CartContextType {
@@ -23,7 +24,12 @@ export interface CartContextType {
     message : string;
     purchasedMessage : string;
     setPurchasedMessage : (msg: string) => void;
+    clearAllCart : () => void;
 }
 export type FavoriteButtonProps = {
     product : Product
+}
+
+export type Recommended = {
+    recommended : Product [];
 }

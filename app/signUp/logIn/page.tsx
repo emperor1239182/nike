@@ -10,14 +10,15 @@ export default function Login () {
             <div >
             <Image
             src="/NikeLogo.png"
-            width={50}
+            width={100}
             height={50}
             alt="nikeLogo"
+            className="mx-auto my-3"
             />
-            <p className="text-2xl font-semibold max-w-2xl">Enter your email to login</p>
+            <p className="formIntro">Enter your email to login</p>
             </div>
 
-            <form className="w-[500px] max-w-[500px] mt-5 relative flex flex-col gap-2">
+            <form className="form">
                 
                     <label htmlFor="email">Enter your email address</label> 
                     <input type="email" id="email" required className="signInInputs"/> 
@@ -27,6 +28,7 @@ export default function Login () {
                         Next
                     </button>
             </form>
+            
         </section>
         </>
     )

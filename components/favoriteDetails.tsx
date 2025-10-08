@@ -22,7 +22,7 @@ export const FavoriteDetails = ({ selectedProduct, setSelectedProduct }: Favorit
           />
 
           <div
-            className={`productDetails z-50 ${
+            className={`favoriteDetails z-50 ${
               selectedProduct ? "translate-y-0" : "translate-y-full"
             }`}
           >

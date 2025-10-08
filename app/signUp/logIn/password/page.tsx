@@ -14,11 +14,12 @@ export default function Password () {
             width={50}
             height={50}
             alt="nikeLogo"
+            className="mx-auto my-3"
             />
-            <p className="text-2xl font-semibold max-w-2xl">Whats your password?</p>
+            <p className="formIntro">Whats your password?</p>
             </div>
 
-            <form className="w-[500px] max-w-[500px] mt-5 relative flex flex-col gap-2">
+            <form className="form">
                 <label htmlFor="password">Enter your password</label> 
                     <input type="password" id="password" required className="signInInputs"/>
                 

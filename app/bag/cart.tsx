@@ -7,7 +7,8 @@ import { FiShoppingBag } from "react-icons/fi"
 import Link from "next/link"
 export const CartItems = () => {
     const [bag, setBag] = useState <Product []>([]);
-    const {cartItems, removeFromCart} = useCart();
+    const [deleteAll, setDeleteAll] = useState(false);
+    const {cartItems, removeFromCart, clearAllCart} = useCart();
 
     useEffect(()=>{
         setBag(cartItems);
@@ -15,7 +16,24 @@ export const CartItems = () => {
 
     return (
         <section className="mx-auto p-2 max-w-4xl">
-            <h3 className="text-xl font-bold mb-4">Bag</h3>
+
+                  <div className="flex justify-between items-center mb-10">
+      <h1 className="text-2xl font-bold">Bag</h1> 
+      <div>
+      <p className="font-bold text-2xl cursor-pointer" onClick={()=> setDeleteAll((prev)=> !prev)}>...</p>
+      {deleteAll && (
+        <button 
+        onClick={()=>{
+        clearAllCart();
+        setDeleteAll(false)
+        }}
+        className="signUp-buton mt-5"
+        >
+          Remove All
+        </button>
+      )}
+      </div>
+      </div>
 
             {bag.length > 0 ? (
                 <div className="flex flex-col gap-4">

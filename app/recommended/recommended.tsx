@@ -1,6 +1,6 @@
 "use client"
 import { FavoriteButton } from "@/components/favoriteButton"
-import { FavoriteDetails } from "@/components/favoriteDetails"
+import { ProductDetails } from "@/components/productDetails"
 import type { Product } from "@/utils/types"
 import Image from "next/image"
 import { useState } from "react"
@@ -21,7 +21,7 @@ export const Recommend = ({ data }: { data: Product[] }) => {
         {data.length > 0? 
         (
           <ul className="productsDisplay">
-            {data.slice(1,10).reverse().map((product : Product) => (
+            {data.reverse().map((product : Product) => (
               <li key={product.id} className="w-full">
                 <div className="imageContainer">
                  <Image
@@ -48,7 +48,7 @@ export const Recommend = ({ data }: { data: Product[] }) => {
       }
 
       <Message/>
-      <FavoriteDetails selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
+      <ProductDetails selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
       </section>
         </>
     )

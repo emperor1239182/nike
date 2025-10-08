@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/nav";
 import { Suspense } from "react";
-import { FavoriteProvider, CartProvider } from "@/utils/Contexts";
+import { FavoriteProvider, CartProvider, RecommendedProvider } from "@/utils/Contexts";
 import { CartItems } from "./bag/cart";
 
 const geistSans = Geist({
@@ -33,6 +33,7 @@ export default function RootLayout({
       >
         <CartProvider>
         <FavoriteProvider>
+          <RecommendedProvider>
           
         <Suspense fallback={<GlobalLoading />}>
 
@@ -44,7 +45,7 @@ export default function RootLayout({
              {children} 
              </div>
 
-          <div className="w-full lg:max-w-[350px] xl:max-w-lg hidden lg:block h-screen overflow-y-auto hide-scrollbar p-4 ">
+          <div className="w-full lg:max-w-[350px] hidden lg:block h-screen overflow-y-auto hide-scrollbar p-4 ">
             <CartItems/>
           </div>
 
@@ -52,6 +53,7 @@ export default function RootLayout({
 
         
        </Suspense>
+       </RecommendedProvider>
        </FavoriteProvider>
        </CartProvider>
       </body>

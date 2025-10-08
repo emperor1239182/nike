@@ -1,6 +1,6 @@
 "use client"
 import { useState, createContext, useContext, useEffect } from "react"
-import type { FavoritesContextType, CartContextType, Product} from "@/utils/types";
+import type { FavoritesContextType, CartContextType, Product, Recommended} from "@/utils/types";
 
 const FavouriteContext = createContext <FavoritesContextType | undefined > (undefined);
 
@@ -48,6 +48,12 @@ export const FavoriteProvider : React.FC<{children : React.ReactNode}> = ({child
         return favorites.some((item)=> item.id === productId);
     }
 
+    const clearAllFavorites = () => {
+    setFavorites([]);
+    setMessage("All favorites removed");
+    setTimeout(() => setMessage(""), 2000);
+    }
+
     
     return (
         <FavouriteContext.Provider value={{
@@ -55,7 +61,8 @@ export const FavoriteProvider : React.FC<{children : React.ReactNode}> = ({child
             addToFavorites,
             removeFromFavorites,
             isFavorite,
-            message
+            message,
+            clearAllFavorites
         }}
         >
             {children}
@@ -122,6 +129,12 @@ export const CartProvider : React.FC<{children : React.ReactNode}> = ({children}
     setCartItems([]);
 }
 
+const clearAllCart = () => {
+    setCartItems([]);
+    setMessage("All favorites removed");
+    setTimeout(() => setMessage(""), 2000);
+    }
+
 
 
 
@@ -135,7 +148,8 @@ export const CartProvider : React.FC<{children : React.ReactNode}> = ({children}
             isCart,
             purchased,
             purchasedMessage,
-            setPurchasedMessage
+            setPurchasedMessage,
+            clearAllCart
         }}
         >
         {children}
@@ -149,4 +163,41 @@ export const useCart = () => {
         throw new Error("useCart must be used within a cartProvider")
     }
     return useCart;
+}
+
+//Recommended products context
+
+const RecommendedContext = createContext<Recommended | null>(null);
+
+export const RecommendedProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
+    const [recommended, setRecommended] = useState<Product[]>([]);
+    
+    useEffect(() => {
+        const recommend = async () => {
+            try {
+                const req = await fetch("http://localhost:3000/Products.json");
+                const res = await req.json();
+                const data: Product[] = res.Products;
+                
+                setRecommended(data.slice(1, 10));
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        }
+        recommend();
+    }, []); 
+
+    return (
+        <RecommendedContext.Provider value={{ recommended }}>
+            {children}
+        </RecommendedContext.Provider>
+    );
+}
+
+export const useRecommended = () => {
+    const context = useContext(RecommendedContext);
+    if (!context) {
+        throw new Error("useRecommended must be used within a RecommendedProvider");
+    }
+    return context; 
 }

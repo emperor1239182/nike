@@ -7,10 +7,12 @@ import { FiHeart } from "react-icons/fi";
 import { FavoriteDetails } from "@/components/favoriteDetails";
 
 export const FavoritesPage = () => {
-  const { favorites, removeFromFavorites } = useFavorite();
+  const { favorites, removeFromFavorites, clearAllFavorites } = useFavorite();
   const {message} = useCart();
   const [clientFavorites, setClientFavorites] = useState<Product[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [deleteAll, setDeleteAll] = useState(false);
+
   // Sync clientFavorites with favorites after mount
   useEffect(() => {
     setClientFavorites(favorites);
@@ -27,7 +29,24 @@ export const FavoritesPage = () => {
 
   return (
     <div className="container mx-auto p-2">
-      <h1 className="text-2xl font-bold mb-4">Favorites</h1>
+
+      <div className="flex justify-between items-center mb-10">
+      <h1 className="text-2xl font-bold">Favorites</h1> 
+      <div>
+      <p className="font-bold text-2xl cursor-pointer" onClick={()=> setDeleteAll((prev)=> !prev)}>...</p>
+      {deleteAll && (
+        <button 
+        onClick={()=>{
+        clearAllFavorites();
+        setDeleteAll(false)
+        }}
+        className="signUp-buton mt-5"
+        >
+          Remove All
+        </button>
+      )}
+      </div>
+      </div>
 
       {clientFavorites.length === 0 ? (
         <p>No favorite products yet.</p>
