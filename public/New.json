@@ -1,44 +1,53 @@
 {
     "New" : [
+           {
+            "id": 39,
+            "image": "/YoungBasketballer.png",
+            "name": "Sport Basketball",
+            "price": "$49",
+            "description": "Basketball fit",
+            "category": "Sport",
+            "overview": "The Sport Basketball Fit apparel is crafted for basketball players who need performance and affordability. Priced at $49, this sportswear offers a snug, flexible fit and moisture-wicking technology to keep athletes comfortable during games or practices. Its sleek design ensures you look and feel your best on the court."
+        },
+
+        {
+            "id": 7,
+            "image": "/Black&WhiteShoe.png",
+            "name": "Nike",
+            "price": "$79",
+            "description": "Nike shoe",
+            "category": "Shoe",
+            "overview": "The Nike Shoe is a versatile, everyday sneaker that balances style and functionality. With a sleek black-and-white design, it’s perfect for casual wear or light athletic activities. The shoe offers reliable cushioning and a sturdy outsole, ensuring comfort and durability for daily use. It’s an affordable option for those seeking classic Nike quality."
+        },
+
+        {
+            "id": 8,
+            "image": "/Boy&Girlhoddie.png",
+            "name": "Nike Hoodie",
+            "price": "$500",
+            "description": "Nike Custom Hoodie",
+            "category": "Clothing",
+            "overview": "The Nike Custom Hoodie is a premium, personalized piece of apparel designed for those who want to stand out. Priced at $500, this hoodie combines luxurious materials with customizable design elements, offering a unique blend of streetwear style and high-end fashion. Perfect for casual outings or making a bold statement, it’s a must-have for Nike enthusiasts."
+        },
+
+        {
+            "id": 9,
+            "image": "/BoybasketBall.png",
+            "name": "Sport Basketball",
+            "price": "$49",
+            "description": "Basketball Black Wear",
+            "category": "Sport",
+            "overview": "Identical to ID 5, this Sport Basketball Black Wear is a budget-friendly option for basketball players. Its moisture-wicking fabric and ergonomic design ensure maximum comfort and mobility on the court. The black aesthetic exudes confidence, making it a popular choice for athletes who want performance without breaking the bank."
+        },
         
-        {
-        "id" : 39,
-        "image" : "/YoungBasketballer.png",
-        "name" : "Sport Basketball",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
-        },
-
-        {
-        "id" : 7,
-        "image" : "/Black&WhiteShoe.png",
-        "name" : "Nike",
-        "price" : "$79",
-        "description": "Nike shoe"
-        },
-
-        {
-        "id" : 8,
-        "image" : "/Boy&Girlhoddie.png",
-        "name" : "Nike Hoodie",
-        "price" : "$500",
-        "description": "Nike Custom Hoodie"
-        },
-
-        {
-        "id" : 9,
-        "image" : "/BoybasketBall.png",
-        "name" : "Sport Basketball",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
-        },
-
          {
-        "id" : 6,
-        "image" : "/BallSpinning.png",
-        "name" : "Basketball",
-        "price" : "$173",
-        "description": "Basketball Wear"
+            "id": 6,
+            "image": "/BallSpinning.png",
+            "name": "Basketball",
+            "price": "$173",
+            "description": "Basketball Wear",
+            "category": "Sport",
+            "overview": "This Basketball Wear from Nike is engineered for high-performance athletes. Priced at $173, it features advanced fabric technology for enhanced breathability and flexibility, allowing players to move freely during fast-paced games. The design emphasizes durability and comfort, making it ideal for both practice sessions and competitive matches."
         }
 
         

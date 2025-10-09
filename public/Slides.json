@@ -1,53 +1,70 @@
 {
     "Slides" : [
         {
-        "id" : 1,
-        "image" : "/NikeN7.png",
-        "name" : "NikeN7",
-        "price" : "$125",
-        "description": "Basketball Shoes "
+            "id": 1,
+            "image": "/NikeN7.png",
+            "name": "NikeN7",
+            "price": "$125",
+            "description": "Basketball Shoes",
+            "category": "Shoe",
+            "overview": "The Nike N7 Basketball Shoes are designed for athletes who demand performance and style on the court. Inspired by Native American and Indigenous communities, the N7 line blends cultural significance with cutting-edge technology. These shoes feature responsive cushioning and a durable outsole for enhanced traction during high-intensity basketball games. Ideal for players seeking a combination of comfort, support, and a unique aesthetic that celebrates heritage."
         },
         {
-        "id" : 2,
-        "image" : "/NikePalm.png",
-        "name" : "Nike Benassi N7",
-        "price" : "$35",
-        "description": "Slides"
+            "id": 2,
+            "image": "/NikePalm.png",
+            "name": "Nike Benassi N7",
+            "price": "$35",
+            "description": "Slides",
+            "category": "Shoe",
+            "overview": "The Nike Benassi N7 Slides offer casual comfort with a nod to cultural pride. Part of the N7 collection, these slides are perfect for post-game relaxation or everyday wear. With a cushioned footbed and lightweight design, they provide all-day comfort for athletes and casual wearers alike. The sleek design and subtle branding make them versatile for lounging or quick errands."
         },
         {
-        "id" : 3,
-        "image" : "/BrownNike.png",
-        "name" : "Brown Nike Jordan",
-        "price" : "$72",
-        "description": "Air Jordan"
+            "id": 3,
+            "image": "/BrownNike.png",
+            "name": "Brown Nike Jordan",
+            "price": "$72",
+            "description": "Air Jordan",
+            "category": "Shoe",
+            "overview": "The Brown Nike Jordan Air Jordan shoes combine iconic style with modern functionality. These sneakers feature the signature Air cushioning for superior comfort and impact protection, making them suitable for both casual wear and light athletic activities. The rich brown colorway adds a sophisticated twist to the classic Jordan design, appealing to sneaker enthusiasts and fashion-forward individuals."
+        },
+
+        {
+            "id": 7,
+            "image": "/Black&WhiteShoe.png",
+            "name": "Nike",
+            "price": "$79",
+            "description": "Nike shoe",
+            "category": "Shoe",
+            "overview": "The Nike Shoe is a versatile, everyday sneaker that balances style and functionality. With a sleek black-and-white design, it’s perfect for casual wear or light athletic activities. The shoe offers reliable cushioning and a sturdy outsole, ensuring comfort and durability for daily use. It’s an affordable option for those seeking classic Nike quality."
+        },
+
+        {
+            "id": 27,
+            "image": "/WhiteNike.png",
+            "name": "Sneaker",
+            "price": "$49",
+            "description": "White Nike",
+            "category": "Shoe",
+            "overview": "The White Nike Sneaker is a classic, affordable option for sneaker enthusiasts. Priced at $49, these shoes feature a clean white design, lightweight construction, and reliable cushioning. Perfect for casual wear or light activities, they offer timeless style and Nike’s signature comfort."
         },
         {
-        "id" : 7,
-        "image" : "/Black&WhiteShoe.png",
-        "name" : "Nike",
-        "price" : "$79",
-        "description": "Nike shoe"
+            "id": 28,
+            "image": "/WhiteNikeJordan.png",
+            "name": "Jordan",
+            "price": "$49",
+            "description": "Comfort Nike",
+            "category": "Shoe",
+            "overview": "The Jordan Comfort Nike shoes are designed for everyday wear with a focus on comfort. Priced at $49, these sneakers feature cushioned soles and a sleek design, making them ideal for casual outings or light sports. Their affordability and iconic Jordan branding make them a popular choice."
         },
+
         {
-        "id" : 28,
-        "image" : "/WhiteNikeJordan.png",
-        "name" : "Jordan",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
-        },
-        {
-        "id" : 27,
-        "image" : "/WhiteNike.png",
-        "name" : "Sneaker",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
-        },
-        {
-        "id" : 14,
-        "image" : "/FootballPlay.png",
-        "name" : "Nike Soccer",
-        "price" : "$203",
-        "description": "Go Soccer Pro"
+            "id": 14,
+            "image": "/FootballPlay.png",
+            "name": "Nike Soccer",
+            "price": "$203",
+            "description": "Go Soccer Pro",
+            "category": "Sport",
+            "overview": "The Nike Soccer Go Soccer Pro apparel is crafted for soccer players who demand excellence. Priced at $203, this sportswear offers lightweight, breathable fabrics and a tailored fit to enhance agility and speed on the field. Its durable construction ensures it withstands the rigors of intense matches, making it ideal for serious athletes."
         }
 
 

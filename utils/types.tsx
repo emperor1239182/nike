@@ -3,7 +3,9 @@ export interface Product {
     name : string;
     price : number;
     image : string;
-    description : string
+    description : string;
+    overview : string;
+    category : string
 }
 
 export interface FavoritesContextType {
@@ -31,5 +33,7 @@ export type FavoriteButtonProps = {
 }
 
 export type Recommended = {
-    recommended : Product [];
+    recommendedShoes : Product [];
+    recommendedClothes : Product [];
+    recommendedSports : Product [];
 }

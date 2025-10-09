@@ -1,81 +1,103 @@
 {
     "Sportwears" : [
         {
-        "id" : 13,
-        "image" : "/Dunk.png",
-        "name" : "Sport Basketball",
-        "price" : "$782",
-        "description": "Basketball Black Wear"
+            "id": 13,
+            "image": "/Dunk.png",
+            "name": "Sport Basketball",
+            "price": "$782",
+            "description": "Basketball Black Wear",
+            "category": "Sport",
+            "overview": "This premium Sport Basketball Black Wear is designed for elite athletes. Priced at $782, it features top-tier materials and advanced technology for superior performance on the court. Its sleek black design and ergonomic fit provide unmatched comfort and style, making it a favorite for professional and competitive players."
         },
         {
-        "id" : 14,
-        "image" : "/FootballPlay.png",
-        "name" : "Nike Soccer",
-        "price" : "$203",
-        "description": "Go Soccer Pro"
+            "id": 14,
+            "image": "/FootballPlay.png",
+            "name": "Nike Soccer",
+            "price": "$203",
+            "description": "Go Soccer Pro",
+            "category": "Sport",
+            "overview": "The Nike Soccer Go Soccer Pro apparel is crafted for soccer players who demand excellence. Priced at $203, this sportswear offers lightweight, breathable fabrics and a tailored fit to enhance agility and speed on the field. Its durable construction ensures it withstands the rigors of intense matches, making it ideal for serious athletes."
         },
         {
-        "id" : 15,
-        "image" : "/GirlExercise.png",
-        "name" : "Nike Workout",
-        "price" : "$340",
-        "description": "Workout With Ease"
+            "id": 15,
+            "image": "/GirlExercise.png",
+            "name": "Nike Workout",
+            "price": "$340",
+            "description": "Workout With Ease",
+            "category": "Sport",
+            "overview": "The Nike Workout apparel is designed for fitness enthusiasts who prioritize comfort and performance. Priced at $340, this sportswear features moisture-wicking technology and a flexible fit, perfect for gym sessions, running, or cross-training. Its sleek design ensures you look as good as you feel during intense workouts."
         },
         {
-        "id" : 16,
-        "image" : "/GirlRuning.png",
-        "name" : "Nike Track Star",
-        "price" : "$65",
-        "description": "Go Atlethe"
+            "id": 16,
+            "image": "/GirlRuning.png",
+            "name": "Nike Track Star",
+            "price": "$65",
+            "description": "Go Atlethe",
+            "category": "Sport",
+            "overview": "The Nike Track Star apparel is built for runners and track athletes seeking speed and comfort. Priced at an affordable $65, this sportswear offers lightweight, breathable materials that support high-performance activities. Its vibrant design inspires confidence, making it a great choice for aspiring athletes."
         },
         {
-        "id" : 19,
-        "image" : "/HoldingBall.png",
-        "name" : "Nike Skills",
-        "price" : "$600",
-        "description": "Go Skillful"
+            "id": 19,
+            "image": "/HoldingBall.png",
+            "name": "Nike Skills",
+            "price": "$600",
+            "description": "Go Skillful",
+            "category": "Sport",
+            "overview": "The Nike Skills sportswear is a premium choice for athletes honing their craft. Priced at $600, it features advanced materials and a performance-driven design, perfect for basketball or other high-intensity sports. Its sleek look and durable construction make it a top pick for serious competitors."
         },
         {
-        "id" : 20,
-        "image" : "/HolidayGirls.png",
-        "name" : "Nike Holidays",
-        "price" : "$1000",
-        "description": "Holiday Just Got Better"
+            "id": 20,
+            "image": "/HolidayGirls.png",
+            "name": "Nike Holidays",
+            "price": "$1000",
+            "description": "Holiday Just Got Better",
+            "category": "Sport",
+            "overview": "The Nike Holidays sportswear is a luxurious, limited-edition piece designed for athletes who want to celebrate in style. Priced at $1000, this premium apparel features top-of-the-line materials and a festive design, perfect for special occasions or high-performance activities. It’s a statement piece for those who demand the best."
         },
         {
-        "id" : 23,
-        "image" : "/SportTime.png",
-        "name" : "Nike All Sport",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 23,
+            "image": "/SportTime.png",
+            "name": "Nike All Sport",
+            "price": "$49",
+            "description": "Basketball Black Wear",
+            "category": "Sport",
+            "overview": "The Nike All Sport apparel is a versatile, budget-friendly option for athletes. Priced at $49, this sportswear is designed for basketball but adaptable to various sports. Its lightweight, breathable fabric ensures comfort and performance, making it a reliable choice for active individuals."
         },
         {
-        "id" : 24,
-        "image" : "/Tennis.png",
-        "name" : "Sport Basketball",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 24,
+            "image": "/Tennis.png",
+            "name": "Sport Tennis",
+            "price": "$49",
+            "description": "Complete Nike Tennis Sport",
+            "category": "Sport",
+            "overview": "The Sport Tennis apparel is tailored for tennis players seeking performance and style. Priced at $49, it features moisture-wicking fabric and a flexible fit to support quick movements on the court. Its sleek design makes it a great choice for both recreational and competitive players."
         },
         {
-        "id" :39,
-        "image" : "/YoungBasketballer.png",
-        "name" : "Sport Basketball",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
-        },
-         {
-        "id" : 5,
-        "image" : "/Backshot.png",
-        "name" : "Sport Basketball",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 5,
+            "image": "/Backshot.png",
+            "name": "Sport Basketball",
+            "price": "$49",
+            "description": "Basketball Black Wear",
+            "category": "Sport",
+            "overview": "The Sport Basketball Black Wear is tailored for basketball enthusiasts who need performance-driven apparel. This sportswear is lightweight, moisture-wicking, and designed to keep athletes cool and dry during intense games. Its sleek black design offers a bold, professional look, making it a go-to choice for players aiming to dominate on the court."
         },
         {
-        "id" : 6,
-        "image" : "/BallSpinning.png",
-        "name" : "Basketball",
-        "price" : "$173",
-        "description": "Basketball Wear"
+            "id": 6,
+            "image": "/BallSpinning.png",
+            "name": "Basketball",
+            "price": "$173",
+            "description": "Basketball Wear",
+            "category": "Sport",
+            "overview": "This Basketball Wear from Nike is engineered for high-performance athletes. Priced at $173, it features advanced fabric technology for enhanced breathability and flexibility, allowing players to move freely during fast-paced games. The design emphasizes durability and comfort, making it ideal for both practice sessions and competitive matches."
+        },
+        {
+            "id": 39,
+            "image": "/YoungBasketballer.png",
+            "name": "Sport Basketball",
+            "price": "$49",
+            "description": "Basketball fit",
+            "category": "Sport",
+            "overview": "The Sport Basketball Fit apparel is crafted for basketball players who need performance and affordability. Priced at $49, this sportswear offers a snug, flexible fit and moisture-wicking technology to keep athletes comfortable during games or practices. Its sleek design ensures you look and feel your best on the court."
         }
 
     ]

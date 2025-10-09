@@ -1,238 +1,265 @@
 {
     "Products": [
         {
-        "id" : 1,
-        "image" : "/NikeN7.png",
-        "name" : "NikeN7",
-        "price" : "$125",
-        "description": "Basketball Shoes "
+            "id": 1,
+            "image": "/NikeN7.png",
+            "name": "NikeN7",
+            "price": "$125",
+            "description": "Basketball Shoes",
+            "category": "Shoe",
+            "overview": "The Nike N7 Basketball Shoes are designed for athletes who demand performance and style on the court. Inspired by Native American and Indigenous communities, the N7 line blends cultural significance with cutting-edge technology. These shoes feature responsive cushioning and a durable outsole for enhanced traction during high-intensity basketball games. Ideal for players seeking a combination of comfort, support, and a unique aesthetic that celebrates heritage."
         },
-
-         {
-        "id" : 2,
-        "image" : "/NikePalm.png",
-        "name" : "Nike Benassi N7",
-        "price" : "$35",
-        "description": "Slides"
-        },
-        
-         {
-        "id" : 3,
-        "image" : "/BrownNike.png",
-        "name" : "Brown Nike Jordan",
-        "price" : "$72",
-        "description": "Air Jordan"
-        },
-        
-         {
-        "id" : 4,
-        "image" : "/AlbinoGirl.png",
-        "name" : "Nike Life",
-        "price" : "$305",
-        "description": "Comfortable Wear"
-        },
-        
-         {
-        "id" : 5,
-        "image" : "/Backshot.png",
-        "name" : "Sport Basketball",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
-        },
-
         {
-        "id" : 6,
-        "image" : "/BallSpinning.png",
-        "name" : "Basketball",
-        "price" : "$173",
-        "description": "Basketball Wear"
+            "id": 2,
+            "image": "/NikePalm.png",
+            "name": "Nike Benassi N7",
+            "price": "$35",
+            "description": "Slides",
+            "category": "Shoe",
+            "overview": "The Nike Benassi N7 Slides offer casual comfort with a nod to cultural pride. Part of the N7 collection, these slides are perfect for post-game relaxation or everyday wear. With a cushioned footbed and lightweight design, they provide all-day comfort for athletes and casual wearers alike. The sleek design and subtle branding make them versatile for lounging or quick errands."
         },
-
         {
-        "id" : 7,
-        "image" : "/Black&WhiteShoe.png",
-        "name" : "Nike",
-        "price" : "$79",
-        "description": "Nike shoe"
+            "id": 3,
+            "image": "/BrownNike.png",
+            "name": "Brown Nike Jordan",
+            "price": "$72",
+            "description": "Air Jordan",
+            "category": "Shoe",
+            "overview": "The Brown Nike Jordan Air Jordan shoes combine iconic style with modern functionality. These sneakers feature the signature Air cushioning for superior comfort and impact protection, making them suitable for both casual wear and light athletic activities. The rich brown colorway adds a sophisticated twist to the classic Jordan design, appealing to sneaker enthusiasts and fashion-forward individuals."
         },
-
         {
-        "id" : 8,
-        "image" : "/Boy&Girlhoddie.png",
-        "name" : "Nike Hoodie",
-        "price" : "$500",
-        "description": "Nike Custom Hoodie"
+            "id": 4,
+            "image": "/AlbinoGirl.png",
+            "name": "Nike Life",
+            "price": "$305",
+            "description": "Comfortable Wear",
+            "category": "Clothing",
+            "overview": "Nike Life is a premium clothing line designed for ultimate comfort and versatility. This piece is crafted from high-quality, breathable fabrics that provide a relaxed fit, perfect for casual outings or lounging at home. The elevated price reflects its superior craftsmanship and stylish design, making it a staple for those who prioritize both comfort and fashion in their everyday wardrobe."
         },
-
         {
-        "id" : 9,
-        "image" : "/BoybasketBall.png",
-        "name" : "Sport Basketball",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 5,
+            "image": "/Backshot.png",
+            "name": "Sport Basketball",
+            "price": "$49",
+            "description": "Basketball Black Wear",
+            "category": "Sport",
+            "overview": "The Sport Basketball Black Wear is tailored for basketball enthusiasts who need performance-driven apparel. This sportswear is lightweight, moisture-wicking, and designed to keep athletes cool and dry during intense games. Its sleek black design offers a bold, professional look, making it a go-to choice for players aiming to dominate on the court."
         },
-
         {
-        "id" : 10,
-        "image" : "/BoyCart.png",
-        "name" : "Jordan Air Nike",
-        "price" : "$234",
-        "description": "Jordan Casual"
+            "id": 6,
+            "image": "/BallSpinning.png",
+            "name": "Basketball",
+            "price": "$173",
+            "description": "Basketball Wear",
+            "category": "Sport",
+            "overview": "This Basketball Wear from Nike is engineered for high-performance athletes. Priced at $173, it features advanced fabric technology for enhanced breathability and flexibility, allowing players to move freely during fast-paced games. The design emphasizes durability and comfort, making it ideal for both practice sessions and competitive matches."
         },
-
         {
-        "id" : 11,
-        "image" : "/BrownJeansNike.png",
-        "name" : "Nike Panties",
-        "price" : "$110",
-        "description": "Casual Panties"
+            "id": 7,
+            "image": "/Black&WhiteShoe.png",
+            "name": "Nike",
+            "price": "$79",
+            "description": "Nike shoe",
+            "category": "Shoe",
+            "overview": "The Nike Shoe is a versatile, everyday sneaker that balances style and functionality. With a sleek black-and-white design, it’s perfect for casual wear or light athletic activities. The shoe offers reliable cushioning and a sturdy outsole, ensuring comfort and durability for daily use. It’s an affordable option for those seeking classic Nike quality."
         },
-
         {
-        "id" : 12,
-        "image" : "/BrownPanties.png",
-        "name" : "Brown Nike Panties",
-        "price" : "$49",
-        "description": "Corporate Wear "
+            "id": 8,
+            "image": "/Boy&Girlhoddie.png",
+            "name": "Nike Hoodie",
+            "price": "$500",
+            "description": "Nike Custom Hoodie",
+            "category": "Clothing",
+            "overview": "The Nike Custom Hoodie is a premium, personalized piece of apparel designed for those who want to stand out. Priced at $500, this hoodie combines luxurious materials with customizable design elements, offering a unique blend of streetwear style and high-end fashion. Perfect for casual outings or making a bold statement, it’s a must-have for Nike enthusiasts."
         },
-
         {
-        "id" : 13,
-        "image" : "/Dunk.png",
-        "name" : "Sport Basketball",
-        "price" : "$782",
-        "description": "Basketball Black Wear"
+            "id": 9,
+            "image": "/BoybasketBall.png",
+            "name": "Sport Basketball",
+            "price": "$49",
+            "description": "Basketball Black Wear",
+            "category": "Sport",
+            "overview": "Identical to ID 5, this Sport Basketball Black Wear is a budget-friendly option for basketball players. Its moisture-wicking fabric and ergonomic design ensure maximum comfort and mobility on the court. The black aesthetic exudes confidence, making it a popular choice for athletes who want performance without breaking the bank."
         },
-
         {
-        "id" : 14,
-        "image" : "/FootballPlay.png",
-        "name" : "Nike Soccer",
-        "price" : "$203",
-        "description": "Go Soccer Pro"
+            "id": 10,
+            "image": "/BoyCart.png",
+            "name": "Jordan Air Nike",
+            "price": "$234",
+            "description": "Jordan Casual",
+            "category": "Shoe",
+            "overview": "The Jordan Air Nike shoes are a premium addition to the Air Jordan lineup, blending casual style with athletic performance. Priced at $234, these shoes feature advanced cushioning and a sleek design, making them suitable for both streetwear and light sports activities. Their versatile look appeals to sneakerheads and casual wearers alike."
         },
-
         {
-        "id" : 15,
-        "image" : "/GirlExercise.png",
-        "name" : "Nike Workout",
-        "price" : "$340",
-        "description": "Workout With Ease"
+            "id": 11,
+            "image": "/BrownJeansNike.png",
+            "name": "Nike Panties",
+            "price": "$110",
+            "description": "Casual Panties",
+            "category": "Clothing",
+            "overview": "The Nike Panties (likely referring to pants or leggings) are designed for casual comfort with a modern edge. Crafted from soft, durable materials, these pants offer a relaxed fit perfect for everyday wear or light workouts. The $110 price point reflects their quality and versatility, making them a great addition to any casual wardrobe."
         },
-
         {
-        "id" : 16,
-        "image" : "/GirlRuning.png",
-        "name" : "Nike Track Star",
-        "price" : "$65",
-        "description": "Go Atlethe"
+            "id": 12,
+            "image": "/BrownPanties.png",
+            "name": "Brown Nike Panties",
+            "price": "$49",
+            "description": "Corporate Wear",
+            "category": "Clothing",
+            "overview": "The Brown Nike Panties (likely pants or leggings) combine corporate sophistication with Nike’s signature comfort. Priced at $49, these pants are designed for professional settings while maintaining a relaxed, breathable fit. The brown colorway adds a stylish, understated touch, ideal for those seeking versatile work-to-weekend apparel."
         },
-
         {
-        "id" : 17,
-        "image" : "/GirlsDancing.png",
-        "name" : "Nike",
-        "price" : "$29",
-        "description": "Have Fun With Nike"
+            "id": 13,
+            "image": "/Dunk.png",
+            "name": "Sport Basketball",
+            "price": "$782",
+            "description": "Basketball Black Wear",
+            "category": "Sport",
+            "overview": "This premium Sport Basketball Black Wear is designed for elite athletes. Priced at $782, it features top-tier materials and advanced technology for superior performance on the court. Its sleek black design and ergonomic fit provide unmatched comfort and style, making it a favorite for professional and competitive players."
         },
-
         {
-        "id" : 18,
-        "image" : "/GirlWrapper.png",
-        "name" : "Nike Culture",
-        "price" : "$73",
-        "description": "Cultural Nike Wear"
+            "id": 14,
+            "image": "/FootballPlay.png",
+            "name": "Nike Soccer",
+            "price": "$203",
+            "description": "Go Soccer Pro",
+            "category": "Sport",
+            "overview": "The Nike Soccer Go Soccer Pro apparel is crafted for soccer players who demand excellence. Priced at $203, this sportswear offers lightweight, breathable fabrics and a tailored fit to enhance agility and speed on the field. Its durable construction ensures it withstands the rigors of intense matches, making it ideal for serious athletes."
         },
-
         {
-        "id" : 19,
-        "image" : "/HoldingBall.png",
-        "name" : "Nike Skills",
-        "price" : "$600",
-        "description": "Go Skillful"
+            "id": 15,
+            "image": "/GirlExercise.png",
+            "name": "Nike Workout",
+            "price": "$340",
+            "description": "Workout With Ease",
+            "category": "Sport",
+            "overview": "The Nike Workout apparel is designed for fitness enthusiasts who prioritize comfort and performance. Priced at $340, this sportswear features moisture-wicking technology and a flexible fit, perfect for gym sessions, running, or cross-training. Its sleek design ensures you look as good as you feel during intense workouts."
         },
-
         {
-        "id" : 20,
-        "image" : "/HolidayGirls.png",
-        "name" : "Nike Holidays",
-        "price" : "$1000",
-        "description": "Holiday Just Got Better"
+            "id": 16,
+            "image": "/GirlRuning.png",
+            "name": "Nike Track Star",
+            "price": "$65",
+            "description": "Go Atlethe",
+            "category": "Sport",
+            "overview": "The Nike Track Star apparel is built for runners and track athletes seeking speed and comfort. Priced at an affordable $65, this sportswear offers lightweight, breathable materials that support high-performance activities. Its vibrant design inspires confidence, making it a great choice for aspiring athletes."
         },
-
         {
-        "id" : 21,
-        "image" : "/Palmer.png",
-        "name" : "Nike",
-        "price" : "$79",
-        "description": "Stay Cool"
+            "id": 17,
+            "image": "/GirlsDancing.png",
+            "name": "Nike",
+            "price": "$29",
+            "description": "Have Fun With Nike",
+            "category": "Clothing",
+            "overview": "This Nike clothing piece is an affordable, fun addition to any casual wardrobe. Priced at $29, it’s designed for everyday wear, offering a relaxed fit and vibrant style. Perfect for casual outings or low-key activities, this item embodies Nike’s playful yet functional approach to fashion."
         },
-
         {
-        "id" : 22,
-        "image" : "/Socks.png",
-        "name" : "Nike Socks",
-        "price" : "$25",
-        "description": "Nike Socks"
+            "id": 18,
+            "image": "/GirlWrapper.png",
+            "name": "Nike Culture",
+            "price": "$73",
+            "description": "Cultural Nike Wear",
+            "category": "Clothing",
+            "overview": "The Nike Culture clothing line celebrates diversity and heritage through stylish, comfortable apparel. Priced at $73, this piece features unique design elements inspired by cultural motifs, combined with Nike’s signature quality. It’s ideal for those who want to express their individuality while staying comfortable."
         },
-
         {
-        "id" : 23,
-        "image" : "/SportTime.png",
-        "name" : "Nike All Sport",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 19,
+            "image": "/HoldingBall.png",
+            "name": "Nike Skills",
+            "price": "$600",
+            "description": "Go Skillful",
+            "category": "Sport",
+            "overview": "The Nike Skills sportswear is a premium choice for athletes honing their craft. Priced at $600, it features advanced materials and a performance-driven design, perfect for basketball or other high-intensity sports. Its sleek look and durable construction make it a top pick for serious competitors."
         },
-
         {
-        "id" : 24,
-        "image" : "/Tennis.png",
-        "name" : "Sport Tennis",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 20,
+            "image": "/HolidayGirls.png",
+            "name": "Nike Holidays",
+            "price": "$1000",
+            "description": "Holiday Just Got Better",
+            "category": "Sport",
+            "overview": "The Nike Holidays sportswear is a luxurious, limited-edition piece designed for athletes who want to celebrate in style. Priced at $1000, this premium apparel features top-of-the-line materials and a festive design, perfect for special occasions or high-performance activities. It’s a statement piece for those who demand the best."
         },
-
         {
-        "id" : 25,
-        "image" : "/TwoboysPanties.png",
-        "name" : "Luxury",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 21,
+            "image": "/Palmer.png",
+            "name": "Nike",
+            "price": "$79",
+            "description": "Stay Cool",
+            "category": "Clothing",
+            "overview": "This Nike clothing item is designed for those who want to stay cool and stylish. Priced at $79, it features breathable fabrics and a modern design, making it perfect for casual wear or light physical activities. Its versatility and affordability make it a wardrobe essential."
         },
-
         {
-        "id" : 26,
-        "image" : "/TwogirlsJumping.png",
-        "name" : "Athlete",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 22,
+            "image": "/Socks.png",
+            "name": "Nike Socks",
+            "price": "$25",
+            "description": "Nike Socks",
+            "category": "Clothing",
+            "overview": "The Nike Socks are a must-have accessory for any active lifestyle. Priced at $25, these socks offer cushioning, moisture-wicking technology, and a snug fit to keep you comfortable during workouts or daily wear. Their simple yet functional design makes them a practical addition to any wardrobe."
         },
-
         {
-        "id" : 27,
-        "image" : "/WhiteNike.png",
-        "name" : "Sneaker",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 23,
+            "image": "/SportTime.png",
+            "name": "Nike All Sport",
+            "price": "$49",
+            "description": "Basketball Black Wear",
+            "category": "Sport",
+            "overview": "The Nike All Sport apparel is a versatile, budget-friendly option for athletes. Priced at $49, this sportswear is designed for basketball but adaptable to various sports. Its lightweight, breathable fabric ensures comfort and performance, making it a reliable choice for active individuals."
         },
-
         {
-        "id" : 28,
-        "image" : "/WhiteNikeJordan.png",
-        "name" : "Jordan",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 24,
+            "image": "/Tennis.png",
+            "name": "Sport Tennis",
+            "price": "$49",
+            "description": "Complete Nike Tennis Sport",
+            "category": "Sport",
+            "overview": "The Sport Tennis apparel is tailored for tennis players seeking performance and style. Priced at $49, it features moisture-wicking fabric and a flexible fit to support quick movements on the court. Its sleek design makes it a great choice for both recreational and competitive players."
         },
-
         {
-        "id" : 39,
-        "image" : "/YoungBasketballer.png",
-        "name" : "Sport Basketball",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 25,
+            "image": "/TwoboysPanties.png",
+            "name": "Luxury",
+            "price": "$49",
+            "description": "Casual Panties",
+            "category": "Clothing",
+            "overview": "The Luxury Nike clothing (likely pants or leggings) offers a blend of comfort and sophistication. Priced at $49, these pants feature a sleek design and soft materials, perfect for casual outings or relaxed settings. Their affordable price makes them accessible for those seeking a touch of elegance."
+        },
+        {
+            "id": 26,
+            "image": "/TwogirlsJumping.png",
+            "name": "Athlete",
+            "price": "$49",
+            "description": "Atlethe Sport Nike",
+            "category": "Sport",
+            "overview": "The Athlete Sport Nike apparel is designed for dynamic individuals who live for sports. Priced at $49, this sportswear offers a lightweight, breathable fit that supports a range of athletic activities. Its vibrant design inspires energy and confidence, making it perfect for athletes of all levels."
+        },
+        {
+            "id": 27,
+            "image": "/WhiteNike.png",
+            "name": "Sneaker",
+            "price": "$49",
+            "description": "White Nike",
+            "category": "Shoe",
+            "overview": "The White Nike Sneaker is a classic, affordable option for sneaker enthusiasts. Priced at $49, these shoes feature a clean white design, lightweight construction, and reliable cushioning. Perfect for casual wear or light activities, they offer timeless style and Nike’s signature comfort."
+        },
+        {
+            "id": 28,
+            "image": "/WhiteNikeJordan.png",
+            "name": "Jordan",
+            "price": "$49",
+            "description": "Comfort Nike",
+            "category": "Shoe",
+            "overview": "The Jordan Comfort Nike shoes are designed for everyday wear with a focus on comfort. Priced at $49, these sneakers feature cushioned soles and a sleek design, making them ideal for casual outings or light sports. Their affordability and iconic Jordan branding make them a popular choice."
+        },
+        {
+            "id": 39,
+            "image": "/YoungBasketballer.png",
+            "name": "Sport Basketball",
+            "price": "$49",
+            "description": "Basketball fit",
+            "category": "Sport",
+            "overview": "The Sport Basketball Fit apparel is crafted for basketball players who need performance and affordability. Priced at $49, this sportswear offers a snug, flexible fit and moisture-wicking technology to keep athletes comfortable during games or practices. Its sleek design ensures you look and feel your best on the court."
         }
-        
-
     ]
-
 }

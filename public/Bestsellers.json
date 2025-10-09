@@ -1,68 +1,81 @@
 {
     "BestSellers" : [
         
-        {
-        "id" : 2,
-        "image" : "/NikePalm.png",
-        "name" : "Nike Benassi N7",
-        "price" : "$35",
-        "description": "Slides"
+      {
+            "id": 2,
+            "image": "/NikePalm.png",
+            "name": "Nike Benassi N7",
+            "price": "$35",
+            "description": "Slides",
+            "category": "Shoe",
+            "overview": "The Nike Benassi N7 Slides offer casual comfort with a nod to cultural pride. Part of the N7 collection, these slides are perfect for post-game relaxation or everyday wear. With a cushioned footbed and lightweight design, they provide all-day comfort for athletes and casual wearers alike. The sleek design and subtle branding make them versatile for lounging or quick errands."
         },
 
         {
-        "id" : 7,
-        "image" : "/Black&WhiteShoe.png",
-        "name" : "Nike",
-        "price" : "$79",
-        "description": "Nike shoe"
+            "id": 7,
+            "image": "/Black&WhiteShoe.png",
+            "name": "Nike",
+            "price": "$79",
+            "description": "Nike shoe",
+            "category": "Shoe",
+            "overview": "The Nike Shoe is a versatile, everyday sneaker that balances style and functionality. With a sleek black-and-white design, it’s perfect for casual wear or light athletic activities. The shoe offers reliable cushioning and a sturdy outsole, ensuring comfort and durability for daily use. It’s an affordable option for those seeking classic Nike quality."
+        },
+        {
+            "id": 8,
+            "image": "/Boy&Girlhoddie.png",
+            "name": "Nike Hoodie",
+            "price": "$500",
+            "description": "Nike Custom Hoodie",
+            "category": "Clothing",
+            "overview": "The Nike Custom Hoodie is a premium, personalized piece of apparel designed for those who want to stand out. Priced at $500, this hoodie combines luxurious materials with customizable design elements, offering a unique blend of streetwear style and high-end fashion. Perfect for casual outings or making a bold statement, it’s a must-have for Nike enthusiasts."
+        },
+
+       {
+            "id": 11,
+            "image": "/BrownJeansNike.png",
+            "name": "Nike Panties",
+            "price": "$110",
+            "description": "Casual Panties",
+            "category": "Clothing",
+            "overview": "The Nike Panties (likely referring to pants or leggings) are designed for casual comfort with a modern edge. Crafted from soft, durable materials, these pants offer a relaxed fit perfect for everyday wear or light workouts. The $110 price point reflects their quality and versatility, making them a great addition to any casual wardrobe."
+        },
+        {
+            "id": 13,
+            "image": "/Dunk.png",
+            "name": "Sport Basketball",
+            "price": "$782",
+            "description": "Basketball Black Wear",
+            "category": "Sport",
+            "overview": "This premium Sport Basketball Black Wear is designed for elite athletes. Priced at $782, it features top-tier materials and advanced technology for superior performance on the court. Its sleek black design and ergonomic fit provide unmatched comfort and style, making it a favorite for professional and competitive players."
         },
 
         {
-        "id" : 8,
-        "image" : "/Boy&Girlhoddie.png",
-        "name" : "Nike Hoodie",
-        "price" : "$500",
-        "description": "Nike Custom Hoodie"
+            "id": 20,
+            "image": "/HolidayGirls.png",
+            "name": "Nike Holidays",
+            "price": "$1000",
+            "description": "Holiday Just Got Better",
+            "category": "Sport",
+            "overview": "The Nike Holidays sportswear is a luxurious, limited-edition piece designed for athletes who want to celebrate in style. Priced at $1000, this premium apparel features top-of-the-line materials and a festive design, perfect for special occasions or high-performance activities. It’s a statement piece for those who demand the best."
+        },
+        {
+            "id": 21,
+            "image": "/Palmer.png",
+            "name": "Nike",
+            "price": "$79",
+            "description": "Stay Cool",
+            "category": "Clothing",
+            "overview": "This Nike clothing item is designed for those who want to stay cool and stylish. Priced at $79, it features breathable fabrics and a modern design, making it perfect for casual wear or light physical activities. Its versatility and affordability make it a wardrobe essential."
         },
 
         {
-        "id" : 11,
-        "image" : "/BrownJeansNike.png",
-        "name" : "Nike Panties",
-        "price" : "$110",
-        "description": "Casual Panties"
-        },
-
-        {
-        "id" : 13,
-        "image" : "/Dunk.png",
-        "name" : "Sport Basketball",
-        "price" : "$782",
-        "description": "Basketball Black Wear"
-        },
-
-        {
-        "id" : 20,
-        "image" : "/HolidayGirls.png",
-        "name" : "Nike Holidays",
-        "price" : "$1000",
-        "description": "Holiday Just Got Better"
-        },
-
-        {
-        "id" : 21,
-        "image" : "/Palmer.png",
-        "name" : "Nike",
-        "price" : "$79",
-        "description": "Stay Cool"
-        },
-
-        {
-        "id" : 28,
-        "image" : "/WhiteNikeJordan.png",
-        "name" : "Jordan",
-        "price" : "$49",
-        "description": "Basketball Black Wear"
+            "id": 28,
+            "image": "/WhiteNikeJordan.png",
+            "name": "Jordan",
+            "price": "$49",
+            "description": "Comfort Nike",
+            "category": "Shoe",
+            "overview": "The Jordan Comfort Nike shoes are designed for everyday wear with a focus on comfort. Priced at $49, these sneakers feature cushioned soles and a sleek design, making them ideal for casual outings or light sports. Their affordability and iconic Jordan branding make them a popular choice."
         }
 
 

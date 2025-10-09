@@ -170,7 +170,9 @@ export const useCart = () => {
 const RecommendedContext = createContext<Recommended | null>(null);
 
 export const RecommendedProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
-    const [recommended, setRecommended] = useState<Product[]>([]);
+    const [recommendedShoes, setRecommendedShoes] = useState<Product[]>([]);
+    const [recommendedClothes, setRecommendedClothes] = useState<Product[]>([]);
+    const [recommendedSports, setRecommendedSports] = useState<Product[]>([]);
     
     useEffect(() => {
         const recommend = async () => {
@@ -179,7 +181,14 @@ export const RecommendedProvider: React.FC<{children: React.ReactNode}> = ({chil
                 const res = await req.json();
                 const data: Product[] = res.Products;
                 
-                setRecommended(data.slice(1, 10));
+                const recommendedShoeProducts = data.filter((items) => items.category === "Shoe");
+                const recommendedClothProducts = data.filter((items) => items.category === "Clothing");
+                const recommendedSportProducts = data.filter((items) => items.category === "Sport");
+
+                setRecommendedShoes(recommendedShoeProducts);
+                setRecommendedClothes(recommendedClothProducts);
+                setRecommendedSports(recommendedSportProducts);
+
             } catch (error) {
                 console.error("Error fetching products:", error);
             }
@@ -188,7 +197,11 @@ export const RecommendedProvider: React.FC<{children: React.ReactNode}> = ({chil
     }, []); 
 
     return (
-        <RecommendedContext.Provider value={{ recommended }}>
+        <RecommendedContext.Provider value={{
+            recommendedShoes,
+            recommendedClothes,
+            recommendedSports
+        }}>
             {children}
         </RecommendedContext.Provider>
     );

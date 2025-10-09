@@ -13,8 +13,23 @@ interface ProductDetailsProps {
 }
 
 export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductDetailsProps) => {
-  const {recommended} = useRecommended();
   const [selectedSize, setSelectedSize] = useState("");
+  const {recommendedShoes,recommendedClothes,recommendedSports} = useRecommended();
+
+  const getRecommendedByCategory = (category : string | "") => {
+    switch(category){
+      case "Shoe" : 
+       return recommendedShoes;
+      case "Clothing" :
+       return recommendedClothes;
+      case "Sport" :
+        return recommendedSports;
+        default :
+         return [];
+    }
+  }
+
+  const recommendedProducts = getRecommendedByCategory(selectedProduct?.category || "");
 
   return (
     <>
@@ -54,6 +69,10 @@ export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductD
         </div>
       </div>
 
+      <p className="font-bold text-xl text-gray-300 my-2">{selectedProduct.category} </p>
+
+      <p className="font-semibold my-3 font-halvetica">{selectedProduct.overview} </p>
+      
       <div className="mt-3">
         <h4 className="text-lg font-bold mb-2">Size</h4>
         <div className="arrivals px-0 hide-scrollbar gap-2">
@@ -75,8 +94,8 @@ export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductD
       <div className="mt-4 mb-4">
         <h1 className="text-lg font-bold mb-3">Recommended For You</h1>
         <div className="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
-          {recommended && recommended.length > 0 ? (
-            recommended.map((items) => (
+          {recommendedProducts && recommendedProducts.length > 0 ? (
+            recommendedProducts.map((items) => (
               <div key={items.id} className="flex-shrink-0">
                 <Image
                   src={items.image}
