@@ -1,35 +1,13 @@
 "use client"
 import Image from "next/image";
-import { useRecommended } from "@/utils/Contexts";
 import { useState } from "react";
-import { Product } from "@/utils/types";
+import { ProductDetailsProps } from "@/utils/types";
 import { FavoriteButton } from "./favoriteButton";
 import { CartButton } from "./addtocartButton";
-
-
-interface ProductDetailsProps {
-  selectedProduct: Product | null;
-  setSelectedProduct: (product: Product | null) => void;
-}
+import { Recommended } from "./recommended";
 
 export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductDetailsProps) => {
   const [selectedSize, setSelectedSize] = useState("");
-  const {recommendedShoes,recommendedClothes,recommendedSports} = useRecommended();
-
-  const getRecommendedByCategory = (category : string | "") => {
-    switch(category){
-      case "Shoe" : 
-       return recommendedShoes;
-      case "Clothing" :
-       return recommendedClothes;
-      case "Sport" :
-        return recommendedSports;
-        default :
-         return [];
-    }
-  }
-
-  const recommendedProducts = getRecommendedByCategory(selectedProduct?.category || "");
 
   return (
     <>
@@ -41,7 +19,7 @@ export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductD
     />
 
     <div
-      className={`productDetails z-50 ${
+      className={`productDetails hide-scrollbar z-50 ${
         selectedProduct ? "translate-y-0" : "translate-y-full"
       }`}
     >
@@ -71,7 +49,7 @@ export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductD
 
       <p className="font-bold text-xl text-gray-300 my-2">{selectedProduct.category} </p>
 
-      <p className="font-semibold my-3 font-halvetica">{selectedProduct.overview} </p>
+      <p className="font-semibold text-md my-3 font-halvetica">{selectedProduct.overview} </p>
       
       <div className="mt-3">
         <h4 className="text-lg font-bold mb-2">Size</h4>
@@ -91,29 +69,9 @@ export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductD
       </div>
 
       {/* Recommended section*/}
-      <div className="mt-4 mb-4">
-        <h1 className="text-lg font-bold mb-3">Recommended For You</h1>
-        <div className="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
-          {recommendedProducts && recommendedProducts.length > 0 ? (
-            recommendedProducts.map((items) => (
-              <div key={items.id} className="flex-shrink-0">
-                <Image
-                  src={items.image}
-                  width={150}
-                  height={150}
-                  alt={items.name}
-                  className="w-40 h-40 object-cover rounded-lg"
-                />
-                <p className="text-sm mt-1">{items.name}</p>
-              </div>
-            ))
-          ) : (
-            <p className="text-gray-500">No recommendations available</p>
-          )}
+         <Recommended selectedProduct={selectedProduct} />
         </div>
       </div>
-    </div>
-  </div>
 )}
     </>
   );

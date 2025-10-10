@@ -5,10 +5,10 @@ import { useCart } from "@/utils/Contexts"
 import { Product } from "@/utils/types"
 import { FiShoppingBag } from "react-icons/fi"
 import Link from "next/link"
+import { RemoveAll } from "@/components/removeAllFromBag"
 export const CartItems = () => {
     const [bag, setBag] = useState <Product []>([]);
-    const [deleteAll, setDeleteAll] = useState(false);
-    const {cartItems, removeFromCart, clearAllCart} = useCart();
+    const {cartItems, removeFromCart} = useCart();
 
     useEffect(()=>{
         setBag(cartItems);
@@ -17,23 +17,7 @@ export const CartItems = () => {
     return (
         <section className="mx-auto p-2 max-w-4xl">
 
-                  <div className="flex justify-between items-center mb-10">
-      <h1 className="text-2xl font-bold">Bag</h1> 
-      <div>
-      <p className="font-bold text-2xl cursor-pointer" onClick={()=> setDeleteAll((prev)=> !prev)}>...</p>
-      {deleteAll && (
-        <button 
-        onClick={()=>{
-        clearAllCart();
-        setDeleteAll(false)
-        }}
-        className="signUp-buton mt-5"
-        >
-          Remove All
-        </button>
-      )}
-      </div>
-      </div>
+          <RemoveAll/>
 
             {bag.length > 0 ? (
                 <div className="flex flex-col gap-4">

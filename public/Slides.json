@@ -65,6 +65,15 @@
             "description": "Go Soccer Pro",
             "category": "Sport",
             "overview": "The Nike Soccer Go Soccer Pro apparel is crafted for soccer players who demand excellence. Priced at $203, this sportswear offers lightweight, breathable fabrics and a tailored fit to enhance agility and speed on the field. Its durable construction ensures it withstands the rigors of intense matches, making it ideal for serious athletes."
+        }, 
+        {
+            "id": 11,
+            "image": "/BrownJeansNike.png",
+            "name": "Nike Shoe",
+            "price": "$110",
+            "description": "Brown Jeans Nike",
+            "category": "Shoe",
+            "overview": "The Nike Shoe in Brown Jeans Nike style combines rugged aesthetics with everyday comfort. Priced at $110, these shoes feature a unique denim-inspired brown design, offering a modern twist on classic Nike craftsmanship. With durable materials and reliable cushioning, they’re perfect for casual wear or light activities, making them a versatile addition to any wardrobe."
         }
 
 

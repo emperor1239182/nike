@@ -37,3 +37,8 @@ export type Recommended = {
     recommendedClothes : Product [];
     recommendedSports : Product [];
 }
+
+export interface ProductDetailsProps {
+  selectedProduct: Product | null;
+  setSelectedProduct?: (product: Product | null) => void;
+}

@@ -31,16 +31,6 @@
         },
 
         {
-            "id": 11,
-            "image": "/BrownJeansNike.png",
-            "name": "Nike Panties",
-            "price": "$110",
-            "description": "Casual Panties",
-            "category": "Clothing",
-            "overview": "The Nike Panties (likely referring to pants or leggings) are designed for casual comfort with a modern edge. Crafted from soft, durable materials, these pants offer a relaxed fit perfect for everyday wear or light workouts. The $110 price point reflects their quality and versatility, making them a great addition to any casual wardrobe."
-        },
-
-        {
             "id": 12,
             "image": "/BrownPanties.png",
             "name": "Brown Nike Panties",

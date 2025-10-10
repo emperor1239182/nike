@@ -1,7 +1,7 @@
 "use client"
 
 import { FavoriteButton } from "@/components/favoriteButton"
-import { FavoriteDetails } from "@/components/favoriteDetails"
+import { ProductDetails } from "@/components/productDetails"
 import type { Product } from "@/utils/types"
 import Image from "next/image"
 import { useState } from "react"
@@ -27,7 +27,7 @@ export const ShoeProducts = ({ data }: { data: Product[] }) => {
                     alt={product.name}
                     width={100}
                     height={100}
-                    className="productImage"
+                    className="productImage cursor-pointer"
                     onClick={() => handleProductDetails(product)} 
                 />
                   <div className="favorite">
@@ -44,7 +44,7 @@ export const ShoeProducts = ({ data }: { data: Product[] }) => {
 
         ) : (<p>No product found</p>)
       }
-      <FavoriteDetails selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
+      <ProductDetails selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
       </section>
         </>
     )
