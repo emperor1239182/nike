@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { FiFilter, FiSearch } from "react-icons/fi";
 
-export function SearchBar() {
+export function SearchBar({setSearch} : {setSearch : (value : string)=> void}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -10,7 +10,7 @@ export function SearchBar() {
             <FiFilter className="text-xl" />
             <div
               className={`flex items-center rounded-full px-2 transition-all duration-500 overflow-hidden
-              ${open ? "absolute left-0 top-2 w-full sm:relative bg-white border shadow px-4 py-4 sm:py-2" : "w-10"} `}
+              ${open ? "absolute left-0 top-2 w-full sm:relative bg-white border shadow px-4 py-3 sm:py-2" : "w-10"} `}
             >
               <FiSearch
                 className="text-gray-700 cursor-pointer text-xl"
@@ -19,8 +19,8 @@ export function SearchBar() {
               <input
                 type="text"
                 placeholder="Search..."
-                className={`ml-2 outline-none flex-1 transition-all duration-500
-                ${open ? "opacity-100 w-full" : "opacity-0 w-0"}`}
+                className={`ml-2 outline-none flex-1 transition-all duration-500 ${open ? "opacity-100 w-full" : "opacity-0 w-0"}`}
+                onChange={(e)=> setSearch(e.target.value)}
               />
               {open && (
                 <p
