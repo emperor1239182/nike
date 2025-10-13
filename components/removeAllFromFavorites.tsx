@@ -15,7 +15,6 @@ export const RemoveAllFavorites = () => {
         <button
           onClick={() => setDeleteAll(!deleteAll)}
           className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
-          aria-label="Menu"
         >
           <span className="text-3xl font-light text-gray-600">•••</span>
         </button>

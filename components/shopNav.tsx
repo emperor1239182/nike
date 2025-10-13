@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useDebounce } from "react-use";
 import { useState, useEffect} from "react";
 import { ProductDetails } from "@/components/productDetails"
+
 import type { Product } from "@/utils/types";
 
 export const ShopNav = () => {
@@ -91,8 +92,8 @@ export const ShopNav = () => {
             <p>Shoes</p> 
             </Link>
             
-        
         </div>
+        
         <ProductDetails selectedProduct={selectedProduct} setSelectedProduct={setSelectedProduct}/>
         </>
     )

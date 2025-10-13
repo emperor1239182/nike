@@ -1,13 +1,15 @@
 "use client"
 import { useState } from "react";
 import { FiFilter, FiSearch } from "react-icons/fi";
+import { SearchFilter } from "./filter";
 
 export function SearchBar({setSearch} : {setSearch : (value : string)=> void}) {
   const [open, setOpen] = useState(false);
+  const [filter, setFilter] = useState(false);
 
   return (
     <div className="flex items-center gap-2">
-            <FiFilter className="text-xl" />
+            <FiFilter className="text-xl" onClick={()=>setFilter(!filter)}/>
             <div
               className={`flex items-center rounded-full px-2 transition-all duration-500 overflow-hidden
               ${open ? "absolute left-0 top-2 w-full sm:relative bg-white border shadow px-4 py-3 sm:py-2" : "w-10"} `}
@@ -31,6 +33,9 @@ export function SearchBar({setSearch} : {setSearch : (value : string)=> void}) {
                 </p>
               )}
             </div>
+            {filter && (
+              <SearchFilter setFilter={setFilter}/>
+            )}
             </div>
   );
 }

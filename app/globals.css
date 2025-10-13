@@ -10,6 +10,10 @@
   } 
 }
 
+body {
+  @apply pb-[60px] sm:pb-0; /* Adjust height based on your menu size */
+}
+
 @layer components{
   .arrivals{
     @apply flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full px-4 gap-4
@@ -31,15 +35,18 @@
       sm:rounded-none
       fixed 
       z-70
-      bottom-3 
+      bottom-0
       lg:relative
       w-full 
       sm:w-auto
       sm:h-[100vh] 
-      mt-10 
+  
       bg-white/15 backdrop-blur-lg backdrop-saturate-[180%]
        border-white/20 shadow-lg shadow-black/15 ring-inset ring-4 ring-white/30
-    } 
+    }
+    .filter{
+      @apply fixed min-w-[300px] top-0 left-1/2 bg-white z-60 transform -translate-x-1/2 p-2 h-[80vh] overflow-y-auto rounded-xl shadow-2xl
+    }
   
 }
 
@@ -178,26 +185,26 @@
         .formIntro{
           @apply text-2xl font-semibold text-center max-w-2xl
         }
-  
-.suggestions {
-  @apply fixed top-16 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-lg z-50 w-full max-w-md h-[50vh] overflow-auto;
-}
+        .suggestions {
+          @apply fixed top-16 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-lg z-50 w-full max-w-md h-[50vh] overflow-auto;
+        }
 
-.suggestions div {
-  @apply px-4 py-3 cursor-pointer border-b border-gray-100 transition-colors last:border-b-0;
-}
+        .suggestions div {
+          @apply px-4 py-3 cursor-pointer border-b border-gray-100 transition-colors last:border-b-0;
+        }
 
-.suggestions div:hover {
-  @apply bg-gray-100;
-}
+        .suggestions div:hover {
+          @apply bg-gray-100;
+        }
 
-.suggestions p {
-  @apply text-gray-800 text-sm font-medium truncate;
-}
+        .suggestions p {
+          @apply text-gray-800 text-sm font-medium truncate;
+        }
 
-.suggestions div:empty {
-  @apply hidden;
-}
+        .suggestions div:empty {
+          @apply hidden;
+        }
+
        }
        
        
