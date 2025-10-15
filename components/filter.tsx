@@ -1,5 +1,6 @@
 import { FaCircleXmark } from "react-icons/fa6";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
+import { Product } from "@/utils/types";
 
 const ACTIONS = {
   SET_GENDER: 'SET_GENDER',
@@ -35,17 +36,16 @@ function filterReducer(state, action) {
 
 export const SearchFilter = ({ setFilter }) => {
   const [filter, dispatch] = useReducer(filterReducer, initialState);
+  const [sorted, setSorted] = useState([])
 
   const handleReset = () => {
     dispatch({ type: ACTIONS.RESET_FILTERS });
   };
 
-  // Handle radio buttons (sort - only one can be selected)
   const handleSortChange = (value) => {
     dispatch({ type: ACTIONS.SET_SORT, payload: value });
   };
 
-  // Handle checkboxes (gender, price, sports - multiple can be selected)
   const handleCheckboxChange = (actionType, value, currentArray) => {
     const newArray = currentArray.includes(value)
       ? currentArray.filter(item => item !== value)
@@ -78,6 +78,59 @@ export const SearchFilter = ({ setFilter }) => {
     training: { element: <input type="checkbox" id="training" checked={filter.category.includes('training')} onChange={(e) => handleCheckboxChange(ACTIONS.SET_CATEGORY, 'training', filter.category)} />, label: <label htmlFor="training">Training & Gym</label> },
     basketball: { element: <input type="checkbox" id="basketball" checked={filter.category.includes('basketball')} onChange={(e) => handleCheckboxChange(ACTIONS.SET_CATEGORY, 'basketball', filter.category)} />, label: <label htmlFor="basketball">Basketball</label> },
   };
+
+  const getFilters = async () => {
+  const req = await fetch("http://localhost:3000/Products.json");
+  const res = await req.json();
+  const data: Product[] = res.Products;
+
+  // Helper function to parse price from "$49" to 49
+  const parsePrice = (priceStr: string) => {
+    return parseInt(priceStr.replace('$', ''));
+  };
+
+  // Helper function to check price range
+  const getPriceRange = (price: number) => {
+    if (price < 25) return 'low';
+    if (price >= 25 && price < 50) return 'medium';
+    if (price >= 50 && price < 100) return 'high';
+    return 'extra';
+  };
+
+  // Filter based on all selected filters
+  const filteredSearch = data.filter((item) => {
+    // If no filters selected, show all products
+    if (
+      filter.gender.length === 0 &&
+      filter.priceRange.length === 0 &&
+      filter.category.length === 0
+    ) {
+      return true;
+    }
+
+    // Check gender (if selected) - normalize to lowercase
+    const genderMatch = 
+      filter.gender.length === 0 || 
+      filter.gender.includes(item.gender?.toLowerCase());
+
+    // Check price range (if selected) - parse price and match range
+    const itemPriceRange = getPriceRange(parsePrice(item.price));
+    const priceMatch = 
+      filter.priceRange.length === 0 || 
+      filter.priceRange.includes(itemPriceRange);
+
+    // Check category (if selected) - normalize to lowercase
+    const categoryMatch = 
+      filter.category.length === 0 || 
+      filter.category.includes(item.category?.toLowerCase());
+
+    // Return true only if ALL selected filters match
+    return genderMatch && priceMatch && categoryMatch;
+  });
+
+  setSorted(filteredSearch);
+  console.log("Filtered results:", filteredSearch);
+};
 
   return (
     <section className="filter">
@@ -136,8 +189,18 @@ export const SearchFilter = ({ setFilter }) => {
 
       <div className="flex justify-center gap-3 mt-5">
         <button className="signUp-buton" onClick={handleReset}>Reset</button>
-        <button className="signUp-buton">Apply</button>
+        <button className="signUp-buton" onClick={getFilters}>Apply</button>
       </div>
+
+      {sorted.length > 0?
+      <div> 
+        {sorted.map((filtered)=>(
+            <div key={filtered.id}>
+                <p>{filtered.name} </p>
+            </div>
+        ))}
+      </div> : "No Result"
+}
     </section>
   );
 }

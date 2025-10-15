@@ -32,6 +32,7 @@ export const ShopNav = () => {
      
      
      useEffect(()=>{
+        console.log("getting searchd")
         const getSearchedTerm = async() => {
             try{
 
