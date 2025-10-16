@@ -276,6 +276,7 @@
             "name": "Jordan",
             "price": "$49",
             "description": "Comfort Nike",
+            "gender": "Unisex",
             "category": "Shoe",
             "overview": "The Jordan Comfort Nike shoes are designed for everyday wear with a focus on comfort. Priced at $49, these sneakers feature cushioned soles and a sleek design, making them ideal for casual outings or light sports. Their affordability and iconic Jordan branding make them a popular choice."
         },

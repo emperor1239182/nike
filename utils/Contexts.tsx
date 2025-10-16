@@ -1,6 +1,6 @@
 "use client"
-import { useState, createContext, useContext, useEffect } from "react"
-import type { FavoritesContextType, CartContextType, Product, Recommended} from "@/utils/types";
+import { useState, createContext, useContext, useEffect, ReactNode} from "react"
+import type { FavoritesContextType, CartContextType, Product, Recommended, FilterContextType} from "@/utils/types";
 
 const FavouriteContext = createContext <FavoritesContextType | undefined > (undefined);
 
@@ -214,3 +214,27 @@ export const useRecommended = () => {
     }
     return context; 
 }
+
+
+
+
+
+const FilterContext = createContext<FilterContextType | undefined>(undefined);
+
+export const FilterProvider = ({ children }: { children: ReactNode }) => {
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+
+  return (
+    <FilterContext.Provider value={{ filteredProducts, setFilteredProducts }}>
+      {children}
+    </FilterContext.Provider>
+  );
+};
+
+export const useFilterContext = () => {
+  const context = useContext(FilterContext);
+  if (!context) {
+    throw new Error('useFilterContext must be used within FilterProvider');
+  }
+  return context;
+};

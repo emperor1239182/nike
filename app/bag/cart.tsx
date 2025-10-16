@@ -6,31 +6,40 @@ import { Product } from "@/utils/types"
 import { FiShoppingBag } from "react-icons/fi"
 import Link from "next/link"
 import { RemoveAll } from "@/components/removeAllFromBag"
+
 export const CartItems = () => {
-    const [bag, setBag] = useState <Product []>([]);
+    const [bag, setBag] = useState<Product[]>([]);
     const {cartItems, removeFromCart} = useCart();
 
-    useEffect(()=>{
+    useEffect(() => {
         setBag(cartItems);
     }, [cartItems]);
 
     return (
         <section className="mx-auto p-2 max-w-4xl">
-
-          <RemoveAll/>
+            <RemoveAll/>
 
             {bag.length > 0 ? (
                 <div className="flex flex-col gap-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-4">
-                        {bag.map((product)=>(
-                            <div key={product.id} className="imageContainer bg-white p-4 rounded-lg shadow-sm">
-                                <Image
-                                    alt={product.name}
-                                    src={product.image}
-                                    width={100}
-                                    height={100}
-                                    className="productImage"
-                                />
+                        {bag.map((product, index) => (
+                            <div 
+                                key={`${product.id}-${index}`} 
+                                className="imageContainer bg-white p-4 rounded-lg shadow-sm"
+                            >
+                                {product.image ? (
+                                    <Image
+                                        alt={product.name}
+                                        src={product.image}
+                                        width={100}
+                                        height={100}
+                                        className="productImage"
+                                    />
+                                ) : (
+                                    <div className="w-[100px] h-[100px] bg-gray-200 flex items-center justify-center">
+                                        <span className="text-gray-400">No Image</span>
+                                    </div>
+                                )}
                                 <p className="productName font-bold mt-2">{product.name}</p>
                                 <p className="productName text-gray-600">{product.description}</p>
                                 <p className="productName font-semibold">{product.price}</p>

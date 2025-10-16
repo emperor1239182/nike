@@ -44,8 +44,8 @@ body {
       bg-white/15 backdrop-blur-lg backdrop-saturate-[180%]
        border-white/20 shadow-lg shadow-black/15 ring-inset ring-4 ring-white/30
     }
-    .filter{
-      @apply fixed min-w-[300px] top-0 left-1/2 bg-white z-60 transform -translate-x-1/2 p-2 h-[80vh] overflow-y-auto rounded-xl shadow-2xl
+  .filter{
+     @apply fixed w-[300px] top-0 left-1/2 bg-white z-60 transform -translate-x-1/2 p-2 h-[80vh] overflow-y-auto rounded-xl shadow-2xl 
     }
   
 }
@@ -186,7 +186,7 @@ body {
           @apply text-2xl font-semibold text-center max-w-2xl
         }
         .suggestions {
-          @apply fixed top-16 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-lg z-50 w-full max-w-md h-[50vh] overflow-auto;
+          @apply fixed p-2 top-0 bg-white shadow-lg rounded-lg z-50 w-full max-w-md h-[full] overflow-auto;
         }
 
         .suggestions div {

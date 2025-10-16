@@ -13,10 +13,11 @@ export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductD
     <>
      {selectedProduct && (
   <div className="fixed inset-0 z-40 flex justify-center items-center">
+
     <div
-      className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-100"
-      onClick={() => setSelectedProduct(null)} 
-    />
+  className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-100"
+  onClick={() => setSelectedProduct?.(null)} 
+/>
 
     <div
       className={`productDetails hide-scrollbar z-50 ${
@@ -24,7 +25,7 @@ export const ProductDetails = ({ selectedProduct, setSelectedProduct }: ProductD
       }`}
     >
       <button
-        onClick={() => setSelectedProduct(null)}
+         onClick={() => setSelectedProduct?.(null)} 
         className="sticky top-0 right-0 ml-auto block text-gray-500 text-lg hover:text-black bg-white z-10 p-2"
       >
         ✕
