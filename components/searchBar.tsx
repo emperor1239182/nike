@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FiFilter, FiSearch } from "react-icons/fi";
 import { SearchFilter } from "./filter";
 
-export function SearchBar({setSearch} : {setSearch : (value : string)=> void}) {
+export function SearchBar({setSearch, search} : {setSearch : (value : string)=> void; search : string}) {
   const [open, setOpen] = useState(false);
   const [filter, setFilter] = useState(false);
 
@@ -22,6 +22,7 @@ export function SearchBar({setSearch} : {setSearch : (value : string)=> void}) {
                 type="text"
                 placeholder="Search..."
                 className={`ml-2 outline-none flex-1 transition-all duration-500 ${open ? "opacity-100 w-full" : "opacity-0 w-0"}`}
+                value={search}
                 onChange={(e)=> setSearch(e.target.value)}
               />
               {open && (

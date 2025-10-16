@@ -57,7 +57,7 @@ export type FilterAction =
     | { type: 'SET_PRICE_RANGE'; payload: string[] }
     | { type: 'SET_CATEGORY'; payload: string[] }
     | { type: 'SET_SORT'; payload: string }
-    | { type: 'RESET_FILTERS' }; // Removed payload - RESET_FILTERS doesn't need one
+    | { type: 'RESET_FILTERS' }; 
 
 export interface SearchFilterProps {
     setFilter: (value: boolean) => void;

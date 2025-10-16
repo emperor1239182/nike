@@ -61,7 +61,7 @@ export const ShopNav = () => {
             <ul className="flex justify-between items-center ">
                 <FiArrowLeft onClick={() => router.back()}/>
                 <h1 className="font-bold text-xl text-center">Shop</h1>
-                <SearchBar setSearch={setSearch}/>
+                <SearchBar setSearch={setSearch} search={search}/>
             </ul>
         </nav>
 
