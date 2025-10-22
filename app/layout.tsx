@@ -5,6 +5,7 @@ import { NavBar } from "@/components/nav";
 import { Suspense } from "react";
 import { FavoriteProvider, CartProvider, RecommendedProvider, FilterProvider } from "@/utils/Contexts";
 import { CartItems } from "./bag/cart";
+import { AuthProvider } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <FavoriteProvider>
           <RecommendedProvider>
             <FilterProvider>
+              <AuthProvider>
           
         <Suspense fallback={<GlobalLoading />}>
 
@@ -54,6 +56,8 @@ export default function RootLayout({
 
         
        </Suspense>
+
+       </AuthProvider>
        </FilterProvider>
        </RecommendedProvider>
        </FavoriteProvider>

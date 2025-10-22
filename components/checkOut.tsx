@@ -22,7 +22,10 @@ export const Order = () => {
 
     return (
         <>
-        <FiArrowLeft onClick={() => router.back()} className="mt-4"/>
+        <div className="flex items-center gap-3">
+         <FiArrowLeft onClick={() => router.back()} />
+           <h1 className="font-bold text-xl">Checkout</h1>
+        </div>
     <section className="checkout checkoutDetails h-auto hide-scrollbar">
             {cartItems &&
              (cartItems.map((bags)=> (
@@ -75,33 +78,33 @@ export const Order = () => {
                     <p className={`${selectedPayment ? "text-black" : "text-red-500"}` } onClick={()=> setOpenSection(openSection === "payment" ? null : "payment")}>Select Payment +</p>
                 </div>
 
-                                {openSection === "payment" && (
-                                    <div className="cardTypes my-3">
-                                        <div className="flex flex-col gap-2">
-                                            <button
-                                                type="button"
-                                                className={`cards ${selectedPayment === "credit" ? "!bg-black !text-white" : ""}`}
-                                                onClick={() => setSelectedPayment("credit")}
-                                            >
-                                                Add Credit Card
-                                            </button>
-                                            <button
-                                                type="button"
-                                                className={`cards ${selectedPayment === "gift" ? "!bg-black !text-white" : ""}`}
-                                                onClick={() => setSelectedPayment("gift")}
-                                            >
-                                                Add Gift Card
-                                            </button>
-                                            <button
-                                                type="button"
-                                                className={`cards ${selectedPayment === "paypal" ? "!bg-black !text-white" : ""}`}
-                                                onClick={() => setSelectedPayment("paypal")}
-                                            >
-                                                Paypal
-                                            </button>
-                                        </div>
-                                    </div>
-                                )}
+                    {openSection === "payment" && (
+                        <div className="cardTypes my-3">
+                            <div className="flex flex-col gap-2">
+                                <button
+                                    type="button"
+                                    className={`cards ${selectedPayment === "credit" ? "!bg-black !text-white" : ""}`}
+                                    onClick={() => setSelectedPayment("credit")}
+                                >
+                                    Add Credit Card
+                                </button>
+                                <button
+                                    type="button"
+                                    className={`cards ${selectedPayment === "gift" ? "!bg-black !text-white" : ""}`}
+                                    onClick={() => setSelectedPayment("gift")}
+                                >
+                                    Add Gift Card
+                                </button>
+                                <button
+                                    type="button"
+                                    className={`cards ${selectedPayment === "paypal" ? "!bg-black !text-white" : ""}`}
+                                    onClick={() => setSelectedPayment("paypal")}
+                                >
+                                    Paypal
+                                </button>
+                            </div>
+                        </div>
+                    )}
 
                 <div className="options border-t-1 border-gray-400 p-3">
                     <h3 className="font-bold text-[px]">Purchase Summary</h3>
