@@ -51,7 +51,7 @@ export default function SignIn () {
                 const form = e.target;
                 form.reset();
                 setError(data.message);
-                router.push('/signUP/login');
+                router.push('/signUP/logIn');
             } else {
                 console.log("User registration failed")
                 setError(data.message);
