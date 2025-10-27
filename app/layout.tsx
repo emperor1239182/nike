@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { FavoriteProvider, CartProvider, RecommendedProvider, FilterProvider } from "@/utils/Contexts";
 import { CartItems } from "./bag/cart";
 import { AuthProvider } from "./providers";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +45,7 @@ export default function RootLayout({
 
         <NavBar/>
 
-          <div className="w-full sm:max-w-xl lg:max-w-2xl sm:mx-auto p-2 lg:border-r-1 border-gray-200">
+          <div className="w-full sm:max-w-xl lg:max-w-3xl sm:mx-auto p-2 lg:h-[100vh] overflow-y-auto hide-scrollbar">
              {children} 
              </div>
 
@@ -53,6 +54,8 @@ export default function RootLayout({
           </div>
 
           </div>
+
+          <Footer/>
 
         
        </Suspense>

@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Login () {
     const [email, setEmail] = useState("");
@@ -69,6 +70,8 @@ export default function Login () {
                 <button type="submit" className="signUp-buton mt-10">
                     Next
                 </button>
+
+                <Link href="/signUp/signIn" className="text-right text-blue-500 text-sm mt-2">Dont have an account? signup</Link>
             </form>
         </section>
     )

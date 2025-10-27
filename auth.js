@@ -1,10 +1,12 @@
 import NextAuth from "next-auth";
+import { authConfig } from "./auth.config";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { ConnectToDB } from "./utils/database";
 import User from "./app/models/user";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+    ...authConfig,
     providers: [
         CredentialsProvider({
             name: "Credentials",
@@ -14,7 +16,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             },
             async authorize(credentials) {
                 if (!credentials?.email || !credentials?.password) {
-                    throw new Error("Missing credentials");
+                    return null;
                 }
 
                 try {
@@ -23,7 +25,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     const user = await User.findOne({ email: credentials.email });
                     
                     if (!user) {
-                        throw new Error("No user found");
+                        return null;
                     }
                     
                     const passwordsMatch = await bcrypt.compare(
@@ -32,7 +34,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     );
                     
                     if (!passwordsMatch) {
-                        throw new Error("Incorrect password");
+                        return null;
                     }
                     
                     return {
@@ -47,12 +49,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             }
         })
     ],
-    session: {
-        strategy: "jwt"
-    },
-    pages: {
-        signIn: "/signUp/login"
-    },
     callbacks: {
         async jwt({ token, user }) {
             if (user) {

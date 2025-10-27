@@ -1,7 +1,7 @@
 "use client"
 import { useCart, useFavorite } from "@/utils/Contexts";
 import Link from "next/link";
-import { FiHeart, FiHome, FiUser, FiSearch, FiShoppingBag } from "react-icons/fi";
+import { FiHeart, FiHome, FiUser, FiSearch, FiShoppingBag, FiXCircle, FiMenu } from "react-icons/fi";
 import {useState, useEffect} from 'react'
 import { useRouter } from "next/navigation";
 
@@ -11,6 +11,7 @@ export const NavBar = () => {
   const router = useRouter();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [bar, setBar] = useState(false);
 
   // Handle screen size changes
   useEffect(() => {
@@ -33,8 +34,15 @@ export const NavBar = () => {
 
     return (
     <>
-    <nav className="menu">
-            <ul className="navListContainer">
+  
+        {bar? 
+        <div className="menuBar">
+        <FiMenu className="text-2xl font-bold" onClick={()=> setBar(false)}/> 
+        </div> :
+        <nav className="menu">
+      <FiXCircle className="bar" onClick={()=> setBar(true)}/>
+
+        <ul className="navListContainer">
     
               <li className="navlist hidden sm:block text-xl font-extrabold">
                 <Link href={"/"}>Nike</Link>
@@ -92,8 +100,12 @@ export const NavBar = () => {
                 </li>
               </Link>
     
-            </ul>
+            </ul> 
             </nav>
+
+      }
+            
+          
     
     </>
     )

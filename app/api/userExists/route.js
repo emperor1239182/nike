@@ -2,16 +2,30 @@ import { ConnectToDB } from "../../../utils/database";
 import User from "../../models/user";
 import { NextResponse } from "next/server";
 
-export async function POST (req) {
-    try{
-        
-        await ConnectToDB();
-        const {email} = await req.json();
-        const user = await User.findOne({email}).select("_id");
-        console.log("user :", user);
-        return NextResponse.json({user});
+export async function POST(req) {
+    try {
+        const { email } = await req.json();
 
-    } catch(error){
-        console.log(error);
+        if (!email) {
+            return NextResponse.json(
+                { user: null, message: "Email is required" }, 
+                { status: 400 }
+            );
+        }
+
+        await ConnectToDB();
+        
+        const user = await User.findOne({ email }).select("_id");
+        console.log("user:", user);
+        
+        return NextResponse.json({ user });
+
+    } catch (error) {
+        console.error("Error checking user:", error);
+        // ✅ CRITICAL: Always return a response in catch block
+        return NextResponse.json(
+            { user: null, message: "An error occurred", error: error.message }, 
+            { status: 500 }
+        );
     }
 }

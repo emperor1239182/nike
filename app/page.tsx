@@ -60,7 +60,7 @@ export default function Home() {
         <section className="postsInteraction my-8">
 
         <h1 className="font-bold text-2xl">Reviews</h1>
-        <p className="text-[14px] text-gray-400">View reviews, interact and share your thoughts...</p>
+        <p className="review">View reviews, interact and share your thoughts...</p>
         <div className="post mt-1 flex flex-col gap-4">
         <Image 
         src="/GirlsDancing.png"
@@ -89,7 +89,9 @@ export default function Home() {
         </div>
         
         <div className="penTool">
+          <Link href="/post">
           <FiPenTool size={20}/>
+          </Link>
         </div>
 
 

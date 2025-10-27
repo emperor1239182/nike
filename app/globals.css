@@ -11,7 +11,7 @@
 }
 
 body {
-  @apply pb-[60px] sm:pb-0; /* Adjust height based on your menu size */
+  @apply sm:pb-0; /* Adjust height based on your menu size */
 }
 
 @layer components{
@@ -36,16 +36,21 @@ body {
       fixed 
       z-70
       bottom-0
+      sm:top-0
       lg:relative
       w-full 
       sm:w-auto
-      sm:h-[100vh] 
+      sm:h-[70vh] 
+      lg:h-[100vh]
   
       bg-white/15 backdrop-blur-lg backdrop-saturate-[180%]
        border-white/20 shadow-lg shadow-black/15 ring-inset ring-4 ring-white/30
     }
   .filter{
      @apply fixed w-[300px] top-0 left-1/2 bg-white z-60 transform -translate-x-1/2 p-2 h-[80vh] overflow-y-auto rounded-xl shadow-2xl 
+    }
+    .footerContainer{
+      @apply bg-white/15 backdrop-blur-lg
     }
   
 }
@@ -87,7 +92,7 @@ body {
           @apply rounded-4xl text-center text-white bg-black text-[13px] font-bold border-1 px-10 py-2 cursor-pointer
         }
         .penTool{
-          @apply sticky bottom-30 ml-auto rounded-4xl bg-black text-white w-10 h-10 flex justify-center items-center mr-6
+          @apply fixed bottom-30 rounded-4xl bg-black text-white w-10 h-10 flex justify-center items-center mr-2 z-90
         }
         .categories{
           @apply flex justify-around text-gray-600 text-[15px] mt-5 
@@ -186,11 +191,12 @@ body {
           @apply text-2xl font-semibold text-center max-w-2xl
         }
         .suggestions {
-    @apply bg-white shadow-2xl rounded p-2 w-full max-w-[500px] fixed top-17 h-auto z-10 left-0 right-0 mx-auto;
-}
+          @apply bg-white shadow-2xl rounded p-2 w-full max-w-[500px] fixed top-17 z-10 left-0 right-0 mx-auto overflow-y-auto h-[650px]
+        }
+
 
         .suggestions div {
-          @apply px-4 py-3 cursor-pointer border-b border-gray-100 transition-colors last:border-b-0;
+          @apply px-4 py-3 cursor-pointer border-b border-gray-100 transition-colors last:border-b-0 ;
         }
 
         .suggestions div:hover {
@@ -203,6 +209,38 @@ body {
 
         .suggestions div:empty {
           @apply hidden;
+        }
+
+        .userNav{
+          @apply  flex justify-between items-center ;
+        }
+
+        .userNav p {
+          @apply text-sm font-bold;
+        }
+
+        .details{
+          @apply flex flex-col justify-between gap-5 ;
+        }
+
+        .review{
+          @apply text-[14px] text-gray-400;
+        }
+
+        .postMedia{
+          @apply bg-blue-500 rounded-2xl text-center text-white text-sm px-2 py-1 w-25
+        }
+
+        .textField{
+          @apply outline-0
+        }
+
+        .bar{
+          @apply absolute top-[-10px] right-1 text-xl font-semibold sm:hidden
+        }
+
+        .menuBar{
+          @apply fixed bottom-20 right-6 rounded-4xl bg-black text-white w-10 h-10 flex justify-center items-center
         }
 
        }
