@@ -8,12 +8,12 @@ const postSchema = new Schema({
     },
 
     post : {
-        type : string,
+        type : String,
         required : [true, "Write a review"],
     },
 
     image : {
-        type : string
+        type : String
     }
 });
 

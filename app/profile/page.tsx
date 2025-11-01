@@ -1,9 +1,9 @@
-import { UserProfile } from "@/components/profile"
+import { UserPosts } from "@/components/userPosts"
 
 export default function Profile () {
     return (
         <>
-        <UserProfile/>
+       <UserPosts/>
         </>
     )
 }

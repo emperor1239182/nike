@@ -67,3 +67,14 @@ export interface FilterContextType {
     filteredProducts: Product[];
     setFilteredProducts: (products: Product[]) => void;
 }
+
+export interface Post {
+    _id: string;
+    post: string;
+    image?: string;
+    creator: {
+        _id: string;
+        username: string;
+        email: string;
+    };
+}

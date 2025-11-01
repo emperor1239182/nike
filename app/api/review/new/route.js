@@ -1,27 +1,50 @@
+import { NextResponse } from "next/server";
 import { ConnectToDB } from "../../../../utils/database";
 import Post from "../../../models/post";
-import { NextResponse } from "next/server";
+import { v2 as cloudinary } from "cloudinary";
 
-export const POST = async(req) => {
-    const {userId, post, image} = await req.json();
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
-    try {
-        await ConnectToDB();
+export const POST = async (req) => {
+  try {
+    await ConnectToDB();
 
-        const newPost = new Post({
-            creator : userId,
-            post,
-            image
-        })
+    const formData = await req.formData();
+    const userId = formData.get("userId");
+    const postText = formData.get("post");
+    const imageFile = formData.get("image");
 
-        await newPost.save();
-        
-        return NextResponse(JSON.stringify(newPost), {
-            status : 201
-        })
-    } catch {
-        return NextResponse("failed to create Prompt", {
-            status : 500
-        })
+
+    let imageUrl = "";
+
+    if (imageFile && typeof imageFile === "object") {
+      const arrayBuffer = await imageFile.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      const base64Image = `data:${imageFile.type};base64,${buffer.toString("base64")}`;
+
+      const uploadResponse = await cloudinary.uploader.upload(base64Image, {
+        folder: "nike_reviews", 
+      });
+
+      imageUrl = uploadResponse.secure_url; 
     }
-}
+
+    const newPost = new Post({
+      creator: userId,
+      post: postText,
+      image: imageUrl,
+    });
+
+    await newPost.save();
+
+    return NextResponse.json( {post: newPost, message : "Sent Successfully"}, { status: 201 });
+  } catch (error) {
+    console.error(" Error creating post:", error);
+    return new NextResponse("Failed to create post", { status: 500 });
+  }
+};

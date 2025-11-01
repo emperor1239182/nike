@@ -45,7 +45,7 @@ export default function RootLayout({
 
         <NavBar/>
 
-          <div className="w-full sm:max-w-xl lg:max-w-3xl sm:mx-auto p-2 lg:h-[100vh] overflow-y-auto hide-scrollbar">
+          <div className="w-full sm:max-w-xl lg:max-w-3xl sm:mx-auto p-2 sm:h-[100vh] overflow-y-auto hide-scrollbar">
              {children} 
              </div>
 

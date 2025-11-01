@@ -52,9 +52,9 @@ export const FavoritesPage = () => {
 
               <button
                 onClick={() => handleRemoveFromFavorites(product.id)}
-                className="mt-2 flex items-center gap-2 text-[12px] hover:text-red-700 rounded-2xl border-2 p-1 text-gray-400"
+                className="mt-2 flex items-center gap-2 text-[12px] hover:text-red-700 rounded-4xl border-2 p-1 text-gray-400"
               >
-                <FiHeart className="fill-red-500" /> Remove from Favorites
+               Remove from Favorites
               </button>
             </div>
           ))}

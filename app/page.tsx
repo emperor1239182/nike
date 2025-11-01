@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FiMessageCircle, FiShare, FiPenTool } from "react-icons/fi";
 import Link from "next/link";
 import Arrivals from "@/components/newArrivals";
+import { PostFeed } from "@/components/feed";
 export default function Home() {
 
   const days : string[] = [
@@ -72,11 +73,14 @@ export default function Home() {
         />
         <h1 className="font-bold">Soyeon Dance Challenge</h1>
         <p>Hip hop dancer Soyeon shows us an epic dance challenge in the latest playlist episode</p>
+
         <div className="flex gap-5">
           <FiShare/>
           <FiMessageCircle/>
         </div>
         </div>
+
+        <PostFeed/>
 
         </section>
 

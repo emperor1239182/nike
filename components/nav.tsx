@@ -37,9 +37,10 @@ export const NavBar = () => {
   
         {bar? 
         <div className="menuBar">
-        <FiMenu className="text-2xl font-bold" onClick={()=> setBar(false)}/> 
+        <FiMenu className="text-2xl font-bold z-90" onClick={()=> setBar(false)}/> 
         </div> :
         <nav className="menu">
+        
       <FiXCircle className="bar" onClick={()=> setBar(true)}/>
 
         <ul className="navListContainer">

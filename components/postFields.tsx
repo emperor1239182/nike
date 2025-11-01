@@ -1,53 +1,88 @@
-"use client"
+"use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
-export const PostFields = ({post, setPost, submitting, handleSubmit, type}) => {
-    const [text, setText] = useState(false);
-    return (
-        <>
-        <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-20 w-full mt-8"
-        >
+export const PostFields = ({ post, setPost, submitting, handleSubmit, type } : any) => {
+  const [text, setText] = useState(false);
 
+  
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]; 
+    if (file) {
+      const previewUrl = URL.createObjectURL(file);
+      setPost({ ...post, image: file, imagePreview: previewUrl });
+    }
+  };
+
+  
+  useEffect(() => {
+    return () => {
+      if (post.imagePreview) {
+        URL.revokeObjectURL(post.imagePreview);
+      }
+    };
+  }, [post.imagePreview]);
+
+  return (
+    <>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-8 w-full mt-8">
         <textarea
-        placeholder="Share your thoughts..."
-        onChange={(e)=> setPost({...post, text : e.target.value})}
-        cols={6}
-        rows={8}
-        className={`${text ? "textField" : ""}`}
-        onClick={()=> setText(true)}
+          placeholder="Share your thoughts..."
+          onChange={(e) => setPost({ ...post, text: e.target.value })}
+          cols={6}
+          rows={4}
+          className={`${text ? "textField" : ""}`}
+          onClick={() => setText(true)}
+          required
         />
+
+        {/* Image preview */}
+        {post.imagePreview && (
+          <div className="mt-4">
+            <Image
+              src={post.imagePreview}
+              alt="Selected"
+              className="max-w-[200px] max-h-[200px] object-contain"
+              width={100}
+              height={100}
+            />
+          </div>
+        )}
 
         <div className="inline-block">
-        <input type="file" 
-        id="image"
-        accept="image" 
-        name="image" 
-        placeholder="SelectImage"
-        multiple
-        onChange={(e)=> setPost({...post, image : e.target.value })}
-        className="hidden"
-        />
+          <input
+            type="file"
+            id="image"
+            accept="image/*" 
+            name="image"
+            multiple 
+            onChange={handleImageChange} 
+            className="hidden"
+          />
         </div>
 
+        <label
+          htmlFor="image"
+          className="bg-blue-500 rounded-2xl text-center text-white text-sm px-2 py-1 w-25 cursor-pointer"
+        >
+          Select Media
+        </label>
 
-        <label htmlFor="image" className=" bg-blue-500 rounded-2xl text-center text-white text-sm px-2 py-1 w-25">Select Media</label>
 
         <div className="flex gap-5 items-center justify-end">
-         <Link href="/" className="font-bold">Cancel</Link> 
-        <button
-        type="submit"
-        disabled={submitting}
-        className="signUp-buton"
-        >
+          <Link href="/" className="font-bold">
+            Cancel
+          </Link>
+          <button
+            type="submit"
+            disabled={submitting}
+            className="signUp-buton"
+          >
             {submitting ? `${type}...` : type}
-        </button>
-
+          </button>
         </div>
-
-        </form>
-        </>
-    )
-}
+      </form>
+    </>
+  );
+};
