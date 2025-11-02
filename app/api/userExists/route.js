@@ -22,7 +22,6 @@ export async function POST(req) {
 
     } catch (error) {
         console.error("Error checking user:", error);
-        // ✅ CRITICAL: Always return a response in catch block
         return NextResponse.json(
             { user: null, message: "An error occurred", error: error.message }, 
             { status: 500 }

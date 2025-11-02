@@ -1,5 +1,5 @@
 "use client";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaTrademark } from "react-icons/fa";
+import { FaWhatsapp, FaTwitter, FaInstagram, FaLinkedinIn, FaTrademark } from "react-icons/fa";
 import Link from "next/link";
 
 export const Footer = () => {
@@ -24,9 +24,9 @@ export const Footer = () => {
 
         
         <div className="flex gap-5 text-gray-400">
-          <Link href="#" className="hover:text-white transition-colors"><FaFacebookF size={18} /></Link>
-          <Link href="#" className="hover:text-white transition-colors"><FaTwitter size={18} /></Link>
-          <Link href="#" className="hover:text-white transition-colors"><FaInstagram size={18} /></Link>
+          <Link href="#" className="hover:text-white transition-colors"><FaWhatsapp size={18} /></Link>
+          <Link href="https://x.com/emperor_dev01" className="hover:text-white transition-colors"><FaTwitter size={18} /></Link>
+          <Link href="https://instagram.com/only_emperor_00" className="hover:text-white transition-colors"><FaInstagram size={18} /></Link>
           <Link href="#" className="hover:text-white transition-colors"><FaLinkedinIn size={18} /></Link>
         </div>
       </div>

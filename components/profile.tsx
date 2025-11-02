@@ -2,10 +2,8 @@
 import { signOut,  useSession} from "next-auth/react";
 import { FiUser } from "react-icons/fi";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export const UserProfile = () => {
-    const [profileReviews, setProfileReviews] = useState([]);
 
     const {data} = useSession();
     const name = data?.user?.name?.split("  ");
@@ -21,7 +19,7 @@ export const UserProfile = () => {
             </div>
 
             <div className="userNav">
-                <p onClick={()=> route.push("/posts")}>Posts</p>
+                <p onClick={()=> route.push("/profile")}>Posts</p>
                 <p onClick={()=> route.push("/purchases")}>Purchases</p>
             </div>
 

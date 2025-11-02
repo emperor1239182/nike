@@ -30,23 +30,26 @@ export const UserPosts = () => {
         <section>
             <div>
                 {profileReviews.length > 0? 
-                <div>
+                <div className="userPosts">
                     {profileReviews.map((posts)=> (
-                        <div key={posts._id}>
-                            <p>{posts.post} </p>
+                        <div key={posts._id} className="postCard">
+                            <p className="postText">{posts.post} </p>
                             {posts.image &&
                             <Image
                             src={posts.image}
                             width={100}
                             height={200}
                             alt={posts.post}
+                            layout="responsive"
+                            objectFit="contain"
+                            className="rounded-2xl"
                             />
                             }
                             
-                            </div>
+                        </div>
                     ))}
                 </div> 
-                : <p className="font-bold text-lg">No Post Yet</p>
+                : <p className="font-bold text-sm my-10">No Post Yet</p>
                 }
             </div>
 

@@ -245,7 +245,15 @@ body {
 
         .signUp-buton:disabled {
           @apply cursor-not-allowed;
-}
+        }
+
+        .userPosts{
+          @apply flex flex-col gap-12
+        }
+
+        .postText{
+          @apply font-semibold text-sm
+        }
 
        }
        

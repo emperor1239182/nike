@@ -46,7 +46,9 @@ export const ShareReview = () => {
 
     return (
         <section>
+            {postMessage && 
             <div className="message">{postMessage}</div>
+            }
             <h1 className="font-bold text-2xl">Post Review</h1>
             <p className="review font-mono">Share your thoughts, feedback and also interact with fellow Nike members</p>
             <p>{postMessage}</p>

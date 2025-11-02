@@ -74,7 +74,7 @@ export interface Post {
     image?: string;
     creator: {
         _id: string;
-        username: string;
-        email: string;
+        firstName: string;
+        surName: string;
     };
 }
