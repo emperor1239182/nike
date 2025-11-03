@@ -3,6 +3,7 @@ import { useCart } from "@/utils/Contexts"
 import { useState } from "react";
 import { FiArrowLeft} from "react-icons/fi"
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 export const Order = () => {
     const [openSection, setOpenSection] = useState<null | "delivery" | "payment">(null);
@@ -11,13 +12,42 @@ export const Order = () => {
 
     const {cartItems, purchased, purchasedMessage, setPurchasedMessage} = useCart();
     const router = useRouter();
+    const {data} = useSession();
 
     const total = cartItems.reduce((acc, product) => {
-  const price = parseFloat(String(product.price).replace(/[^0-9.]/g, ""));
-  return acc + (isNaN(price) ? 0 : price);
-}, 0);
+    const price = parseFloat(String(product.price).replace(/[^0-9.]/g, ""));
+    return acc + (isNaN(price) ? 0 : price);
+    }, 0);
 
+    const handlePurchases = async () => {
+   
+    if (!selectedDelivery || !selectedPayment) {
+        console.log("Please select delivery and payment options");
+        return;
+    }
 
+    try {
+        const req = await fetch("/api/purchased", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({
+                items : cartItems,
+                userId : data?.user?.id
+            }),
+        });
+        const res = await req.json();
+
+        if (res.ok) {
+            router.push("/");
+        } else {
+            console.log("Couldn't purchase all items:", res.error);
+        }
+    } catch (error) {
+        console.log("Error:", error);
+    }
+}
 
 
     return (
@@ -114,7 +144,7 @@ export const Order = () => {
             <button 
             type="button" 
             className="signUp-buton"
-            onClick={()=> purchased()}
+            onClick={()=>{purchased(); handlePurchases()}}
             >
                 Submit Payment
             </button>

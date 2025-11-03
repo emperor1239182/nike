@@ -20,7 +20,7 @@ export const UserProfile = () => {
 
             <div className="userNav">
                 <p onClick={()=> route.push("/profile")}>Posts</p>
-                <p onClick={()=> route.push("/purchases")}>Purchases</p>
+                <p onClick={()=> route.push("/profile/purchases")}>Purchases</p>
             </div>
 
         </section>

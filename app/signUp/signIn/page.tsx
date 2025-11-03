@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 export default function SignIn () {
     const [inputs, setInputs] = useState({
         email : "",
@@ -16,7 +16,7 @@ export default function SignIn () {
     
     const router = useRouter();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setError("");
 
@@ -48,7 +48,7 @@ export default function SignIn () {
             const data = await res.json();
 
             if(res.ok){
-                const form = e.target;
+                const form = e.currentTarget as HTMLFormElement;
                 form.reset();
                 setError(data.message);
                 router.push('/signUP/logIn');

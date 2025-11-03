@@ -1,6 +1,6 @@
 "use client"
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +9,7 @@ export default function Login () {
     const [error, setError] = useState("");
     const router = useRouter();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         try {

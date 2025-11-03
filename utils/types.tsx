@@ -78,3 +78,4 @@ export interface Post {
         surName: string;
     };
 }
+

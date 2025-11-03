@@ -1,6 +1,6 @@
 "use client" 
 import { PostFields } from "./postFields";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
@@ -15,7 +15,7 @@ export const ShareReview = () => {
     const route = useRouter();
     const {data : session} = useSession();
 
-    const createPost = async (e) => {
+    const createPost = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setSubmitting(true);
 
@@ -33,7 +33,7 @@ export const ShareReview = () => {
             const data = await res.json();
             if(res.ok){
                 route.push("/");
-                const form = e.target;
+                const form = e.target as HTMLFormElement;
                 form.reset();
                 setPostMessage(data.message);
             }
