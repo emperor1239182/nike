@@ -27,10 +27,10 @@ export const PurchasedItems = () => {
 
     
     return (
-        <section>
+        <section className="mt-10">
             <div>
                 {userPurchases.length > 0? 
-                <ul className="productsDisplay">
+                <ul className=" productsDisplay">
                     {userPurchases.map((purchases)=> (
                         <li key={purchases._id} className="w-full">
                             <div className="imageContainer">
@@ -38,7 +38,7 @@ export const PurchasedItems = () => {
                             <Image
                                 src={purchases.image}
                                 width={100}
-                                height={200}
+                                height={100}
                                 alt={purchases.name}
                                 className="productImage cursor-pointer"
                             />

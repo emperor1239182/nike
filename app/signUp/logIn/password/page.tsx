@@ -54,7 +54,7 @@ export default function Password () {
                     alt="nikeLogo"
                     className="mx-auto my-3"
                 />
-                <p className="formIntro">What's your password?</p>
+                <p className="formIntro">What`&apos;`s your password?</p>
             </div>
 
             <form className="form" onSubmit={handleSubmit}>

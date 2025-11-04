@@ -1,9 +1,12 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import type { PostFieldsProps } from "@/utils/types";
 
-export const PostFields = ({ post, setPost, submitting, handleSubmit, type } : any) => {
+
+
+export const PostFields: React.FC<PostFieldsProps> = ({ post, setPost, submitting, handleSubmit, type }) => {
   const [text, setText] = useState(false);
 
   

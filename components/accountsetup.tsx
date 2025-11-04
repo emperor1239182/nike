@@ -39,7 +39,7 @@ export const SetUp = () => {
 
             <Link href="/getstarted" className="regularButton">
                 <button type="button">
-                    Let's get you started
+                    Let&apos;s get you started
                 </button>
             </Link>
         </section>

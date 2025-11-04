@@ -27,7 +27,7 @@ export const UserPosts = () => {
         } 
     }, [data?.user?.id])
     return (
-        <section>
+        <section className="mt-10">
             <div>
                 {profileReviews.length > 0? 
                 <div className="userPosts">

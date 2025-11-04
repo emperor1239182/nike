@@ -3,7 +3,6 @@ import { useFavorite, useCart } from "@/utils/Contexts";
 import type { Product } from "@/utils/types";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { FiHeart } from "react-icons/fi";
 import { FavoriteDetails } from "@/components/favoriteDetails";
 import { RemoveAllFavorites } from "@/components/removeAllFromFavorites";
 

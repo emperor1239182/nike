@@ -3,12 +3,13 @@ import { PostFields } from "./postFields";
 import { FormEvent, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import type { PostField, PostFieldsProps } from "@/utils/types";
 
 export const ShareReview = () => {
     const [submitting, setSubmitting] = useState(false);
     const [postMessage, setPostMessage] = useState("")
-    const [post, setPost] = useState({
-        image : "",
+    const [post, setPost] = useState<PostField>({
+        image : null,
         text : ""
     });
 
@@ -21,8 +22,10 @@ export const ShareReview = () => {
 
         try {
             const formData = new FormData();
-            formData.append("userId", session?.user?.id);
-            formData.append("post", post.text);
+            if (session?.user?.id) {
+                formData.append("userId", session.user.id);
+            }
+            formData.append("post", post.text ?? "");
             if(post.image) formData.append("image", post.image )
 
             const res = await fetch('/api/review/new', {

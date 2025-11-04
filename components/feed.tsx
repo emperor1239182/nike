@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react"
 import Image from "next/image";
 import type { Post } from "@/utils/types";
+import { FiMessageCircle } from "react-icons/fi";
+import { LikeButton } from "./likePost";
 
 export const PostFeed = () => {
     const [reviews, setReviews] = useState<Post[]>([]);
@@ -47,6 +49,10 @@ export const PostFeed = () => {
                                          className="rounded-2xl"
                                     />
                                 )}
+                                <div className="flex gap-5 items-center">
+                                    <LikeButton/>
+                                    <FiMessageCircle/>
+                                </div>
                             
                             </div>
                         ))}

@@ -1,4 +1,5 @@
 export interface Product {
+    _id : "";
     id: number;
     name: string;
     price: string; 
@@ -78,4 +79,18 @@ export interface Post {
         surName: string;
     };
 }
+export type PostField = {
+  image?: File | null;
+  imagePreview?: string | null;
+  text?: string;
+};
+
+export interface PostFieldsProps {
+  post: PostField;
+  setPost: React.Dispatch<React.SetStateAction<PostField>>;
+  submitting: boolean;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  type: string;
+};
+
 

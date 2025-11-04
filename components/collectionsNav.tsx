@@ -64,7 +64,7 @@ useDebounce(()=> setDebouncedSearch(search), 1000, [search]);
                 {(pathname !== initialPath.current ) && (
                   <h1 className="font-bold text-xl text-center">Nike Collections</h1>
                 )}
-        <SearchBar setSearch={setSearch}/>
+        <SearchBar search={search} setSearch={setSearch}/>
             </ul>
         </nav>
 

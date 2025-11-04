@@ -21,11 +21,7 @@ export const Order = () => {
 
     const handlePurchases = async () => {
    
-    if (!selectedDelivery || !selectedPayment) {
-        console.log("Please select delivery and payment options");
-        return;
-    }
-
+    
     try {
         const req = await fetch("/api/purchased", {
             method: "POST",
