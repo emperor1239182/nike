@@ -3,7 +3,7 @@ import { PostFields } from "./postFields";
 import { FormEvent, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import type { PostField, PostFieldsProps } from "@/utils/types";
+import type { PostField} from "@/utils/types";
 
 export const ShareReview = () => {
     const [submitting, setSubmitting] = useState(false);

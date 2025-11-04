@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FiMessageCircle, FiShare, FiPenTool } from "react-icons/fi";
+import { FiMessageCircle, FiPenTool } from "react-icons/fi";
 import Link from "next/link";
 import Arrivals from "@/components/newArrivals";
 import { PostFeed } from "@/components/feed";
