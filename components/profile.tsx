@@ -1,13 +1,14 @@
 "use client"
 import { signOut,  useSession} from "next-auth/react";
 import { FiUser } from "react-icons/fi";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export const UserProfile = () => {
 
     const {data} = useSession();
     const name = data?.user?.name?.split("  ");
     const route = useRouter();
+    const pathName = usePathname();
 
     return (
         <section className="flex flex-col gap-10">
@@ -19,8 +20,8 @@ export const UserProfile = () => {
             </div>
 
             <div className="userNav">
-                <p onClick={()=> route.push("/profile")}>Posts</p>
-                <p onClick={()=> route.push("/profile/purchases")}>Purchases</p>
+                <p onClick={()=> route.push("/profile")} className={`${pathName === "/profile" ? "activeLinks" : ""}`}>Posts</p>
+                <p onClick={()=> route.push("/profile/purchases")} className={`${pathName === "/profile/purchases" ? "activeLinks" : ""}`}>Purchases</p>
             </div>
 
         </section>

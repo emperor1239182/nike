@@ -216,7 +216,7 @@ body {
         }
 
         .userNav p {
-          @apply text-sm font-bold;
+          @apply text-sm font-bold cursor-pointer;
         }
 
         .details{

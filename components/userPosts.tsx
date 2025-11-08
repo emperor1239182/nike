@@ -40,9 +40,7 @@ export const UserPosts = () => {
                             width={100}
                             height={200}
                             alt={posts.post}
-                            layout="responsive"
-                            objectFit="contain"
-                            className="rounded-2xl"
+                            className="w-full h-auto object-contain rounded-2xl"
                             />
                             }
                             

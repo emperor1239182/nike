@@ -65,12 +65,11 @@ export default function Home() {
         <p className="review">View reviews, interact and share your thoughts...</p>
         <div className="post mt-1 flex flex-col gap-4">
         <Image 
-        src="/GirlsDancing.png"
-        alt="girs dancing post"
-        width={50}
-        height={50}
-        layout="responsive"
-        objectFit="contain"
+          src="/GirlsDancing.png"
+          alt="girls dancing post"
+          width={50}
+          height={50}
+          className="w-full h-auto object-contain"
         />
         <h1 className="font-bold">Soyeon Dance Challenge</h1>
         <p>Hip hop dancer Soyeon shows us an epic dance challenge in the latest playlist episode</p>

@@ -177,7 +177,7 @@ export const RecommendedProvider: React.FC<{children: React.ReactNode}> = ({chil
     useEffect(() => {
         const recommend = async () => {
             try {
-                const req = await fetch("http://localhost:3000/Products.json");
+                const req = await fetch("/Products.json");
                 const res = await req.json();
                 const data: Product[] = res.Products;
                 

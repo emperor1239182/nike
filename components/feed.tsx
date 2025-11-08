@@ -40,13 +40,11 @@ export const PostFeed = () => {
 
                                 {post.image && (
                                     <Image
-                                        src={post.image}
-                                        width={100}
-                                        height={200}
-                                        alt={post.post || "Post image"}
-                                        layout="responsive"
-                                         objectFit="contain"
-                                         className="rounded-2xl"
+                                    src={post.image}
+                                    width={100}
+                                    height={200}
+                                    alt={post.post || "Post image"}
+                                    className="w-full h-auto object-contain rounded-2xl"
                                     />
                                 )}
                                 <div className="flex gap-5 items-center">

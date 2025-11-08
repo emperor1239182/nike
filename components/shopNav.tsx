@@ -36,7 +36,7 @@ export const ShopNav = () => {
         const getSearchedTerm = async() => {
             try{
 
-            const req = await fetch("http://localhost:3000/Products.json");
+            const req = await fetch("/Products.json");
             const res = await req.json();
             const data = res.Products;
             const term = data.filter((items : Product) => 
@@ -46,7 +46,7 @@ export const ShopNav = () => {
             setSuggestions(term);
 
             } catch{
-                throw new Error("Couldn'nt load serach terms");
+                console.log("Couldn'nt load serach terms");
             }
             
 

@@ -4,16 +4,19 @@ const postSchema = new Schema({
 
     creator : {
         type : Schema.Types.ObjectId,
-        ref : "User"
+        ref : "User",
+        index : true
     },
 
     post : {
         type : String,
         required : [true, "Write a review"],
+        index : true
     },
 
     image : {
-        type : String
+        type : String,
+        index : true
     }
 });
 
