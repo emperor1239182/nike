@@ -6,7 +6,7 @@ export const GET = async() => {
     try {
         await ConnectToDB();
 
-        const posts = await Post.find({}).populate("creator", "firstName surName").sort({createdAt: -1}).maxTimeMS(20000).lean();
+        const posts = await Post.find({}).populate("creator", "firstName surName").sort({createdAt: -1});
         return NextResponse.json(posts, { status: 200 });
         
     } catch (error) {
