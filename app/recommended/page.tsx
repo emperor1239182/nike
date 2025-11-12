@@ -1,8 +1,9 @@
 import type { Product } from "@/utils/types";
 import { Recommend } from "./recommended";
+
 export default async function Recommended () {
     const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`, {
-    cache : "default"
+    cache : "no-store"
   })
 
   if(!request.ok){

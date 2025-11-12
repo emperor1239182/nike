@@ -1,8 +1,9 @@
 import { NewProducts } from "./new";
 import type { Product } from "@/utils/types";
+
 export default async function NewFeatured () {
     const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/New.json`, {
-        cache : "default"
+        cache : "no-store"
       })
     
       if(!request.ok){

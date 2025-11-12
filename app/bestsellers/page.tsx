@@ -1,8 +1,9 @@
 import { BestSales } from "./best";
 import type { Product } from "@/utils/types";
+
 export default async function BestSellers () {
-    const request = await fetch(`${process.env.NEXT__PUBLIC_BASE_URL}/Bestsellers.json`, {
-        cache : "default"
+    const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Bestsellers.json`, {
+        cache : "no-store"
       })
     
       if(!request.ok){

@@ -2,9 +2,10 @@ import Image from "next/image"
 import Link from "next/link";
 import { CollectionNav } from "@/components/collectionsNav"
 import type { Product } from "@/utils/types";
+
 export default async function Collections () {
     const req = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`, {
-        cache : "no-cache"
+        cache : "no-store"
     })
     if(!req){
         throw new Error ("Failed to get new products");
@@ -14,7 +15,7 @@ export default async function Collections () {
 
     {/*fetch shirts */}
     const shopRequest = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Shirt.json`,{
-        cache : "no-cache"
+        cache : "no-store"
     })
     if(!shopRequest){
         throw new Error ("Failed to fecth collections");

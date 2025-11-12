@@ -3,7 +3,7 @@ import type { Product } from "@/utils/types";
 
 export default async function Shop () {
   const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`, {
-    cache : "default"
+    cache : "no-store"
   })
 
   if(!request.ok){

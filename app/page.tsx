@@ -44,14 +44,13 @@ export default function Home() {
 
         <h1 className="font-bold text-[20px] ">Discover</h1>
         <div className="text-[10px] text-gray-500 font-bold mb-4"> {day}, {dateNum} {month}</div>
-        <Image
-        src="/BasketballTeam.png"
-        alt="Basketball Team"
-        width={80}
-        height={80}
-        className="object-contain w-full h-auto"
-        layout="responsive"
-        />
+  <Image
+  src="/BasketballTeam.png"
+  alt="Basketball Team"
+  width={80}
+  height={80}
+  className="object-contain w-full h-auto"
+  />
 
         
         <Arrivals/>
@@ -70,7 +69,6 @@ export default function Home() {
           width={50}
           height={50}
           className="w-full h-auto object-contain"
-          layout="responsive"
         />
         <h1 className="font-bold">Soyeon Dance Challenge</h1>
         <p>Hip hop dancer Soyeon shows us an epic dance challenge in the latest playlist episode</p>
