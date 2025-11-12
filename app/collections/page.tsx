@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CollectionNav } from "@/components/collectionsNav"
 import type { Product } from "@/utils/types";
 export default async function Collections () {
-    const req = await fetch("http://localhost:3000/Products.json", {
+    const req = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`, {
         cache : "no-cache"
     })
     if(!req){
@@ -13,7 +13,7 @@ export default async function Collections () {
     const Data = res.Products;
 
     {/*fetch shirts */}
-    const shopRequest = await fetch("http://localhost:3000/Shirt.json",{
+    const shopRequest = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Shirt.json`,{
         cache : "no-cache"
     })
     if(!shopRequest){
@@ -40,8 +40,8 @@ export default async function Collections () {
             width={180}
             height={180}
             alt="best sellers"
-            layout="intrinsic"
             style={{ aspectRatio: '1 / 1' }}
+            className="w-auto h-auto"
         />
         </Link>
         <p className="card">Best Sellers</p>
@@ -53,8 +53,8 @@ export default async function Collections () {
         width={180}
         height={180}
         alt="featured in Air Nike"
-        layout="intrinsic"
         style={{ aspectRatio: '1 / 1' }}
+        className="w-auto h-auto"
         />
         <p className="card">Featured in Air Nike</p>
         </div>

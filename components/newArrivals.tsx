@@ -1,7 +1,7 @@
 import type { Product } from "@/utils/types";
 import Image from "next/image";
 export default async function Arrivals () {
-  const response = await fetch("http://localhost:3000/Products.json")
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`)
   
   if(!response.ok){
     throw new Error ("Failed to get new products");
