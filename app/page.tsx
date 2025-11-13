@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 import { FiMessageCircle, FiPenTool } from "react-icons/fi";
 import Link from "next/link";
 import Arrivals from "@/components/newArrivals";
@@ -50,6 +50,7 @@ export default function Home() {
   width={80}
   height={80}
   className="object-contain w-full h-auto"
+  layout="responsive"
   />
 
         
