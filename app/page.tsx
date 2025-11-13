@@ -70,6 +70,7 @@ export default function Home() {
           width={50}
           height={50}
           className="w-full h-auto object-contain"
+          layout="responsive"
         />
         <h1 className="font-bold">Soyeon Dance Challenge</h1>
         <p>Hip hop dancer Soyeon shows us an epic dance challenge in the latest playlist episode</p>

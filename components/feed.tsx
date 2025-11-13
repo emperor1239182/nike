@@ -45,6 +45,7 @@ export const PostFeed = () => {
                                     height={200}
                                     alt={post.post || "Post image"}
                                     className="w-full h-auto object-contain rounded-2xl"
+                                    layout="responsive"
                                     />
                                 )}
                                 <div className="flex gap-5 items-center">

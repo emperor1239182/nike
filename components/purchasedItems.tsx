@@ -41,6 +41,7 @@ export const PurchasedItems = () => {
                                 height={100}
                                 alt={purchases.name}
                                 className="productImage cursor-pointer"
+                                layout="responsive"
                             />
                             }
                             </div>
