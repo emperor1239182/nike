@@ -4,7 +4,7 @@ import { CollectionNav } from "@/components/collectionsNav"
 import type { Product } from "@/utils/types";
 
 export default async function Collections () {
-    const req = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`, {
+    const req = await fetch("/Products.json", {
         cache : "no-store"
     })
     if(!req){
