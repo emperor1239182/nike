@@ -7,7 +7,7 @@ export default async function Collections () {
     const req = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`, {
         cache : "no-store"
     })
-    if(!req){
+    if(!req.ok){
         throw new Error ("Failed to get new products");
     }
     const res = await req.json();
@@ -17,7 +17,7 @@ export default async function Collections () {
     const shopRequest = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Shirt.json`,{
         cache : "no-store"
     })
-    if(!shopRequest){
+    if(!shopRequest.ok){
         throw new Error ("Failed to fecth collections");
     }
     const response = await shopRequest.json();
