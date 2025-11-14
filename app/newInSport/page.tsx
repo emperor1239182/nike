@@ -2,7 +2,7 @@ import type { Product } from "@/utils/types";
 import { NewSport } from "./newSport";
 
 export default async function NewSports () {
-    const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/SportWears.json`, {
+    const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Sportwears.json`, {
     cache : "no-store"
   })
 
