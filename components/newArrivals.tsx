@@ -2,7 +2,7 @@ import type { Product } from "@/utils/types";
 import Image from "next/image";
 export default async function Arrivals () {
   const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`, {
-    cache : "no-store"
+    cache : "default"
   })
   
   if(!response.ok){

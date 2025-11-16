@@ -5,7 +5,7 @@ import type { Product } from "@/utils/types";
 
 export default async function Collections () {
     const req = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`, {
-        cache : "no-store"
+        cache : "default"
     })
     if(!req.ok){
         throw new Error ("Failed to get new products");
@@ -15,7 +15,7 @@ export default async function Collections () {
 
     {/*fetch shirts */}
     const shopRequest = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Shirt.json`,{
-        cache : "no-store"
+        cache : "default"
     })
     if(!shopRequest.ok){
         throw new Error ("Failed to fecth collections");

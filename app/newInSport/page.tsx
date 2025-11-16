@@ -3,7 +3,7 @@ import { NewSport } from "./newSport";
 
 export default async function NewSports () {
     const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Sportwears.json`, {
-    cache : "no-store"
+    cache : "default"
   })
 
   if(!request.ok){

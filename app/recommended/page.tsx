@@ -3,7 +3,7 @@ import { Recommend } from "./recommended";
 
 export default async function Recommended () {
     const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Products.json`, {
-    cache : "no-store"
+    cache : "default"
   })
 
   if(!request.ok){

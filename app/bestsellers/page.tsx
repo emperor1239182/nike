@@ -3,7 +3,7 @@ import type { Product } from "@/utils/types";
 
 export default async function BestSellers () {
     const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/Bestsellers.json`, {
-        cache : "no-store"
+        cache : "default"
       })
     
       if(!request.ok){

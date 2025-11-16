@@ -3,7 +3,7 @@ import type { Product } from "@/utils/types";
 
 export default async function NewFeatured () {
     const request = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/New.json`, {
-        cache : "no-store"
+        cache : "default"
       })
     
       if(!request.ok){
