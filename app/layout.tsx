@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <CartProvider>
         <FavoriteProvider>
@@ -62,7 +62,7 @@ export default function RootLayout({
           
         <Suspense fallback={<GlobalLoading />}>
 
-        <div className="flex justify-between gap-10">
+        <div className="flex justify-between gap-10 flex-1">
 
         <NavBar/>
 
