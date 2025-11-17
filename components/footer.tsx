@@ -1,5 +1,5 @@
 "use client";
-import { FaWhatsapp, FaTwitter, FaInstagram, FaTrademark } from "react-icons/fa";
+import { FaWhatsapp, FaTwitter, FaTrademark } from "react-icons/fa";
 import { SiGmail, SiDiscord } from "react-icons/si";
 
 import Link from "next/link";
