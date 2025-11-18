@@ -48,7 +48,7 @@ export const ShareReview = () => {
     }
 
     return (
-        <section>
+        <section  data-aos="zoom-in-down" suppressHydrationWarning>
             {postMessage && 
             <div className="message">{postMessage}</div>
             }

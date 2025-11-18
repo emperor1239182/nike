@@ -39,7 +39,7 @@ export const Brands = () => {
     }
 
     return (
-        <section className="productSelect">
+        <section className="productSelect" data-aos="zoom-out-down" suppressHydrationWarning>
             <h1 className="selectionIntro">What sports, brand and collections are you interested in?</h1>
 
             {Object.entries(activity).map(([key, {image,text,element}])=>(

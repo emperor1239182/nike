@@ -6,7 +6,7 @@ export const ProductSelection = () => {
     const [selectedGender, setSelectedGender] = useState("")
     const [kids, setKids] = useState("");
     return (
-        <section className="productSelect">
+        <section className="productSelect" data-aos="zoom-in" suppressHydrationWarning>
             <h1 className="selectionIntro">
                 First up, which product do you use the most?
             </h1>

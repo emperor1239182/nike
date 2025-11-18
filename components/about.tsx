@@ -11,7 +11,7 @@ export const poppins = Poppins({
 export const AboutPage = () => {
   
     return (
-        <section className="about flex gap-10 flex-col" data-aos="flip-up" data-aos-duration="1000">
+        <section className="about flex gap-10 flex-col" data-aos="flip-up">
             <h2 className="font-bold text-xl text-center">About Us</h2>
             <div>
                 <p className={`${poppins.className} tracking-wider leading-relaxed`}>

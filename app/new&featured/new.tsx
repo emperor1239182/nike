@@ -15,7 +15,7 @@ export const NewProducts = ({data } : {data : Product[]} ) => {
 
     return (
         <>
-       <section className="mt-5">
+       <section className="mt-5" data-aos="fade-down" suppressHydrationWarning>
         <h1 className="font-bold text-black text-xl mb-4">New</h1>
     
         {data.length > 0? 

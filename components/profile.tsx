@@ -11,7 +11,7 @@ export const UserProfile = () => {
     const pathName = usePathname();
 
     return (
-        <section className="flex flex-col gap-10">
+        <section className="flex flex-col gap-10"  data-aos="fade-up-right" suppressHydrationWarning>
 
             <div className="details mx-auto">
                 <div className="rounded-full w-12 h-12 flex justify-center items-center bg-gray-400 o mx-auto"><FiUser/></div>

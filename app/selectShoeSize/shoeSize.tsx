@@ -10,7 +10,7 @@ export const ShoeSize = () => {
         }
 
         return (
-                <section className="productSelect">
+                <section className="productSelect" data-aos="zoom-in-down" suppressHydrationWarning>
                         <h1 className="selectionIntro">Whats Your Shoe Size?</h1>
                         <div className="grid grid-cols-4 gap-5">
                             {sizes.map(size => (
