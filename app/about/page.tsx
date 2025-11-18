@@ -12,7 +12,7 @@ export default function About () {
   
     return (
         <section className="about flex gap-10 flex-col">
-            <h2 className="font-bold text-xl">About Us</h2>
+            <h2 className="font-bold text-xl text-center">About Us</h2>
             <div>
                 <p className={`${poppins.className} tracking-wider leading-relaxed`}>
                 Welcome to a space where sport meets soul, where every step, jump, and celebration is powered by the iconic swoosh.
