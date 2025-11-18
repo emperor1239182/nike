@@ -7,6 +7,7 @@ import { FavoriteProvider, CartProvider, RecommendedProvider, FilterProvider } f
 import { CartItems } from "./bag/cart";
 import { AuthProvider } from "./providers";
 import { Footer } from "@/components/footer";
+import AOSInit from "@/components/aos";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,6 +66,8 @@ export default function RootLayout({
         <div className="flex justify-between gap-10 flex-1">
 
         <NavBar/>
+        
+        <AOSInit/>
 
           <div className="w-full sm:max-w-xl lg:max-w-3xl sm:mx-auto p-2 sm:h-[100vh] overflow-y-auto hide-scrollbar">
              {children} 
